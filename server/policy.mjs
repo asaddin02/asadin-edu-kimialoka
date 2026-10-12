@@ -5,6 +5,33 @@
 export const REPOSITORY = 'https://github.com/asaddin02/asadin-edu-alchemist';
 export const DEFAULT_USER_AGENT = `Alchemist/3 (open-source chemistry encyclopedia and learning platform; +${REPOSITORY})`;
 
+/** The app's page routes (first path segment); keep in step with PAGES in js/core/router.js. */
+export const APP_ROUTES = [
+  'home',
+  'explore',
+  'molecule',
+  'classes',
+  'table',
+  'atom',
+  'learn',
+  'lab',
+  'quiz',
+  'compare',
+  'around',
+  'glossary',
+  'saved',
+  'teacher',
+  'assignment',
+  'about',
+  'dukung',
+  'search',
+  'peta',
+  'isotope',
+  'ion',
+  'reaction',
+  'material',
+];
+
 export const CSP = [
   "default-src 'self'",
   "script-src 'self'",

@@ -40,7 +40,7 @@ const MODULES = {
 export const title = route => (route.id ? pick(findLab(route.id)?.title || ['Lab', 'Lab']) : s.title);
 
 const card = l =>
-  `<a class="card lab-card" href="#/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 26 })}</span><span class="card-title">${esc(pick(l.title))}</span>
+  `<a class="card lab-card" href="/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 26 })}</span><span class="card-title">${esc(pick(l.title))}</span>
    <span class="card-text">${esc(pick(l.summary))}</span><span class="topic-meta">${l.levels.map(x => esc(levelName(x))).join(' · ')}</span><span class="card-next">${esc(pick(['Mulai eksperimen', 'Start experimenting']))} ${icon('arrowRight', { size: 16 })}</span></a>`;
 
 export async function render({ id, main, params, cleanup, isCurrent }) {
@@ -57,17 +57,17 @@ export async function render({ id, main, params, cleanup, isCurrent }) {
   }
   const lab = findLab(id);
   if (!lab || !MODULES[id]) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/lab">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/lab">${esc(s.title)}</a></section>`;
     return;
   }
   const topic = findTopic(lab.topic);
   main.innerHTML = `<div class="container lab-page">
     ${breadcrumbs([
-      [s.title, '#/lab'],
+      [s.title, '/lab'],
       [pick(lab.title), ''],
     ])}
     <header class="page-head"><p class="eyebrow">${icon(lab.icon, { size: 18 })} ${esc(s.title)}</p><h1>${esc(pick(lab.title))}</h1><p class="lead">${esc(pick(lab.summary))}</p>
-      ${topic ? `<p>${esc(s.lesson)}: <a href="#/learn/${topic.id}">${esc(pick(topic.title))}</a></p>` : ''}</header>
+      ${topic ? `<p>${esc(s.lesson)}: <a href="/learn/${topic.id}">${esc(pick(topic.title))}</a></p>` : ''}</header>
     <div class="lab-host" data-lab>${loading()}</div>
   </div>`;
   try {

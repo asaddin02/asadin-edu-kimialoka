@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Alchemist production server: static files (allow-listed paths only) + a caching proxy for PubChem.
+// Alchemist production server: static files (allow-listed paths only, the app shell for every route) + a caching
+// proxy for PubChem.
 // No dependencies. Node 20+.
 //
 // Why a proxy? A whole classroom usually shares one public IP address, and PubChem allows about
@@ -12,7 +13,13 @@ import { readFile, stat } from 'node:fs/promises';
 import { extname, join, normalize, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gzipSync, brotliCompressSync, constants as zlib } from 'node:zlib';
-import { DEFAULT_USER_AGENT, SECURITY_HEADERS as BASE_HEADERS, UPSTREAM, route } from './policy.mjs';
+import {
+  APP_ROUTES,
+  DEFAULT_USER_AGENT,
+  SECURITY_HEADERS as BASE_HEADERS,
+  UPSTREAM,
+  route,
+} from './policy.mjs';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PORT = Number(process.env.PORT || 8080);
@@ -87,10 +94,21 @@ function pick(req, body, type, key) {
   return { body: compressed.get(cacheKey), encoding };
 }
 
+// App routes (/atom/Fe, /molecule/water, /search) are served the app shell, like the prerendered pages on a
+// static host; an unknown extensionless path gets the shell too but answers 404 (the app shows its not-found page,
+// as 404.html does on Cloudflare Pages). Dotfiles and paths with an extension are never app routes.
+const isAppRoute = pathname =>
+  !/\.[a-z0-9]+$/i.test(pathname.split('/').pop()) && !pathname.split('/').some(part => part.startsWith('.'));
+
 async function serveStatic(req, res, pathname) {
   if (pathname === '/') pathname = '/index.html';
-  if (pathname.includes('..') || !PUBLIC_PATHS.some(re => re.test(pathname)))
-    return send(res, 404, 'Not found');
+  let status = 200;
+  if (pathname.includes('..')) return send(res, 404, 'Not found');
+  if (!PUBLIC_PATHS.some(re => re.test(pathname))) {
+    if (!isAppRoute(pathname)) return send(res, 404, 'Not found');
+    if (!APP_ROUTES.includes(pathname.split('/')[1])) status = 404;
+    pathname = '/index.html';
+  }
   const file = normalize(join(ROOT, pathname));
   if (!file.startsWith(ROOT.endsWith(sep) ? ROOT : ROOT + sep)) return send(res, 403, 'Forbidden');
   let info;
@@ -110,7 +128,7 @@ async function serveStatic(req, res, pathname) {
     'Cache-Control': volatile ? 'no-cache' : 'public, max-age=604800',
     Vary: 'Accept-Encoding',
   };
-  if (req.headers['if-none-match'] === etag) {
+  if (status === 200 && req.headers['if-none-match'] === etag) {
     res.writeHead(304, headers);
     return res.end();
   }
@@ -118,7 +136,7 @@ async function serveStatic(req, res, pathname) {
   const { body, encoding } = pick(req, raw, type, `${file}|${etag}`);
   if (encoding) headers['Content-Encoding'] = encoding;
   headers['Content-Length'] = body.length;
-  res.writeHead(200, headers);
+  res.writeHead(status, headers);
   res.end(req.method === 'HEAD' ? undefined : body);
 }
 

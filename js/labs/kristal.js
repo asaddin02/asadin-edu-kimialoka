@@ -59,7 +59,7 @@ export function mount(host) {
       <p><strong>${esc(s.cn)}:</strong> ${esc(info.cn)}${info.pack ? ` · <strong>${esc(s.pack)}:</strong> ${info.pack}%` : ''}</p>
       <p>${esc(pick(info.note))}</p>
       <p class="muted small">${esc(s.atoms.replace('{n}', data.atoms.length))}</p>
-      ${mol ? `<a class="btn btn-small" href="#/molecule/${mol.id}">${esc(s.open)}: ${esc(pick(mol.name))}</a>` : ''}`;
+      ${mol ? `<a class="btn btn-small" href="/molecule/${mol.id}">${esc(s.open)}: ${esc(pick(mol.name))}</a>` : ''}`;
   }
   function setMode(mode) {
     viewer.setMode(mode);

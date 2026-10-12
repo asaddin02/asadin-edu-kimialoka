@@ -63,7 +63,7 @@ test('bookmarks and notes are kept on the device', async ({ page }) => {
 test('any PubChem compound opens as a live page', async ({ page }) => {
   await prefs(page, { level: 'kuliah' });
   const errors = watchErrors(page);
-  await page.goto(`/#/molecule/cid/${LIVE.cid}`);
+  await page.goto(`/molecule/cid/${LIVE.cid}`);
   await expect(page.locator('h1')).toHaveText(LIVE.title);
   await expect(page.locator('.badge-live').first()).toBeVisible();
   await expect(page.locator('#sec-id')).toContainText('CCO');
@@ -73,9 +73,9 @@ test('any PubChem compound opens as a live page', async ({ page }) => {
 
 test('names resolve to a compound, and catalogue CIDs redirect to the card', async ({ page }) => {
   await prefs(page);
-  await page.goto('/#/molecule/name/testium');
-  await expect(page).toHaveURL(new RegExp(`#/molecule/cid/${LIVE.cid}`));
-  await page.goto('/#/molecule/cid/962');
-  await expect(page).toHaveURL(/#\/molecule\/water/);
+  await page.goto('/molecule/name/testium');
+  await expect(page).toHaveURL(new RegExp(`/molecule/cid/${LIVE.cid}`));
+  await page.goto('/molecule/cid/962');
+  await expect(page).toHaveURL(/\/molecule\/water$/);
   await expect(page.locator('h1')).toHaveText('Air');
 });

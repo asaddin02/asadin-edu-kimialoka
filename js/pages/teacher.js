@@ -168,7 +168,7 @@ export async function render({ main, params }) {
         .slice(0, 10)
         .map(x => x.slice(0, 300)),
     };
-    const url = `${location.origin}${location.pathname}${routeURL('assignment', null, { d: encodeData(data) })}`;
+    const url = `${location.origin}${routeURL('assignment', null, { d: encodeData(data) })}`;
     $('[data-task-out]', main).innerHTML = `<div class="card">
       <label for="task-link">${esc(s.link)}</label>
       <input id="task-link" class="mono" readonly value="${esc(url)}" />

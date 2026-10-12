@@ -144,7 +144,7 @@ export async function render({ id, main, isCurrent }) {
   const gen = Object.hasOwn(GEN, id) ? GEN[id] : null;
   const topicId = id.replace(/^topic-/, '');
   if (!gen && !findTopic(topicId)) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/quiz">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/quiz">${esc(s.title)}</a></section>`;
     return;
   }
   let topic = null;
@@ -161,7 +161,7 @@ export async function render({ id, main, isCurrent }) {
   const name = gen ? pick(gen.title) : pick(topic.title);
   main.innerHTML = `<div class="container narrow">
     ${breadcrumbs([
-      [s.title, '#/quiz'],
+      [s.title, '/quiz'],
       [name, ''],
     ])}
     ${pageHead({ title: esc(name), lead: esc(gen ? s[gen.lead] : pick(topic.summary)) })}
@@ -182,7 +182,7 @@ function renderList(main) {
       ${Object.entries(GEN)
         .map(([k, g]) => {
           const r = results[`gen-${k}`];
-          return `<a class="card lab-card" href="#/quiz/${k}"><span class="topic-icon">${icon(g.icon, { size: 24 })}</span><span class="card-title">${esc(pick(g.title))}</span><span class="card-text">${esc(s[g.lead])}</span>${
+          return `<a class="card lab-card" href="/quiz/${k}"><span class="topic-icon">${icon(g.icon, { size: 24 })}</span><span class="card-title">${esc(pick(g.title))}</span><span class="card-text">${esc(s[g.lead])}</span>${
             r ? `<span class="topic-meta">★ ${esc(fmt(s.best, r))}</span>` : ''
           }</a>`;
         })
@@ -191,7 +191,7 @@ function renderList(main) {
     <section><h2>${esc(s.lessons)}</h2><div class="grid grid-3">
       ${TOPICS.map(t => {
         const r = results[`topic-${t.id}`];
-        return `<a class="card topic-card" href="#/quiz/topic-${t.id}"><span class="topic-icon">${icon(t.icon, { size: 22 })}</span><span class="card-title">${esc(pick(t.title))}</span>${
+        return `<a class="card topic-card" href="/quiz/topic-${t.id}"><span class="topic-icon">${icon(t.icon, { size: 22 })}</span><span class="card-title">${esc(pick(t.title))}</span>${
           r ? `<span class="topic-meta">★ ${esc(fmt(s.best, r))}</span>` : ''
         }</a>`;
       }).join('')}

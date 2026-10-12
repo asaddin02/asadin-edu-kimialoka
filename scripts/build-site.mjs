@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Assembles dist/: the files a static host (Cloudflare Pages, Netlify, GitHub Pages) should publish,
-// plus a _headers file with the same security policy as server/server.mjs.
+// Assembles dist/: the files a static host (Cloudflare Pages, Netlify, GitHub Pages) should publish, one
+// prerendered HTML page per route (scripts/prerender.mjs), sitemap.xml, 404.html and a _headers file with the
+// same security policy as server/server.mjs.
 //   npm run build:site                                   (also refreshes the sw.js precache list)
 //   SITE_URL=https://alchemist.example npm run build:site  absolute link-preview URLs for that address
 // The Pages Function in functions/ is deployed from the project root by `wrangler pages deploy dist`.
@@ -8,6 +9,7 @@ import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promi
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SECURITY_HEADERS } from '../server/policy.mjs';
+import { notFoundShell, prerender } from './prerender.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const dist = join(root, 'dist');
@@ -29,25 +31,19 @@ await cp(join(root, 'data'), join(dist, 'data'), {
   filter: src => !src.includes('.sync-cache'),
 });
 
+// Link previews need absolute image URLs; everything else per page is added by the prerenderer.
 if (siteURL) {
   const path = join(dist, 'index.html');
   let html = await readFile(path, 'utf8');
-  const image = '<meta property="og:image" content="assets/brand/og-image.png" />';
-  const type = '<meta property="og:type" content="website" />';
-  if (!html.includes(image) || !html.includes(type))
+  const image = '<meta property="og:image" content="/assets/brand/og-image.png" />';
+  if (!html.includes(image))
     throw new Error('index.html Open Graph tags changed; update scripts/build-site.mjs');
-  html = html
-    .replace(image, `<meta property="og:image" content="${siteURL}/assets/brand/og-image.png" />`)
-    .replace(
-      type,
-      `${type}\n    <meta property="og:url" content="${siteURL}/" />\n    <link rel="canonical" href="${siteURL}/" />`
-    );
+  html = html.replace(image, `<meta property="og:image" content="${siteURL}/assets/brand/og-image.png" />`);
   await writeFile(path, html);
 }
 
 // Search engines. GOOGLE_SITE_VERIFICATION (the content of Search Console's meta tag, or the whole tag)
-// proves ownership; the sitemap needs SITE_URL; 404.html makes unknown paths answer 404 instead of the
-// app, which Cloudflare Pages would otherwise serve for every path.
+// proves ownership and goes into the shell, so every prerendered page carries it; the sitemap needs SITE_URL.
 const verification = (process.env.GOOGLE_SITE_VERIFICATION || '').match(
   /(?:content="([^"]*)"|^\s*(\S+)\s*$)/
 );
@@ -65,41 +61,27 @@ if (verificationCode) {
     )
   );
 }
+
+// One static HTML page per route (dist/atom/Fe.html is served at /atom/Fe), each with its own title, description,
+// canonical URL and readable content, so the site can be indexed without running JavaScript.
+const shell = await readFile(join(dist, 'index.html'), 'utf8');
+const pages = await prerender({ dist, siteURL });
+// Unknown paths answer 404 (Cloudflare Pages serves 404.html itself) but still boot the app, so a live PubChem
+// compound (/molecule/cid/2244) that was not prerendered works for visitors while staying out of the index.
+await writeFile(join(dist, '404.html'), notFoundShell(shell));
+
 if (siteURL) {
   const today = new Date().toISOString().slice(0, 10);
+  const urls = pages
+    .filter(page => !page.noindex)
+    .map(page => `  <url><loc>${siteURL}${page.path}</loc><lastmod>${today}</lastmod></url>`);
   await writeFile(
     join(dist, 'sitemap.xml'),
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${siteURL}/</loc><lastmod>${today}</lastmod></url>\n</urlset>\n`
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`
   );
   const robots = await readFile(join(dist, 'robots.txt'), 'utf8');
   await writeFile(join(dist, 'robots.txt'), `${robots.trimEnd()}\n\nSitemap: ${siteURL}/sitemap.xml\n`);
 }
-await writeFile(
-  join(dist, '404.html'),
-  `<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex" />
-    <title>Halaman tidak ditemukan · Alchemist</title>
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png" />
-    <style>
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
-        font: 16px/1.5 system-ui, sans-serif; color: #172033; background: #f5f8ff; text-align: center; }
-      a { color: #2563eb; font-weight: 600; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Halaman tidak ditemukan</h1>
-      <p>Alamat ini tidak ada di Alchemist.</p>
-      <p><a href="/">Kembali ke beranda Alchemist</a></p>
-    </main>
-  </body>
-</html>
-`
-);
 
 // Cloudflare Pages / Netlify read _headers for static files; the Function sets its own headers.
 const headers = { ...SECURITY_HEADERS, 'Strict-Transport-Security': 'max-age=31536000' };
@@ -130,5 +112,7 @@ async function size(dir) {
 }
 const { files, bytes } = await size(dist);
 console.log(
-  `dist/: ${files} files, ${(bytes / 1048576).toFixed(1)} MB${siteURL ? `, link previews for ${siteURL}` : ''}.`
+  `dist/: ${files} files, ${(bytes / 1048576).toFixed(1)} MB, ${pages.length} prerendered pages${
+    siteURL ? `, ${pages.filter(p => !p.noindex).length} sitemap URLs for ${siteURL}` : ''
+  }.`
 );

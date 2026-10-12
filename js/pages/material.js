@@ -1,5 +1,5 @@
-// Materials and mixtures: #/material groups alloys, glass, ceramics, composites, solutions, colloids, suspensions,
-// heterogeneous mixtures and biological macromolecules; #/material/<id> shows composition, properties and sources.
+// Materials and mixtures: /material groups alloys, glass, ceramics, composites, solutions, colloids, suspensions,
+// heterogeneous mixtures and biological macromolecules; /material/<id> shows composition, properties and sources.
 import { $, esc, debounce } from '../core/dom.js';
 import { S, pick, fmt } from '../core/prefs.js';
 import { replaceQuery } from '../core/router.js';
@@ -49,15 +49,15 @@ function compLink(link) {
   const [kind, id] = link.split(':');
   if (kind === 'e') {
     const e = getElement(id);
-    return e ? `<a href="#/atom/${e.s}">${esc(pick([e.id, e.en]))} (${esc(e.s)})</a>` : null;
+    return e ? `<a href="/atom/${e.s}">${esc(pick([e.id, e.en]))} (${esc(e.s)})</a>` : null;
   }
   if (kind === 'm') {
     const m = getMolecule(id);
-    return m ? `<a href="#/molecule/${m.id}">${esc(pick(m.name))}</a>` : null;
+    return m ? `<a href="/molecule/${m.id}">${esc(pick(m.name))}</a>` : null;
   }
   if (kind === 'i') {
     const i = getIon(id);
-    return i ? `<a href="#/ion/${i.id}">${esc(pick(i.name))}</a>` : null;
+    return i ? `<a href="/ion/${i.id}">${esc(pick(i.name))}</a>` : null;
   }
   return null;
 }
@@ -125,7 +125,7 @@ export function render({ id, main, params }) {
         <div class="grid grid-3">${items
           .map(
             m =>
-              `<a class="card topic-card" href="#/material/${m.id}"><span class="card-title">${esc(pick(m.name))}</span><span class="card-text">${esc(pick(m.about))}</span><span class="topic-meta">${levelBadge(m.lv)}${m.pdb ? ` <span class="chip">PDB ${esc(m.pdb)}</span>` : ''}</span></a>`
+              `<a class="card topic-card" href="/material/${m.id}"><span class="card-title">${esc(pick(m.name))}</span><span class="card-text">${esc(pick(m.about))}</span><span class="topic-meta">${levelBadge(m.lv)}${m.pdb ? ` <span class="chip">PDB ${esc(m.pdb)}</span>` : ''}</span></a>`
           )
           .join('')}</div></section>`
           )
@@ -146,15 +146,15 @@ export function render({ id, main, params }) {
 function renderMaterial(main, id) {
   const m = getMaterial(id);
   if (!m) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/material">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/material">${esc(s.title)}</a></section>`;
     return;
   }
   const t = MATERIAL_TYPES[m.type];
   const lesson = LESSONS[m.type];
   main.innerHTML = `<article class="container material-page">
     ${breadcrumbs([
-      [s.title, '#/material'],
-      [pick(t.name), `#/material?type=${m.type}`],
+      [s.title, '/material'],
+      [pick(t.name), `/material?type=${m.type}`],
       [pick(m.name), ''],
     ])}
     <header class="page-head">
@@ -186,7 +186,7 @@ function renderMaterial(main, id) {
     </div>
     ${m.sep ? `<section class="card"><h2 class="h-small">${icon('filter', { size: 18 })} ${esc(s.sep)}</h2><p>${esc(pick(m.sep))}</p></section>` : ''}
     <section class="mol-section refs"><h2 class="h-small">${esc(s.refs)}</h2><ul class="ref-list">${m.src.map(c => `<li>${sourceLink(c)}</li>`).join('')}</ul>
-      ${lesson && findTopic(lesson) ? `<p>${esc(s.lesson)}: <a href="#/learn/${lesson}">${esc(pick(findTopic(lesson).title))}</a></p>` : ''}
+      ${lesson && findTopic(lesson) ? `<p>${esc(s.lesson)}: <a href="/learn/${lesson}">${esc(pick(findTopic(lesson).title))}</a></p>` : ''}
     </section>
   </article>`;
 }

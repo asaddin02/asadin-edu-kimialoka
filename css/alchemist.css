@@ -2028,3 +2028,32 @@ main h1[tabindex='-1']:focus {
   background: var(--brand);
   border-radius: 8px;
 }
+
+/* Prerendered pages (scripts/prerender.mjs): shown before the app renders the route and without JavaScript. */
+[data-prerendered] .facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 8px 20px;
+  margin: 0;
+}
+[data-prerendered] .facts div {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line, #e4e9f2);
+}
+[data-prerendered] .facts dt {
+  font-size: 0.85rem;
+  color: var(--muted, #5b6472);
+}
+[data-prerendered] .facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+[data-prerendered] .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+[data-prerendered] .mol-section,
+[data-prerendered] .prerender-sections {
+  margin-top: 24px;
+}

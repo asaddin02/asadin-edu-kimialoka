@@ -27,7 +27,7 @@ export async function render({ id, main }) {
     main.innerHTML = `<div class="container">
       ${pageHead({ title: esc(s.title), lead: esc(s.lead) })}
       <div class="grid grid-3">${PLACES.map(
-        p => `<a class="card place-card" href="#/around/${p.id}"><span class="topic-icon">${icon(p.icon, { size: 28 })}</span>
+        p => `<a class="card place-card" href="/around/${p.id}"><span class="topic-icon">${icon(p.icon, { size: 28 })}</span>
           <span class="card-title">${esc(pick(p.name))}</span><span class="card-text">${esc(pick(p.about))}</span>
           <span class="topic-meta">${esc(fmt(s.count, { n: moleculesInPlace(p.id).length }))}</span></a>`
       ).join('')}</div>
@@ -36,7 +36,7 @@ export async function render({ id, main }) {
   }
   const p = findPlace(id);
   if (!p) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/around">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/around">${esc(s.title)}</a></section>`;
     return;
   }
   const idx = await moleculeIndex();
@@ -46,7 +46,7 @@ export async function render({ id, main }) {
   const higher = all.filter(m => rank(m.lv) > rank(lv));
   main.innerHTML = `<div class="container">
     ${breadcrumbs([
-      [s.title, '#/around'],
+      [s.title, '/around'],
       [pick(p.name), ''],
     ])}
     ${pageHead({ title: `${icon(p.icon, { size: 30 })} ${esc(pick(p.name))}`, lead: esc(pick(p.about)) })}

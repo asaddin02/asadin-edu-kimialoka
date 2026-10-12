@@ -44,7 +44,7 @@ export async function render({ id, main, isCurrent }) {
   if (!id) return renderTree(main);
   const c = getClass(id);
   if (!c) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/classes">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/classes">${esc(s.title)}</a></section>`;
     return;
   }
   const idx = await moleculeIndex();
@@ -56,7 +56,7 @@ export async function render({ id, main, isCurrent }) {
     : [];
 
   main.innerHTML = `<div class="container">
-    ${breadcrumbs([[s.title, '#/classes'], ...path.slice(0, -1).map(p => [pick(p.name), `#/classes/${p.id}`]), [pick(c.name), '']])}
+    ${breadcrumbs([[s.title, '/classes'], ...path.slice(0, -1).map(p => [pick(p.name), `/classes/${p.id}`]), [pick(c.name), '']])}
     <header class="page-head class-head" style="--accent:${c.color}">
       <p class="eyebrow">${icon(c.icon, { size: 18 })} ${path.length > 1 ? esc(pick(path[0].name)) : esc(s.title)}</p>
       <h1>${esc(pick(c.name))}</h1>
@@ -124,11 +124,11 @@ function renderTree(main) {
       <ul class="tree">
         ${rootClasses()
           .map(
-            r => `<li><a href="#/classes/${r.id}" class="tree-node" style="--accent:${r.color}">${icon(r.icon, { size: 18 })} ${esc(pick(r.name))} <small>${countOf(r.id)}</small></a>
+            r => `<li><a href="/classes/${r.id}" class="tree-node" style="--accent:${r.color}">${icon(r.icon, { size: 18 })} ${esc(pick(r.name))} <small>${countOf(r.id)}</small></a>
             <ul>${childClasses(r.id)
               .map(
                 k =>
-                  `<li><a href="#/classes/${k.id}" class="tree-node">${esc(pick(k.name))}${k.general ? ` <code>${esc(k.general)}</code>` : ''} <small>${moleculesInClass(k.id).length}</small></a></li>`
+                  `<li><a href="/classes/${k.id}" class="tree-node">${esc(pick(k.name))}${k.general ? ` <code>${esc(k.general)}</code>` : ''} <small>${moleculesInClass(k.id).length}</small></a></li>`
               )
               .join('')}</ul></li>`
           )

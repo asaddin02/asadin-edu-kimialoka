@@ -4,7 +4,7 @@ const cache = new Map();
 
 async function json(path) {
   if (cache.has(path)) return cache.get(path);
-  const task = fetch(new URL(path, document.baseURI), { signal: AbortSignal.timeout(15000) }).then(r => {
+  const task = fetch(new URL(path, location.origin), { signal: AbortSignal.timeout(15000) }).then(r => {
     if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
     return r.json();
   });

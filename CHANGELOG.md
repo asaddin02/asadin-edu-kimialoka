@@ -1,5 +1,13 @@
 # Changelog
 
+## Belum dirilis
+
+- Alamat halaman kini berupa path (`/atom/Fe`, `/molecule/water`, `/learn/zat`, `/search?q=…`), bukan `#/…`;
+  tautan lama `#/…` tetap bekerja dan diarahkan otomatis.
+- Setiap halaman publik dirender di awal saat build (`scripts/prerender.mjs`) menjadi HTML statis dengan judul,
+  deskripsi, URL kanonis, Open Graph, JSON-LD, dan isi yang terbaca tanpa JavaScript, sehingga mesin pencari dapat
+  mengindeksnya; `sitemap.xml` memuat semua URL, `robots.txt` mengizinkan `/data/`, dan `404.html` memuat aplikasi.
+
 ## 3.0.0 — Alchemist (2026-09-29)
 
 Moleculium berganti nama menjadi **Alchemist** dan diperluas dari atlas molekul menjadi ensiklopedia kimia

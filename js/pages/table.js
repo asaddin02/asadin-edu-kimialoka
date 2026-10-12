@@ -72,7 +72,7 @@ export function render({ main, params }) {
   };
 
   const tile = e =>
-    `<a class="el-tile" href="#/atom/${e.s}" data-z="${e.z}" style="grid-column:${e.x};grid-row:${e.y}" aria-label="${esc(
+    `<a class="el-tile" href="/atom/${e.s}" data-z="${e.z}" style="grid-column:${e.x};grid-row:${e.y}" aria-label="${esc(
       `${pick([e.id, e.en])}, ${e.s}, ${pick(['nomor atom', 'atomic number'])} ${e.z}`
     )}"><span class="z">${e.z}</span><span class="sym">${esc(e.s)}</span><span class="nm">${esc(pick([e.id, e.en]))}</span><span class="val" data-val></span></a>`;
 
@@ -111,7 +111,7 @@ export function render({ main, params }) {
         <thead><tr><th scope="col">Z</th><th scope="col">${esc(pick(['Lambang', 'Symbol']))}</th><th scope="col">${esc(pick(['Nama', 'Name']))}</th><th scope="col">${esc(s.category)}</th><th scope="col">${esc(pick(['Massa (u)', 'Mass (u)']))}</th><th scope="col">${esc(s.eneg)}</th></tr></thead>
         <tbody>${ELEMENTS.map(
           e =>
-            `<tr><td>${e.z}</td><td><a href="#/atom/${e.s}">${esc(e.s)}</a></td><td>${esc(pick([e.id, e.en]))}</td><td>${esc(pick(CATEGORIES[e.cat].name))}</td><td>${e.m ?? '–'}</td><td>${e.eneg ?? '–'}</td></tr>`
+            `<tr><td>${e.z}</td><td><a href="/atom/${e.s}">${esc(e.s)}</a></td><td>${esc(pick([e.id, e.en]))}</td><td>${esc(pick(CATEGORIES[e.cat].name))}</td><td>${e.m ?? '–'}</td><td>${e.eneg ?? '–'}</td></tr>`
         ).join('')}</tbody>
       </table></div>
     </details>

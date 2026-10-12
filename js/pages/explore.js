@@ -156,7 +156,7 @@ export async function render({ main, params, isCurrent }) {
     const el = state.q && getElement(state.q.trim());
     $('[data-element-hit]', main).innerHTML = el
       ? notice(
-          `${icon('atom', { size: 16 })} <a href="#/atom/${el.s}">${esc(fmt(s.elementHit, { name: pick([el.id, el.en]), s: el.s }))}</a>`
+          `${icon('atom', { size: 16 })} <a href="/atom/${el.s}">${esc(fmt(s.elementHit, { name: pick([el.id, el.en]), s: el.s }))}</a>`
         )
       : '';
   }

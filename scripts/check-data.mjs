@@ -51,9 +51,9 @@ const unique = (list, what) => {
 const PAGES = new Set([...read('js/core/router.js').matchAll(/^\s{4}'([a-z]+)',$/gm)].map(m => m[1]));
 for (const p of PAGES)
   if (!existsSync(join(root, 'js/pages', `${p}.js`))) fail(`router: missing js/pages/${p}.js`);
-/** "#/page/id?x=1" → does the page exist (and the id, for pages with their own data)? */
+/** "/page/id?x=1" → does the page exist (and the id, for pages with their own data)? */
 function routeOK(href) {
-  const m = String(href).match(/^#\/([a-z]*)(?:\/([^?]+))?/);
+  const m = String(href).match(/^\/([a-z]*)(?:\/([^?]+))?/);
   if (!m) return false;
   const [, page, id] = m;
   if (!page) return true;

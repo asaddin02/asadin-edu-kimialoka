@@ -137,15 +137,23 @@ export function watchErrors(page) {
  * with ERR_NETWORK_CHANGED when the host's network interfaces change (for example Docker starting containers);
  * that is not an app failure, so the navigation is retried.
  */
-export async function open(page, hash, attempt = 1) {
+export async function open(page, route, attempt = 1) {
   const failed = [];
   const onFailed = r => failed.push(`${r.url()} (${r.failure()?.errorText})`);
   page.on('requestfailed', onFailed);
   let problem = '';
   try {
-    await page.goto(`/#/${hash}`);
+    // Inside the running app, navigate like a link click (pushState + render) instead of reloading the document:
+    // faster, and it exercises the router the way users do. The first visit loads the page from the server.
+    const inApp = await page.evaluate(() => Boolean(document.body?.dataset.route)).catch(() => false);
+    if (inApp)
+      await page.evaluate(url => {
+        history.pushState(null, '', url);
+        dispatchEvent(new PopStateEvent('popstate'));
+      }, `/${route}`);
+    else await page.goto(`/${route}`);
     try {
-      await page.waitForFunction(h => document.body.dataset.route === h, `#/${hash}`, { timeout: 20000 });
+      await page.waitForFunction(h => document.body.dataset.route === h, `/${route}`, { timeout: 20000 });
       const failure = page.locator('main [role="alert"] details code');
       if (await failure.count()) problem = `failed to load: ${await failure.first().textContent()}`;
     } catch {
@@ -155,10 +163,10 @@ export async function open(page, hash, attempt = 1) {
     page.off('requestfailed', onFailed);
   }
   if (problem && attempt < 3 && failed.some(f => f.includes('ERR_NETWORK_CHANGED'))) {
-    // Leave the page first: a same-URL goto would only change the hash and keep the failed modules.
+    // Leave the page first: a same-URL goto would keep the failed modules.
     await page.goto('about:blank');
-    return open(page, hash, attempt + 1);
+    return open(page, route, attempt + 1);
   }
-  if (problem) throw new Error(`#/${hash} ${problem} · failed requests: ${failed.join(', ') || 'none'}`);
+  if (problem) throw new Error(`/${route} ${problem} · failed requests: ${failed.join(', ') || 'none'}`);
   await expect(page.locator('main h1').first()).toBeVisible();
 }

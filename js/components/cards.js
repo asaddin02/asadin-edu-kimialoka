@@ -31,7 +31,7 @@ export function moleculeCard(m, info) {
   const name = pick(m.name);
   const cls = getClass(m.cls[0]);
   return `<article class="card mol-card">
-    <a class="card-link" href="#/molecule/${esc(m.id)}">
+    <a class="card-link" href="/molecule/${esc(m.id)}">
       <div class="card-media">${moleculePicture(m, info)}</div>
       <div class="card-body">
         ${info?.formula ? `<p class="formula">${formulaHTML(info.formula)}</p>` : ''}
@@ -41,7 +41,7 @@ export function moleculeCard(m, info) {
     </a>
     <div class="card-foot">
       ${levelBadge(m.lv)}
-      ${cls ? `<a class="chip chip-class" href="#/classes/${cls.id}">${esc(pick(cls.name))}</a>` : ''}
+      ${cls ? `<a class="chip chip-class" href="/classes/${cls.id}">${esc(pick(cls.name))}</a>` : ''}
       ${bookmarkButton(m.id, name)}
     </div>
   </article>`;
@@ -50,7 +50,7 @@ export function moleculeCard(m, info) {
 /** Result from PubChem that is not in the catalogue. */
 export function liveCard({ cid, title, formula, mw, label }) {
   return `<article class="card mol-card live">
-    <a class="card-link" href="#/molecule/cid/${Number(cid)}">
+    <a class="card-link" href="/molecule/cid/${Number(cid)}">
       <div class="card-media"><img class="card-structure" src="${imageURL(cid, 300)}" alt="${esc(pick(['Struktur 2D', '2D structure']))}: ${esc(title)}" loading="lazy" width="240" height="158" data-fallback="icon" /></div>
       <div class="card-body">
         ${formula ? `<p class="formula">${formulaHTML(formula)}</p>` : ''}
@@ -63,7 +63,7 @@ export function liveCard({ cid, title, formula, mw, label }) {
 }
 
 export function classCard(c, count) {
-  return `<a class="card class-card" href="#/classes/${c.id}" style="--accent:${c.color}">
+  return `<a class="card class-card" href="/classes/${c.id}" style="--accent:${c.color}">
     <span class="class-icon">${icon(c.icon, { size: 26 })}</span>
     <span class="class-name">${esc(pick(c.name))}</span>
     ${c.general ? `<span class="class-general">${esc(c.general)}</span>` : ''}
@@ -73,4 +73,4 @@ export function classCard(c, count) {
 
 /** Search suggestions from PubChem autocomplete (resolved to a CID when opened). */
 export const nameResult = name =>
-  `<li><a class="suggest" href="#/molecule/name/${encodeURIComponent(name)}">${icon('globe', { size: 16 })}<span>${esc(name)}</span><small>PubChem</small></a></li>`;
+  `<li><a class="suggest" href="/molecule/name/${encodeURIComponent(name)}">${icon('globe', { size: 16 })}<span>${esc(name)}</span><small>PubChem</small></a></li>`;

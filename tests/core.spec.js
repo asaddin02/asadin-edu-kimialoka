@@ -81,9 +81,9 @@ test('language switches without reload and legacy dark preferences use light mod
 
 test('unknown routes show a friendly not-found page', async ({ page }) => {
   await prefs(page);
-  await page.goto('/#/does-not-exist');
+  await page.goto('/does-not-exist');
   await expect(page.locator('h1')).toHaveText('Halaman tidak ditemukan');
-  await page.goto('/#/molecule/no-such-molecule');
+  await page.goto('/molecule/no-such-molecule');
   await expect(page.locator('h1')).toHaveText('Molekul tidak ditemukan');
 });
 
@@ -93,7 +93,7 @@ test('header search opens the unified search with the query', async ({ page }) =
   await page.goto('/');
   await page.locator('#site-search').fill('kafeina');
   await page.locator('#site-search').press('Enter');
-  await expect(page).toHaveURL(/#\/search\?q=kafeina/);
+  await expect(page).toHaveURL(/\/search\?q=kafeina/);
   await expect(page.locator('.result-top')).toContainText('Kafeina');
 });
 

@@ -17,7 +17,7 @@ export function pageHead({ title, lead = '', crumbs = [], eyebrow = '', actions 
 
 export function breadcrumbs(items) {
   return `<nav class="crumbs" aria-label="${esc(pick(['Jejak halaman', 'Breadcrumb']))}"><ol>
-    <li><a href="#/">${esc(ui.home)}</a></li>
+    <li><a href="/">${esc(ui.home)}</a></li>
     ${items
       .map(([label, href]) =>
         href ? `<li><a href="${href}">${esc(label)}</a></li>` : `<li aria-current="page">${esc(label)}</li>`

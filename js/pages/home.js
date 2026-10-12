@@ -139,7 +139,7 @@ export async function render({ main }) {
         <p class="hero-label">${icon('atom', { size: 16 })} ${esc(pick(['ALCHEMIST · ENSIKLOPEDIA KIMIA', 'ALCHEMIST · CHEMISTRY ENCYCLOPEDIA']))}</p>
         <h2 id="discovery-title">${pick(['Kenali materi.<br>Jelajahi <span>perubahannya.</span>', 'Discover matter.<br>Explore <span>how it changes.</span>'])}</h2>
         <p>${esc(s.lead)}</p>
-        <div class="hero-actions"><a class="btn btn-yellow" href="#/learn/${next?.id || 'zat'}">${icon('play', { size: 18 })} ${esc(pick(['Mulai petualangan', 'Start exploring']))}</a><a class="hero-secondary" href="#/molecule/water">${esc(pick(['Lihat molekul 3D', 'Meet a 3D molecule']))} ${icon('arrowRight', { size: 17 })}</a></div>
+        <div class="hero-actions"><a class="btn btn-yellow" href="/learn/${next?.id || 'zat'}">${icon('play', { size: 18 })} ${esc(pick(['Mulai petualangan', 'Start exploring']))}</a><a class="hero-secondary" href="/molecule/water">${esc(pick(['Lihat molekul 3D', 'Meet a 3D molecule']))} ${icon('arrowRight', { size: 17 })}</a></div>
         <p class="hero-footnote">${icon('check', { size: 15 })} ${esc(pick(['Bebas bereksplorasi. Belajar sesuai jenjangmu.', 'Explore freely. Learn at your own level.']))}</p>
       </div>
       <div class="molecule-scene" aria-hidden="true">
@@ -152,14 +152,14 @@ export async function render({ main }) {
       </div>
     </section>
     <section class="quick-discover" aria-label="${esc(pick(['Mau mulai dari mana?', 'Where would you like to start?']))}">
-      ${quick.map(([route, ic, name, desc, color]) => `<a href="#/${route}" class="quick-card quick-${color}"><span class="quick-icon">${icon(ic, { size: 25 })}</span><span><strong>${esc(pick(name))}</strong><small>${esc(pick(desc))}</small></span>${icon('arrowRight', { size: 18 })}</a>`).join('')}
+      ${quick.map(([route, ic, name, desc, color]) => `<a href="/${route}" class="quick-card quick-${color}"><span class="quick-icon">${icon(ic, { size: 25 })}</span><span><strong>${esc(pick(name))}</strong><small>${esc(pick(desc))}</small></span>${icon('arrowRight', { size: 18 })}</a>`).join('')}
     </section>
     <form class="discovery-search" role="search" data-search>
       ${icon('search', { size: 22 })}<label class="sr-only" for="hero-q">${esc(s.search)}</label><input id="hero-q" name="q" type="search" autocomplete="off" placeholder="${esc(s.search)}" /><button class="btn btn-primary" type="submit">${esc(s.go)} ${icon('arrowRight', { size: 17 })}</button>
     </form>
-    <p class="discovery-suggestions">${esc(pick(['Penasaran tentang:', 'Curious about:']))} ${['air', 'besi', 'C-14', 'sulfat', 'C6H12O6', 'baja'].map(q => `<a href="#/search?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</p>
+    <p class="discovery-suggestions">${esc(pick(['Penasaran tentang:', 'Curious about:']))} ${['air', 'besi', 'C-14', 'sulfat', 'C6H12O6', 'baja'].map(q => `<a href="/search?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</p>
     <section class="home-chain" aria-labelledby="chain-title">
-      ${sectionHead(esc(s.chain), '#/peta', undefined, 'chain-title')}
+      ${sectionHead(esc(s.chain), '/peta', undefined, 'chain-title')}
       <p class="muted">${esc(s.chainLead)}</p>
       ${chainHTML()}
     </section>
@@ -183,10 +183,10 @@ export async function render({ main }) {
 
     <div class="learning-overview">
       <section class="learning-path" aria-labelledby="path-title">
-        ${sectionHead(esc(s.path), '#/learn', undefined, 'path-title')}
+        ${sectionHead(esc(s.path), '/learn', undefined, 'path-title')}
         <p class="muted">${esc(pick(['Sedikit demi sedikit, jadi makin mengerti.', 'One small step. A little more understanding.']))}</p>
         <div class="path-steps">
-          ${path.map((t, i) => `<a class="path-step ${read[t.id] ? 'is-complete' : ''}" href="#/learn/${t.id}"><span class="step-number">${read[t.id] ? icon('check', { size: 18 }) : String(i + 1).padStart(2, '0')}</span><span class="step-content"><strong>${esc(pick(t.title))}</strong><small>${esc(pick(t.summary))}</small></span><span class="step-status">${read[t.id] ? esc(s.done) : icon('arrowRight', { size: 17 })}${quiz['topic-' + t.id] ? ` · ★ ${quiz['topic-' + t.id].best}/${quiz['topic-' + t.id].total}` : ''}</span></a>`).join('')}
+          ${path.map((t, i) => `<a class="path-step ${read[t.id] ? 'is-complete' : ''}" href="/learn/${t.id}"><span class="step-number">${read[t.id] ? icon('check', { size: 18 }) : String(i + 1).padStart(2, '0')}</span><span class="step-content"><strong>${esc(pick(t.title))}</strong><small>${esc(pick(t.summary))}</small></span><span class="step-status">${read[t.id] ? esc(s.done) : icon('arrowRight', { size: 17 })}${quiz['topic-' + t.id] ? ` · ★ ${quiz['topic-' + t.id].best}/${quiz['topic-' + t.id].total}` : ''}</span></a>`).join('')}
         </div>
       </section>
       <aside class="progress-card" aria-labelledby="progress-title">
@@ -196,17 +196,17 @@ export async function render({ main }) {
         <div class="progress-caption"><span>${esc(pick(['Jalur belajarmu', 'Your learning path']))}</span><strong>${complete}/${path.length}</strong></div>
         <progress max="${path.length || 1}" value="${complete}" aria-label="${esc(s.path)}"></progress>
         <div class="progress-stats"><span><strong>${progress.lessons}</strong>${esc(pick(['Materi dibaca', 'Lessons read']))}</span><span><strong>${progress.labs}</strong>${esc(pick(['Lab dicoba', 'Labs tried']))}</span></div>
-        <a class="btn btn-primary" href="#/learn/${next?.id || 'zat'}">${esc(pick(['Lanjut belajar', 'Keep learning']))} ${icon('arrowRight', { size: 18 })}</a>
+        <a class="btn btn-primary" href="/learn/${next?.id || 'zat'}">${esc(pick(['Lanjut belajar', 'Keep learning']))} ${icon('arrowRight', { size: 18 })}</a>
       </aside>
     </div>
 
     <section aria-labelledby="featured-title">
-      ${sectionHead(esc(s.featured), '#/explore', undefined, 'featured-title')}
+      ${sectionHead(esc(s.featured), '/explore', undefined, 'featured-title')}
       <div class="grid grid-cards">${picks.map(m => moleculeCard(m, idx.get(m.id))).join('')}</div>
     </section>
 
     <section aria-labelledby="families-title">
-      ${sectionHead(esc(s.families), '#/classes', undefined, 'families-title')}
+      ${sectionHead(esc(s.families), '/classes', undefined, 'families-title')}
       <p class="muted">${esc(s.familiesLead)}</p>
       <div class="grid grid-classes">
         ${rootClasses()
@@ -222,26 +222,26 @@ export async function render({ main }) {
     <section class="split" aria-label="${esc(s.element)} · ${esc(s.around)}">
       <article class="card element-day" style="--accent:${CATEGORIES[el.cat].color}">
         <h2>${esc(s.element)}</h2>
-        <a class="element-big" href="#/atom/${el.s}">
+        <a class="element-big" href="/atom/${el.s}">
           <span class="z">${el.z}</span><span class="sym">${esc(el.s)}</span><span class="nm">${esc(pick([el.id, el.en]))}</span>
         </a>
         <p>${esc(pick(CATEGORIES[el.cat].name))} · ${esc(el.conf)} · ${el.m ?? '–'} u</p>
-        <a class="link-more" href="#/atom/${el.s}">${esc(s.openElement)} ${icon('arrowRight', { size: 16 })}</a>
+        <a class="link-more" href="/atom/${el.s}">${esc(s.openElement)} ${icon('arrowRight', { size: 16 })}</a>
       </article>
       <article class="card">
         <h2>${esc(s.around)}</h2>
         <div class="place-chips">
-          ${PLACES.map(p => `<a class="chip chip-lg" href="#/around/${p.id}">${icon(p.icon, { size: 18 })} ${esc(pick(p.name))}</a>`).join('')}
+          ${PLACES.map(p => `<a class="chip chip-lg" href="/around/${p.id}">${icon(p.icon, { size: 18 })} ${esc(pick(p.name))}</a>`).join('')}
         </div>
       </article>
     </section>
 
     <section aria-labelledby="labs-title">
-      ${sectionHead(esc(s.labs), '#/lab', undefined, 'labs-title')}
+      ${sectionHead(esc(s.labs), '/lab', undefined, 'labs-title')}
       <div class="grid grid-4">
         ${labs
           .map(
-            l => `<a class="card lab-card" href="#/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 24 })}</span>
+            l => `<a class="card lab-card" href="/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 24 })}</span>
             <span class="card-title">${esc(pick(l.title))}</span><span class="card-text">${esc(pick(l.summary))}</span></a>`
           )
           .join('')}
@@ -256,9 +256,9 @@ export async function render({ main }) {
     </dl>
     <section class="card teacher-cta">
       <div><h2>${icon('teacher', { size: 22 })} ${esc(s.teacherTitle)}</h2><p>${esc(s.teacherLead)}</p></div>
-      <a class="btn btn-primary" href="#/teacher">${esc(s.teacherGo)}</a>
+      <a class="btn btn-primary" href="/teacher">${esc(s.teacherGo)}</a>
     </section>
-  <section class="support-banner"><div><h2>${pick(['Suka belajar di Alchemist?', 'Enjoy learning with Alchemist?'])}</h2><p>${pick(['Bantu ruang belajar ini terus tumbuh. Dukungan sukarela, belajar tetap gratis.', 'Help this learning space grow. Support is optional; learning stays free.'])}</p></div><a class="btn" href="#/dukung">${pick(['Dukung Alchemist', 'Support Alchemist'])} →</a></section></div>`;
+  <section class="support-banner"><div><h2>${pick(['Suka belajar di Alchemist?', 'Enjoy learning with Alchemist?'])}</h2><p>${pick(['Bantu ruang belajar ini terus tumbuh. Dukungan sukarela, belajar tetap gratis.', 'Help this learning space grow. Support is optional; learning stays free.'])}</p></div><a class="btn" href="/dukung">${pick(['Dukung Alchemist', 'Support Alchemist'])} →</a></section></div>`;
 
   main.querySelector('.mode-grid').addEventListener('click', e => {
     const b = e.target.closest('[data-level]');

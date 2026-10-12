@@ -1,4 +1,4 @@
-// Reaction library: #/reaction lists reactions by type and level; #/reaction/<id> shows
+// Reaction library: /reaction lists reactions by type and level; /reaction/<id> shows
 // reactants → conditions → transformation → products, with an atom and charge tally computed from the formulas
 // (every equation is also checked by scripts/check-data.mjs).
 import { $, esc, debounce } from '../core/dom.js';
@@ -83,7 +83,7 @@ function speciesLink(sp) {
   if (!link) return `${shown}${state}`;
   const [kind, id] = link.split(':');
   const href =
-    kind === 'm' && getMolecule(id) ? `#/molecule/${id}` : kind === 'i' && getIon(id) ? `#/ion/${id}` : '';
+    kind === 'm' && getMolecule(id) ? `/molecule/${id}` : kind === 'i' && getIon(id) ? `/ion/${id}` : '';
   return href ? `<a href="${href}">${shown}</a>${state}` : `${shown}${state}`;
 }
 
@@ -99,7 +99,7 @@ export function equationHTML(r) {
     const nuc = sp => {
       const [A, Z, sym] = sp;
       const el = getElement(sym);
-      return el && el.z === Z ? `<a href="#/isotope/${nuclideId(sym, A)}">${nucTerm(sp)}</a>` : nucTerm(sp);
+      return el && el.z === Z ? `<a href="/isotope/${nuclideId(sym, A)}">${nucTerm(sp)}</a>` : nucTerm(sp);
     };
     return `${r.r.map(nuc).join(' <span class="op">+</span> ')} <span class="op">→</span> ${r.p.map(nuc).join(' <span class="op">+</span> ')}`;
   }
@@ -187,7 +187,7 @@ export function render({ id, main, params }) {
 
 export function rxCard(r) {
   return `<article class="card rx-card">
-    <h3 class="card-title"><a href="#/reaction/${r.id}">${esc(pick(r.name))}</a></h3>
+    <h3 class="card-title"><a href="/reaction/${r.id}">${esc(pick(r.name))}</a></h3>
     <p class="rx-eq rx-eq-sm">${equationHTML(r)}</p>
     <p class="topic-meta">${levelBadge(r.lv)} ${r.types.map(t => `<span class="chip">${esc(pick(REACTION_TYPES[t].name))}</span>`).join(' ')}</p>
   </article>`;
@@ -196,7 +196,7 @@ export function rxCard(r) {
 function renderReaction(main, id) {
   const r = getReaction(id);
   if (!r) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/reaction">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/reaction">${esc(s.title)}</a></section>`;
     return;
   }
   const nuclear = isNuclear(r);
@@ -216,7 +216,7 @@ function renderReaction(main, id) {
     )
       .map(
         ([el, [a, b]]) =>
-          `<tr class="${a === b ? 'ok' : 'no'}"><th scope="row"><a href="#/atom/${el}">${esc(el)}</a></th><td>${a}</td><td>${b}</td></tr>`
+          `<tr class="${a === b ? 'ok' : 'no'}"><th scope="row"><a href="/atom/${el}">${esc(el)}</a></th><td>${a}</td><td>${b}</td></tr>`
       )
       .join(
         ''
@@ -231,13 +231,13 @@ function renderReaction(main, id) {
 
   main.innerHTML = `<article class="container reaction-page">
     ${breadcrumbs([
-      [s.title, '#/reaction'],
+      [s.title, '/reaction'],
       [pick(r.name), ''],
     ])}
     <header class="page-head">
       <p class="eyebrow">${icon(REACTION_TYPES[r.types[0]].icon, { size: 18 })} ${esc(s.title)}</p>
       <h1>${esc(pick(r.name))}</h1>
-      <p class="mol-badges">${levelBadge(r.lv)} ${r.types.map(t => `<a class="chip" href="#/reaction?type=${t}">${esc(pick(REACTION_TYPES[t].name))}</a>`).join(' ')}</p>
+      <p class="mol-badges">${levelBadge(r.lv)} ${r.types.map(t => `<a class="chip" href="/reaction?type=${t}">${esc(pick(REACTION_TYPES[t].name))}</a>`).join(' ')}</p>
     </header>
     <div class="card rx-equation"><p class="rx-eq rx-eq-lg">${equationHTML(r)}</p></div>
     <ol class="rx-flow">
@@ -249,8 +249,8 @@ function renderReaction(main, id) {
     <div class="grid grid-2">
       <section class="card">${tallyHTML}</section>
       <section class="card"><h2 class="h-small">${esc(s.types)}</h2><ul>${r.types.map(t => `<li><strong>${esc(pick(REACTION_TYPES[t].name))}</strong>: ${esc(pick(REACTION_TYPES[t].def))}</li>`).join('')}</ul>
-        ${labEq ? `<p><a class="btn" href="#/lab/setara?eq=${encodeURIComponent(labEq)}">${icon('compare', { size: 16 })} ${esc(s.tryLab)}</a></p>` : ''}
-        ${topic ? `<p>${esc(s.lesson)}: <a href="#/learn/${topic.id}">${esc(pick(topic.title))}</a></p>` : ''}
+        ${labEq ? `<p><a class="btn" href="/lab/setara?eq=${encodeURIComponent(labEq)}">${icon('compare', { size: 16 })} ${esc(s.tryLab)}</a></p>` : ''}
+        ${topic ? `<p>${esc(s.lesson)}: <a href="/learn/${topic.id}">${esc(pick(topic.title))}</a></p>` : ''}
       </section>
     </div>
     <section class="mol-section refs"><h2 class="h-small">${esc(s.refs)}</h2><ul class="ref-list">${refs.map(x => `<li>${extLink(x.url, x.label)}</li>`).join('')}</ul></section>

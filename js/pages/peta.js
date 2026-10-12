@@ -1,5 +1,5 @@
-// The chemistry knowledge map: #/peta shows the chain from matter to transformation and every branch of
-// chemistry; #/peta/<domain> lists that domain's concepts, layered lessons, explorers, labs and references.
+// The chemistry knowledge map: /peta shows the chain from matter to transformation and every branch of
+// chemistry; /peta/<domain> lists that domain's concepts, layered lessons, explorers, labs and references.
 import { esc } from '../core/dom.js';
 import { S, pick, fmt, depth, atLeast } from '../core/prefs.js';
 import { levelName } from '../i18n/ui.js';
@@ -61,22 +61,22 @@ export const title = route =>
 export function render({ id, main }) {
   if (id) return renderDomain(main, id);
   const stats = [
-    [DOMAINS.length, ['cabang kimia', 'branches of chemistry'], '#/peta'],
-    [new Set(DOMAINS.flatMap(d => d.concepts)).size, ['konsep dalam peta', 'mapped concepts'], '#/glossary'],
-    [GLOSSARY.length, ['istilah kamus', 'glossary terms'], '#/glossary'],
-    [TOPICS.length, ['materi 4 lapis', '4-layer lessons'], '#/learn'],
-    [118, ['unsur', 'elements'], '#/table'],
-    ['3500+', ['nuklida (isotop)', 'nuclides (isotopes)'], '#/isotope'],
-    [IONS.length, ['ion', 'ions'], '#/ion'],
-    [MOLECULES.length, ['molekul & senyawa katalog', 'catalogue molecules & compounds'], '#/explore'],
-    [CLASSES.length, ['golongan senyawa', 'compound classes'], '#/classes'],
+    [DOMAINS.length, ['cabang kimia', 'branches of chemistry'], '/peta'],
+    [new Set(DOMAINS.flatMap(d => d.concepts)).size, ['konsep dalam peta', 'mapped concepts'], '/glossary'],
+    [GLOSSARY.length, ['istilah kamus', 'glossary terms'], '/glossary'],
+    [TOPICS.length, ['materi 4 lapis', '4-layer lessons'], '/learn'],
+    [118, ['unsur', 'elements'], '/table'],
+    ['3500+', ['nuklida (isotop)', 'nuclides (isotopes)'], '/isotope'],
+    [IONS.length, ['ion', 'ions'], '/ion'],
+    [MOLECULES.length, ['molekul & senyawa katalog', 'catalogue molecules & compounds'], '/explore'],
+    [CLASSES.length, ['golongan senyawa', 'compound classes'], '/classes'],
     [
       MATERIALS.length,
       ['material, campuran & makromolekul', 'materials, mixtures & macromolecules'],
-      '#/material',
+      '/material',
     ],
-    [LIBRARY.length + NUCLEAR.length, ['reaksi setara', 'balanced reactions'], '#/reaction'],
-    [LABS.length, ['lab virtual', 'virtual labs'], '#/lab'],
+    [LIBRARY.length + NUCLEAR.length, ['reaksi setara', 'balanced reactions'], '/reaction'],
+    [LABS.length, ['lab virtual', 'virtual labs'], '/lab'],
   ];
   const groups = Object.entries(GROUPS)
     .map(
@@ -84,7 +84,7 @@ export function render({ id, main }) {
       <h2 id="grp-${g}">${esc(pick(name))}</h2>
       <div class="grid grid-3">${DOMAINS.filter(d => d.group === g)
         .map(
-          d => `<a class="card domain-card" href="#/peta/${d.id}">
+          d => `<a class="card domain-card" href="/peta/${d.id}">
           <span class="topic-icon">${icon(d.icon, { size: 24 })}</span>
           <span class="card-title">${esc(pick(d.name))}</span>
           <span class="card-text">${esc(pick(d.lead))}</span>
@@ -118,7 +118,7 @@ export function render({ id, main }) {
 function renderDomain(main, id) {
   const d = getDomain(id);
   if (!d) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/peta">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/peta">${esc(s.title)}</a></section>`;
     return;
   }
   const lv = depth();
@@ -134,7 +134,7 @@ function renderDomain(main, id) {
 
   main.innerHTML = `<article class="container peta-domain">
     ${breadcrumbs([
-      [s.title, '#/peta'],
+      [s.title, '/peta'],
       [pick(d.name), ''],
     ])}
     <header class="page-head">
@@ -148,7 +148,7 @@ function renderDomain(main, id) {
       <p class="muted small">${esc(s.lessonsLead)}</p>
       <div class="grid grid-3">${topics
         .map(
-          t => `<a class="card topic-card" href="#/learn/${t.id}?lv=${t.layers.includes(lv) ? lv : t.layers[0]}">
+          t => `<a class="card topic-card" href="/learn/${t.id}?lv=${t.layers.includes(lv) ? lv : t.layers[0]}">
           <span class="topic-icon">${icon(t.icon, { size: 22 })}</span>
           <span class="card-title">${esc(pick(t.title))}</span>
           <span class="card-text">${esc(pick(t.summary))}</span>
@@ -164,7 +164,7 @@ function renderDomain(main, id) {
       <ul class="concept-grid">${concepts
         .map(
           g =>
-            `<li><a class="card concept-card" href="#/glossary/${encodeURIComponent(g.key)}"><strong>${esc(pick(g.term))}</strong><span>${esc(pick(simple ? g.simple : g.sci))}</span></a></li>`
+            `<li><a class="card concept-card" href="/glossary/${encodeURIComponent(g.key)}"><strong>${esc(pick(g.term))}</strong><span>${esc(pick(simple ? g.simple : g.sci))}</span></a></li>`
         )
         .join('')}</ul>
     </section>
@@ -182,7 +182,7 @@ function renderDomain(main, id) {
       <div class="grid grid-4">${labs
         .map(
           l =>
-            `<a class="card lab-card" href="#/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 22 })}</span><span class="card-title">${esc(pick(l.title))}</span><span class="card-text">${esc(pick(l.summary))}</span></a>`
+            `<a class="card lab-card" href="/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 22 })}</span><span class="card-title">${esc(pick(l.title))}</span><span class="card-text">${esc(pick(l.summary))}</span></a>`
         )
         .join('')}</div></section>`
         : ''
@@ -191,7 +191,7 @@ function renderDomain(main, id) {
     ${
       related.length
         ? `<section aria-labelledby="dom-related"><h2 id="dom-related">${esc(s.related)}</h2>
-      <p class="chip-grid">${related.map(([o]) => `<a class="chip" href="#/peta/${o.id}">${icon(o.icon, { size: 14 })} ${esc(pick(o.name))}</a>`).join(' ')}</p></section>`
+      <p class="chip-grid">${related.map(([o]) => `<a class="chip" href="/peta/${o.id}">${icon(o.icon, { size: 14 })} ${esc(pick(o.name))}</a>`).join(' ')}</p></section>`
         : ''
     }
 

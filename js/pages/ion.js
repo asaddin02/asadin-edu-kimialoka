@@ -1,4 +1,4 @@
-// Ion explorer: #/ion lists cations, anions, polyatomic and complex ions; #/ion/<id> is an ion profile with its
+// Ion explorer: /ion lists cations, anions, polyatomic and complex ions; /ion/<id> is an ion profile with its
 // PubChem identity (checked by scripts/sync-ions.mjs), electron count, tests, compounds and reactions.
 import { $, esc, debounce, safeURL } from '../core/dom.js';
 import { S, pick, fmt, num, atLeast } from '../core/prefs.js';
@@ -109,7 +109,7 @@ export async function render({ id, main, params, isCurrent, cleanup }) {
     </form>
     <p class="muted" data-count aria-live="polite"></p>
     <div class="grid grid-4" data-ions></div>
-    <p class="muted small">${esc(s.lesson)}: <a href="#/learn/ion">${esc(pick(['buka materi', 'open the lesson']))}</a></p>
+    <p class="muted small">${esc(s.lesson)}: <a href="/learn/ion">${esc(pick(['buka materi', 'open the lesson']))}</a></p>
   </div>`;
   const form = $('[data-filters]', main);
   for (const k of ['kind', 'type', 'lv']) form.elements[k].value = state[k];
@@ -137,7 +137,7 @@ export async function render({ id, main, params, isCurrent, cleanup }) {
 
 export function ionCard(i) {
   const { charge } = electronCount(i);
-  return `<a class="card ion-card ion-${i.kind}" href="#/ion/${i.id}">
+  return `<a class="card ion-card ion-${i.kind}" href="/ion/${i.id}">
     <span class="ion-formula">${formulaHTML(i.f)}</span>
     <span class="card-title">${esc(pick(i.name))}</span>
     <span class="topic-meta">${esc(pick(i.kind === 'cation' ? s.cation : s.anion))} · ${esc(pick(i.complex ? s.complex : i.poly ? s.poly : s.mono))} · ${esc(pick(['muatan', 'charge']))} ${chargeText(charge)}</span>
@@ -147,7 +147,7 @@ export function ionCard(i) {
 async function renderIon(main, id, isCurrent, cleanup) {
   const ion = getIon(id);
   if (!ion) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/ion">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/ion">${esc(s.title)}</a></section>`;
     return;
   }
   trackVisit(`ion:${ion.id}`, pick(ion.name));
@@ -176,14 +176,14 @@ async function renderIon(main, id, isCurrent, cleanup) {
     [s.electrons, `${electrons} (${protons} − (${chargeText(charge)}))`],
     [
       s.composition,
-      els.map(([e, n]) => `<a href="#/atom/${e.s}">${esc(e.s)}</a>${n > 1 ? ` × ${n}` : ''}`).join(', '),
+      els.map(([e, n]) => `<a href="/atom/${e.s}">${esc(e.s)}</a>${n > 1 ? ` × ${n}` : ''}`).join(', '),
     ],
     props.mw ? [s.mass, `${num(props.mw, 3)} g/mol`] : null,
   ].filter(Boolean);
 
   main.innerHTML = `<article class="container ion-page">
     ${breadcrumbs([
-      [s.title, '#/ion'],
+      [s.title, '/ion'],
       [pick(ion.name), ''],
     ])}
     <header class="mol-head">
@@ -214,20 +214,20 @@ async function renderIon(main, id, isCurrent, cleanup) {
 
     <section class="mol-section"><h2>${esc(s.compounds)}</h2>
       ${compounds.length ? `<div class="grid grid-cards">${compounds.map(m => moleculeCard(m, molIdx.get(m.id))).join('')}</div>` : `<p class="muted">${esc(s.noCompounds)}</p>`}
-      <p><a class="link-more" href="#/explore?q=${encodeURIComponent(ion.q?.[0] || pick(ion.name))}">${icon('search', { size: 16 })} ${esc(pick(['Cari senyawa lain di PubChem', 'Search more compounds in PubChem']))}</a></p>
-      ${acid ? `<p>${esc(s.acid)}: <a href="#/molecule/${acid.id}">${esc(pick(acid.name))}</a></p>` : ''}
+      <p><a class="link-more" href="/explore?q=${encodeURIComponent(ion.q?.[0] || pick(ion.name))}">${icon('search', { size: 16 })} ${esc(pick(['Cari senyawa lain di PubChem', 'Search more compounds in PubChem']))}</a></p>
+      ${acid ? `<p>${esc(s.acid)}: <a href="/molecule/${acid.id}">${esc(pick(acid.name))}</a></p>` : ''}
     </section>
 
     ${
       reactions.length
         ? `<section class="mol-section"><h2>${esc(s.reactions)}</h2><ul class="rx-list">${reactions
-            .map(r => `<li><a href="#/reaction/${r.id}">${esc(pick(r.name))}</a></li>`)
+            .map(r => `<li><a href="/reaction/${r.id}">${esc(pick(r.name))}</a></li>`)
             .join('')}</ul></section>`
         : ''
     }
     ${
       materials.length
-        ? `<section class="mol-section"><h2>${esc(s.materials)}</h2><p class="chip-grid">${materials.map(m => `<a class="chip" href="#/material/${m.id}">${esc(pick(m.name))}</a>`).join(' ')}</p></section>`
+        ? `<section class="mol-section"><h2>${esc(s.materials)}</h2><p class="chip-grid">${materials.map(m => `<a class="chip" href="/material/${m.id}">${esc(pick(m.name))}</a>`).join(' ')}</p></section>`
         : ''
     }
     ${
@@ -258,7 +258,7 @@ async function renderIon(main, id, isCurrent, cleanup) {
 
     <section class="mol-section refs"><h2 class="h-small">${esc(s.refs)}</h2>
       <ul class="ref-list">${refs.map(r => `<li>${extLink(r.url, r.label)}</li>`).join('')}${cid ? `<li>${extLink(recordURL(cid), `PubChem CID ${cid}`)}</li>` : ''}</ul>
-      <p><a href="#/learn/ion">${esc(s.lesson)}</a></p>
+      <p><a href="/learn/ion">${esc(s.lesson)}</a></p>
     </section>
   </article>`;
 

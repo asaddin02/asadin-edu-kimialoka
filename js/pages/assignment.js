@@ -1,4 +1,4 @@
-// Assignment from a teacher: everything is inside the link (#/assignment?d=…); answers stay on this device.
+// Assignment from a teacher: everything is inside the link (/assignment?d=…); answers stay on this device.
 import { $, esc, decodeData, debounce } from '../core/dom.js';
 import { S, pick, LEVELS } from '../core/prefs.js';
 import { levelName } from '../i18n/ui.js';
@@ -75,7 +75,7 @@ export async function render({ main, params }) {
       <div class="field"><label for="as-class">${esc(s.klass)}</label><input id="as-class" data-answer="class" value="${esc(answers.class || '')}" /></div>
     </div>
     ${a.i ? `<section class="card"><h2 class="h-small">${esc(s.instructions)}</h2><p class="pre">${esc(a.i)}</p></section>` : ''}
-    ${topic ? `<section><h2>${esc(s.lesson)}</h2><a class="card topic-card" href="#/learn/${topic.id}${a.l && a.l !== 'guru' ? `?lv=${a.l}` : ''}"><span class="topic-icon">${icon(topic.icon, { size: 24 })}</span><span class="card-title">${esc(pick(topic.title))}</span><span class="card-text">${esc(pick(topic.summary))}</span></a></section>` : ''}
+    ${topic ? `<section><h2>${esc(s.lesson)}</h2><a class="card topic-card" href="/learn/${topic.id}${a.l && a.l !== 'guru' ? `?lv=${a.l}` : ''}"><span class="topic-icon">${icon(topic.icon, { size: 24 })}</span><span class="card-title">${esc(pick(topic.title))}</span><span class="card-text">${esc(pick(topic.summary))}</span></a></section>` : ''}
     ${a.m.length ? `<section><h2>${esc(s.molecules)}</h2><div class="grid grid-cards">${a.m.map(id => moleculeCard(getMolecule(id), idx.get(id))).join('')}</div></section>` : ''}
     ${
       a.q.length

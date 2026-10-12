@@ -1,4 +1,4 @@
-// Atoms: #/atom is the hub for atomic structure; #/atom/<symbol> is an element profile: properties, isotopes and
+// Atoms: /atom is the hub for atomic structure; /atom/<symbol> is an element profile: properties, isotopes and
 // the IUPAC standard atomic weight, history, uses and occurrence from the reference sources PubChem gathers, GHS
 // hazards of the elemental substance, and everything in Alchemist that contains the element (ions, molecules,
 // reactions, materials, lessons).
@@ -214,7 +214,7 @@ export async function render({ id, main, isCurrent }) {
   if (!id) return renderHub(main);
   const e = getElement(id);
   if (!e) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/table">${esc(pick(['Tabel periodik', 'Periodic table']))}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/table">${esc(pick(['Tabel periodik', 'Periodic table']))}</a></section>`;
     return;
   }
   trackVisit(`el:${e.s}`, pick([e.id, e.en]));
@@ -299,7 +299,7 @@ export async function render({ id, main, isCurrent }) {
 
   main.innerHTML = `<article class="container element-page" style="--accent:${cat.color}">
     ${breadcrumbs([
-      [pick(['Tabel periodik', 'Periodic table']), '#/table'],
+      [pick(['Tabel periodik', 'Periodic table']), '/table'],
       [pick([e.id, e.en]), ''],
     ])}
     <header class="element-head">
@@ -309,8 +309,8 @@ export async function render({ id, main, isCurrent }) {
         <h1>${esc(pick([e.id, e.en]))} <span class="muted">(${esc(e.s)})</span></h1>
         <p class="mol-other">${esc(pick([e.en, e.id]))}</p>
         <nav class="el-nav" aria-label="${esc(pick(['Unsur lain', 'Other elements']))}">
-          ${prev ? `<a class="btn btn-small" href="#/atom/${prev.s}" aria-label="${esc(s.prev)}: ${esc(pick([prev.id, prev.en]))}">${`← ${esc(prev.s)}`}</a>` : ''}
-          ${next ? `<a class="btn btn-small" href="#/atom/${next.s}" aria-label="${esc(s.next)}: ${esc(pick([next.id, next.en]))}">${`${esc(next.s)} →`}</a>` : ''}
+          ${prev ? `<a class="btn btn-small" href="/atom/${prev.s}" aria-label="${esc(s.prev)}: ${esc(pick([prev.id, prev.en]))}">${`← ${esc(prev.s)}`}</a>` : ''}
+          ${next ? `<a class="btn btn-small" href="/atom/${next.s}" aria-label="${esc(s.next)}: ${esc(pick([next.id, next.en]))}">${`${esc(next.s)} →`}</a>` : ''}
         </nav>
       </div>
     </header>
@@ -324,7 +324,7 @@ export async function render({ id, main, isCurrent }) {
         <figure class="card bohr-card"><figcaption class="h-small">${esc(s.bohr)}</figcaption>${bohrSVG(e.shells, e.s, 240)}</figure>
       </div>
     </div>
-    ${atLeast('sma') ? `<section class="card"><h2 class="h-small">${esc(s.orbitals)}</h2>${orbitalBoxes(parts)}<p><a href="#/lab/orbital?z=${e.z}">${esc(s.labLink)}</a></p></section>` : ''}
+    ${atLeast('sma') ? `<section class="card"><h2 class="h-small">${esc(s.orbitals)}</h2>${orbitalBoxes(parts)}<p><a href="/lab/orbital?z=${e.z}">${esc(s.labLink)}</a></p></section>` : ''}
     ${rec ? isotopeSection(e, rec, lv, { name, nuclideCount, w, weightTitle }) : ''}
     ${
       paras.length
@@ -364,7 +364,7 @@ export async function render({ id, main, isCurrent }) {
     <section class="mol-section" aria-labelledby="safety-title"><h2 id="safety-title">${esc(s.safety)}</h2>
       ${
         rec?.ghs
-          ? `<p class="muted small">${esc(fmt(s.safetyFor, { what: substance ? pick(substance.name) : name, cid: rec.ghsCid }))}${substance ? ` <a href="#/molecule/${substance.id}">${esc(pick(['Buka kartu zatnya', 'Open its substance card']))}</a>` : ''}</p>${ghsPanel(rec.ghs, lv)}`
+          ? `<p class="muted small">${esc(fmt(s.safetyFor, { what: substance ? pick(substance.name) : name, cid: rec.ghsCid }))}${substance ? ` <a href="/molecule/${substance.id}">${esc(pick(['Buka kartu zatnya', 'Open its substance card']))}</a>` : ''}</p>${ghsPanel(rec.ghs, lv)}`
           : `<p class="muted">${esc(s.safetyNone)}</p>`
       }
     </section>
@@ -391,19 +391,19 @@ export async function render({ id, main, isCurrent }) {
               .join('')}</div>`
           : `<p class="muted">${esc(s.noMolecules)}</p>`
       }
-      <p><a class="link-more" href="#/explore?q=${encodeURIComponent(e.s)}">${icon('search', { size: 16 })} ${esc(pick(['Cari senyawa lain di PubChem', 'Search more compounds in PubChem']))}</a></p>
+      <p><a class="link-more" href="/explore?q=${encodeURIComponent(e.s)}">${icon('search', { size: 16 })} ${esc(pick(['Cari senyawa lain di PubChem', 'Search more compounds in PubChem']))}</a></p>
     </section>
     ${
       reactions.length
         ? `<section class="mol-section" aria-labelledby="rx-title"><h2 id="rx-title">${esc(fmt(s.reactions, { name }))}</h2>
       <div class="rx-grid">${reactions.slice(0, 6).map(rxCard).join('')}</div>
-      ${reactions.length > 6 ? `<p><a class="link-more" href="#/reaction?q=${encodeURIComponent(e.s)}">${esc(pick(['Lihat semua reaksi', 'See all reactions']))} (${reactions.length})</a></p>` : ''}</section>`
+      ${reactions.length > 6 ? `<p><a class="link-more" href="/reaction?q=${encodeURIComponent(e.s)}">${esc(pick(['Lihat semua reaksi', 'See all reactions']))} (${reactions.length})</a></p>` : ''}</section>`
         : ''
     }
     ${
       materials.length
         ? `<section class="mol-section" aria-labelledby="mat-title"><h2 id="mat-title">${esc(fmt(s.materials, { name }))}</h2>
-      <p class="chip-grid">${materials.map(m => `<a class="chip" href="#/material/${m.id}">${esc(pick(m.name))} · ${esc(pick(MATERIAL_TYPES[m.type].name))}</a>`).join(' ')}</p></section>`
+      <p class="chip-grid">${materials.map(m => `<a class="chip" href="/material/${m.id}">${esc(pick(m.name))} · ${esc(pick(MATERIAL_TYPES[m.type].name))}</a>`).join(' ')}</p></section>`
         : ''
     }
     <section class="mol-section" aria-labelledby="learn-title"><h2 id="learn-title">${esc(s.lessons)}</h2>
@@ -411,10 +411,10 @@ export async function render({ id, main, isCurrent }) {
       <div class="grid grid-cards">${lessons
         .map(
           t =>
-            `<a class="card topic-card" href="#/learn/${t.id}"><span class="topic-icon">${icon(t.icon, { size: 22 })}</span><span class="card-title">${esc(pick(t.title))}</span><span class="card-text">${esc(pick(t.summary))}</span></a>`
+            `<a class="card topic-card" href="/learn/${t.id}"><span class="topic-icon">${icon(t.icon, { size: 22 })}</span><span class="card-title">${esc(pick(t.title))}</span><span class="card-text">${esc(pick(t.summary))}</span></a>`
         )
         .join('')}</div>
-      <p class="chip-row">${domains.map(d => `<a class="chip" href="#/peta/${d.id}">${icon(d.icon, { size: 14 })} ${esc(pick(d.name))}</a>`).join(' ')}</p>
+      <p class="chip-row">${domains.map(d => `<a class="chip" href="/peta/${d.id}">${icon(d.icon, { size: 14 })} ${esc(pick(d.name))}</a>`).join(' ')}</p>
     </section>
     <section class="mol-section refs" aria-labelledby="ref-title"><h2 class="h-small" id="ref-title">${esc(s.refs)}</h2>
       <ul class="ref-list">
@@ -443,7 +443,7 @@ function isotopeSection(e, rec, lv, { name, nuclideCount, w, weightTitle }) {
       <tbody>${natural
         .map(
           x =>
-            `<tr><th scope="row"><a href="#/isotope/${nuclideId(e.s, x.A)}">${esc(nuclideLabel(x.A, e.s))}</a></th>${lv !== 'smp' ? `<td class="mono">${esc(x.mass)}</td>` : ''}<td class="mono">${esc(x.abundance)}</td></tr>`
+            `<tr><th scope="row"><a href="/isotope/${nuclideId(e.s, x.A)}">${esc(nuclideLabel(x.A, e.s))}</a></th>${lv !== 'smp' ? `<td class="mono">${esc(x.mass)}</td>` : ''}<td class="mono">${esc(x.abundance)}</td></tr>`
         )
         .join('')}</tbody></table></div>
       ${intervals ? `<p class="muted small">${esc(s.isoIntervalNote)}</p>` : ''}`
@@ -459,7 +459,7 @@ function isotopeSection(e, rec, lv, { name, nuclideCount, w, weightTitle }) {
       <div class="card">
         ${count ? `<p>${esc(count)}</p>` : ''}
         ${table}
-        <p><a class="btn btn-small" href="#/isotope?q=${encodeURIComponent(e.s)}">${icon('nucleus', { size: 16 })} ${esc(fmt(s.allIsotopes, { n: nuclideCount }))}</a></p>
+        <p><a class="btn btn-small" href="/isotope?q=${encodeURIComponent(e.s)}">${icon('nucleus', { size: 16 })} ${esc(fmt(s.allIsotopes, { n: nuclideCount }))}</a></p>
       </div>
     </div>
   </section>`;
@@ -489,12 +489,12 @@ function renderHub(main) {
     <section>
       <h2>${esc(s.explore)}</h2>
       <div class="grid grid-4">
-        <a class="card lab-card" href="#/table"><span class="topic-icon">${icon('table', { size: 24 })}</span><span class="card-title">${esc(pick(['Tabel periodik', 'Periodic table']))}</span><span class="card-text">${esc(pick(['118 unsur dengan data PubChem', '118 elements with PubChem data']))}</span></a>
-        <a class="card lab-card" href="#/lab/orbital"><span class="topic-icon">${icon('atom', { size: 24 })}</span><span class="card-title">${esc(pick(['Lab konfigurasi elektron', 'Electron configuration lab']))}</span><span class="card-text">${esc(pick(['Aufbau, Pauli, Hund, dan bentuk orbital', 'Aufbau, Pauli, Hund and orbital shapes']))}</span></a>
-        <a class="card lab-card" href="#/lab/nyala"><span class="topic-icon">${icon('flame', { size: 24 })}</span><span class="card-title">${esc(pick(['Uji nyala logam', 'Flame tests']))}</span><span class="card-text">${esc(pick(['Warna nyala dari loncatan elektron', 'Flame colours from electron jumps']))}</span></a>
-        <a class="card lab-card" href="#/learn/atom"><span class="topic-icon">${icon('book', { size: 24 })}</span><span class="card-title">${esc(pick(['Materi: Atom dan strukturnya', 'Lesson: Atoms and their structure']))}</span><span class="card-text">${esc(pick(['Dari Dalton sampai mekanika kuantum', 'From Dalton to quantum mechanics']))}</span></a>
+        <a class="card lab-card" href="/table"><span class="topic-icon">${icon('table', { size: 24 })}</span><span class="card-title">${esc(pick(['Tabel periodik', 'Periodic table']))}</span><span class="card-text">${esc(pick(['118 unsur dengan data PubChem', '118 elements with PubChem data']))}</span></a>
+        <a class="card lab-card" href="/lab/orbital"><span class="topic-icon">${icon('atom', { size: 24 })}</span><span class="card-title">${esc(pick(['Lab konfigurasi elektron', 'Electron configuration lab']))}</span><span class="card-text">${esc(pick(['Aufbau, Pauli, Hund, dan bentuk orbital', 'Aufbau, Pauli, Hund and orbital shapes']))}</span></a>
+        <a class="card lab-card" href="/lab/nyala"><span class="topic-icon">${icon('flame', { size: 24 })}</span><span class="card-title">${esc(pick(['Uji nyala logam', 'Flame tests']))}</span><span class="card-text">${esc(pick(['Warna nyala dari loncatan elektron', 'Flame colours from electron jumps']))}</span></a>
+        <a class="card lab-card" href="/learn/atom"><span class="topic-icon">${icon('book', { size: 24 })}</span><span class="card-title">${esc(pick(['Materi: Atom dan strukturnya', 'Lesson: Atoms and their structure']))}</span><span class="card-text">${esc(pick(['Dari Dalton sampai mekanika kuantum', 'From Dalton to quantum mechanics']))}</span></a>
       </div>
-      <p class="hero-try">${sample.map(e => `<a class="chip" href="#/atom/${e.s}">${esc(e.s)} · ${esc(pick([e.id, e.en]))}</a>`).join(' ')}</p>
+      <p class="hero-try">${sample.map(e => `<a class="chip" href="/atom/${e.s}">${esc(e.s)} · ${esc(pick([e.id, e.en]))}</a>`).join(' ')}</p>
     </section>
   </div>`;
   const select = $('[data-pick]', main);

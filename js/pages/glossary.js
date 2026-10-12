@@ -38,15 +38,15 @@ const termHTML = (g, open = false) => {
   const sci = `<p><strong>${esc(s.sci)}:</strong> ${esc(pick(g.sci))}</p>`;
   const examples = (g.m || []).map(getMolecule).filter(Boolean);
   return `<article class="card term-card ${open ? 'is-open' : ''}" id="term-${g.key}">
-    <h2 class="h-small"><a href="#/glossary/${g.key}">${esc(pick(g.term))}</a> <span class="muted small" lang="${pick(['en', 'id'])}">${esc(pick([g.term[1], g.term[0]]))}</span></h2>
+    <h2 class="h-small"><a href="/glossary/${g.key}">${esc(pick(g.term))}</a> <span class="muted small" lang="${pick(['en', 'id'])}">${esc(pick([g.term[1], g.term[0]]))}</span></h2>
     ${simpleFirst ? simple + sci : sci + simple}
-    ${examples.length ? `<p class="small"><strong>${esc(s.examples)}:</strong> ${examples.map(m => `<a class="chip" href="#/molecule/${m.id}">${esc(pick(m.name))}</a>`).join(' ')}</p>` : ''}
+    ${examples.length ? `<p class="small"><strong>${esc(s.examples)}:</strong> ${examples.map(m => `<a class="chip" href="/molecule/${m.id}">${esc(pick(m.name))}</a>`).join(' ')}</p>` : ''}
     ${
       g.see?.length
         ? `<p class="small"><strong>${esc(s.see)}:</strong> ${g.see
             .map(findTerm)
             .filter(Boolean)
-            .map(t => `<a href="#/glossary/${t.key}">${esc(pick(t.term))}</a>`)
+            .map(t => `<a href="/glossary/${t.key}">${esc(pick(t.term))}</a>`)
             .join(', ')}</p>`
         : ''
     }
@@ -62,8 +62,7 @@ function usesHTML(g) {
     domains.length
       ? `<section><h2 class="h-small">${icon('map', { size: 18 })} ${esc(s.domains)}</h2><p class="chip-grid">${domains
           .map(
-            d =>
-              `<a class="chip" href="#/peta/${d.id}">${icon(d.icon, { size: 14 })} ${esc(pick(d.name))}</a>`
+            d => `<a class="chip" href="/peta/${d.id}">${icon(d.icon, { size: 14 })} ${esc(pick(d.name))}</a>`
           )
           .join(' ')}</p></section>`
       : ''
@@ -72,14 +71,14 @@ function usesHTML(g) {
       ? `<section><h2 class="h-small">${icon('book', { size: 18 })} ${esc(s.lessons)}</h2><p class="chip-grid">${lessons
           .map(
             t =>
-              `<a class="chip" href="#/learn/${t.id}">${icon(t.icon, { size: 14 })} ${esc(pick(t.title))}</a>`
+              `<a class="chip" href="/learn/${t.id}">${icon(t.icon, { size: 14 })} ${esc(pick(t.title))}</a>`
           )
           .join(' ')}</p></section>`
       : ''
   }${
     back.length
       ? `<section><h2 class="h-small">${esc(s.mentioned)}</h2><p class="chip-grid">${back
-          .map(t => `<a class="chip" href="#/glossary/${t.key}">${esc(pick(t.term))}</a>`)
+          .map(t => `<a class="chip" href="/glossary/${t.key}">${esc(pick(t.term))}</a>`)
           .join(' ')}</p></section>`
       : ''
   }`;
@@ -90,11 +89,11 @@ export function render({ id, main, params }) {
     const g = findTerm(id);
     main.innerHTML = `<div class="container narrow">
       ${breadcrumbs([
-        [s.title, '#/glossary'],
+        [s.title, '/glossary'],
         [g ? pick(g.term) : id, ''],
       ])}
       ${g ? `<h1>${esc(pick(g.term))}</h1>${termHTML(g, true)}${usesHTML(g)}` : emptyState(s.none)}
-      <p><a class="btn" href="#/glossary">${esc(s.back)}</a></p>
+      <p><a class="btn" href="/glossary">${esc(s.back)}</a></p>
     </div>`;
     return;
   }

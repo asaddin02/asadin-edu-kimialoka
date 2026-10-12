@@ -1,5 +1,6 @@
 // Learning shell: grouped navigation, search, learner level and language.
 import { $, $$, esc } from '../core/dom.js';
+import { go } from '../core/router.js';
 import { getPrefs, setPref, LEVELS, pick } from '../core/prefs.js';
 import { ui, levelName, levelLong } from '../i18n/ui.js';
 import { icon } from './icons.js';
@@ -53,11 +54,11 @@ export function renderHeader() {
   const prefs = getPrefs();
   const count = bookmarks().length;
   const link = ([page, key, ic]) =>
-    `<a class="nav-link" href="#/${page === 'home' ? '' : page}" data-nav="${page}">${icon(ic, { size: 20 })}<span>${esc(ui[key])}</span>${
+    `<a class="nav-link" href="/${page === 'home' ? '' : page}" data-nav="${page}">${icon(ic, { size: 20 })}<span>${esc(ui[key])}</span>${
       page === 'saved' ? `<span class="count" aria-label="${count}">${count}</span>` : ''
     }</a>`;
-  const brand = `<a class="brand" href="#/" aria-label="Alchemist, ${esc(ui.home)}">
-    <img src="assets/brand/logo.png" alt="" width="44" height="44" />
+  const brand = `<a class="brand" href="/" aria-label="Alchemist, ${esc(ui.home)}">
+    <img src="/assets/brand/logo.png" alt="" width="44" height="44" />
     <span class="brand-text"><strong>Alchemist<span class="brand-dot">.</span></strong><small>BY ASADIN EDU</small></span>
   </a>`;
   $('#header').innerHTML = `
@@ -66,8 +67,8 @@ export function renderHeader() {
       <nav aria-label="${esc(pick(['Navigasi utama', 'Main navigation']))}">
         ${SIDEBAR.map(([caption, pages]) => `<p class="nav-caption">${esc(pick(caption))}</p>${pages.map(p => link(NAV[p])).join('')}`).join('')}
       </nav>
-      <a class="sidebar-teacher" href="#/teacher" data-nav="teacher">${icon('teacher', { size: 22 })}<span><strong>${esc(ui.teacher)}</strong><small>${esc(pick(['Teman mengajar yang seru', 'Make learning come alive']))}</small></span>${icon('arrowRight', { size: 16 })}</a>
-      <a class="sidebar-about" href="#/about" data-nav="about">${icon('info', { size: 16 })} ${esc(ui.about)}</a>
+      <a class="sidebar-teacher" href="/teacher" data-nav="teacher">${icon('teacher', { size: 22 })}<span><strong>${esc(ui.teacher)}</strong><small>${esc(pick(['Teman mengajar yang seru', 'Make learning come alive']))}</small></span>${icon('arrowRight', { size: 16 })}</a>
+      <a class="sidebar-about" href="/about" data-nav="about">${icon('info', { size: 16 })} ${esc(ui.about)}</a>
     </aside>
     <div class="header-bar container">
       <div class="mobile-brand">${brand}</div>
@@ -93,7 +94,7 @@ export function renderHeader() {
       <p class="drawer-mode">${esc(levelLong(prefs.level))}</p>
     </div>
     <nav class="mobile-dock" aria-label="${esc(pick(['Pintasan belajar', 'Learning shortcuts']))}">${DOCK.map(p => link(NAV[p])).join('')}</nav>`;
-  markActive(location.hash.replace(/^#\/?/, '').split(/[/?]/)[0] || 'home');
+  markActive(location.pathname.split('/')[1] || 'home');
   updateOffline();
 }
 
@@ -148,7 +149,7 @@ export function bindShell(onSearch) {
     e.preventDefault();
     const q = new FormData(form).get('q')?.toString().trim();
     if (q) onSearch(q);
-    else location.hash = '#/search';
+    else go('/search');
   });
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
@@ -166,7 +167,7 @@ export function renderFooter() {
   $('#footer').innerHTML = `
     <div class="container footer-grid">
       <div>
-        <p class="footer-brand"><img src="assets/brand/logo.png" alt="" width="28" height="28" /> <strong>Alchemist</strong></p>
+        <p class="footer-brand"><img src="/assets/brand/logo.png" alt="" width="28" height="28" /> <strong>Alchemist</strong></p>
         <p>${esc(
           pick([
             'Ensiklopedia kimia interaktif yang terbuka untuk pelajar SD sampai mahasiswa, serta guru. Bagian dari Asadin Edu, bersama BioTaxa.',
@@ -190,10 +191,10 @@ export function renderFooter() {
       <div>
         <h2 class="footer-title">Alchemist</h2>
         <ul class="footer-links">
-          <li><a href="#/dukung">${esc(ui.dukung)}</a></li>
-          <li><a href="#/about">${esc(ui.about)}</a></li>
-          <li><a href="#/teacher">${esc(ui.teacher)}</a></li>
-          <li><a href="#/glossary">${esc(ui.glossary)}</a></li>
+          <li><a href="/dukung">${esc(ui.dukung)}</a></li>
+          <li><a href="/about">${esc(ui.about)}</a></li>
+          <li><a href="/teacher">${esc(ui.teacher)}</a></li>
+          <li><a href="/glossary">${esc(ui.glossary)}</a></li>
           <li><a href="${esc(CONFIG.repository)}" rel="noopener" target="_blank">${esc(pick(['Kode sumber (MIT)', 'Source code (MIT)']))}</a></li>
         </ul>
       </div>

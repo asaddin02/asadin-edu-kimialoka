@@ -80,7 +80,7 @@ export const title = route => (route.id ? pick(findTopic(route.id)?.title || ['M
 export async function render({ id, main, params, cleanup, isCurrent }) {
   if (!id) return renderList(main, params);
   if (!findTopic(id)) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/learn">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/learn">${esc(s.title)}</a></section>`;
     return;
   }
   main.innerHTML = `<div class="container">${loading()}</div>`;
@@ -102,7 +102,7 @@ export async function render({ id, main, params, cleanup, isCurrent }) {
   const levels = ['sd', 'smp', 'sma', 'kuliah'].filter(l => t.body[l]);
   main.innerHTML = `<article class="container lesson">
     ${breadcrumbs([
-      [s.title, '#/learn'],
+      [s.title, '/learn'],
       [pick(t.title), ''],
     ])}
     <header class="page-head">
@@ -140,7 +140,7 @@ export async function render({ id, main, params, cleanup, isCurrent }) {
             .filter(Boolean)
             .map(
               l =>
-                `<a class="card lab-card" href="#/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 24 })}</span><span class="card-title">${esc(pick(l.title))}</span><span class="card-text">${esc(pick(l.summary))}</span></a>`
+                `<a class="card lab-card" href="/lab/${l.id}"><span class="topic-icon">${icon(l.icon, { size: 24 })}</span><span class="card-title">${esc(pick(l.title))}</span><span class="card-text">${esc(pick(l.summary))}</span></a>`
             )
             .join('')}</div></section>`
         : ''
@@ -150,8 +150,8 @@ export async function render({ id, main, params, cleanup, isCurrent }) {
     ${isTeacher() ? teacherNotes(t) : ''}
     ${refsHTML(t)}
     <nav class="pager" aria-label="${esc(pick(['Materi lain', 'Other lessons']))}">
-      ${prev ? `<a class="btn" href="#/learn/${prev.id}">← ${esc(pick(prev.title))}</a>` : '<span></span>'}
-      ${next ? `<a class="btn" href="#/learn/${next.id}">${esc(pick(next.title))} →</a>` : ''}
+      ${prev ? `<a class="btn" href="/learn/${prev.id}">← ${esc(pick(prev.title))}</a>` : '<span></span>'}
+      ${next ? `<a class="btn" href="/learn/${next.id}">${esc(pick(next.title))} →</a>` : ''}
     </nav>
   </article>`;
 
@@ -216,28 +216,28 @@ function relatedHTML(t) {
     elements.length
       ? `<h3 class="h-small">${esc(s.elements)}</h3>${chips(
           elements,
-          e => `#/atom/${e.s}`,
+          e => `/atom/${e.s}`,
           e => `${esc(e.s)} · ${esc(pick([e.id, e.en]))}`
         )}`
       : '',
     ions.length
       ? `<h3 class="h-small">${esc(s.ions)}</h3>${chips(
           ions,
-          i => `#/ion/${i.id}`,
+          i => `/ion/${i.id}`,
           i => `${esc(i.f)} · ${esc(pick(i.name))}`
         )}`
       : '',
     reactions.length
       ? `<h3 class="h-small">${esc(s.reactions)}</h3>${chips(
           reactions,
-          r => `#/reaction/${r.id}`,
+          r => `/reaction/${r.id}`,
           r => esc(pick(r.name))
         )}`
       : '',
     materials.length
       ? `<h3 class="h-small">${esc(s.materials)}</h3>${chips(
           materials,
-          m => `#/material/${m.id}`,
+          m => `/material/${m.id}`,
           m => esc(pick(m.name))
         )}`
       : '',
@@ -246,13 +246,13 @@ function relatedHTML(t) {
     terms.length
       ? `<section aria-labelledby="concepts-title"><h2 id="concepts-title">${icon('bulb', { size: 20 })} ${esc(s.concepts)}</h2>${chips(
           terms,
-          g => `#/glossary/${g.key}`,
+          g => `/glossary/${g.key}`,
           g => esc(pick(g.term))
         )}</section>`
       : ''
   }${explore ? `<section class="card" aria-labelledby="explore-title"><h2 id="explore-title">${icon('search', { size: 20 })} ${esc(s.explore)}</h2>${explore}</section>` : ''}${
     domains.length
-      ? `<p class="muted">${esc(s.domains)}: ${domains.map(d => `<a href="#/peta/${d.id}">${esc(pick(d.name))}</a>`).join(', ')}</p>`
+      ? `<p class="muted">${esc(s.domains)}: ${domains.map(d => `<a href="/peta/${d.id}">${esc(pick(d.name))}</a>`).join(', ')}</p>`
       : ''
   }`;
 }
@@ -285,13 +285,13 @@ function teacherNotes(t) {
       <dt>${esc(s.misconceptions)}</dt><dd><ul>${n.misconceptions.map(g => `<li>${esc(pick(g))}</li>`).join('')}</ul></dd>
       <dt>${esc(s.assessment)}</dt><dd>${esc(pick(n.assessment))}</dd>
     </dl>
-    <a class="btn" href="#/teacher?topic=${t.id}">${icon('print', { size: 16 })} ${esc(s.printPlan)}</a>
+    <a class="btn" href="/teacher?topic=${t.id}">${icon('print', { size: 16 })} ${esc(s.printPlan)}</a>
   </section>`;
 }
 
 function topicCard(t, i, lv, read, quiz) {
   const q = quiz[`topic-${t.id}`];
-  return `<a class="card topic-card" href="#/learn/${t.id}?lv=${lv}">
+  return `<a class="card topic-card" href="/learn/${t.id}?lv=${lv}">
     ${i != null ? `<span class="topic-num">${i + 1}</span>` : ''}
     <span class="topic-icon">${icon(t.icon, { size: 24 })}</span>
     <span class="card-title">${esc(pick(t.title))}</span>

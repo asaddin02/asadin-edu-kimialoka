@@ -80,7 +80,7 @@ export async function render({ main, params, cleanup, isCurrent }) {
       <div class="field field-grow"><label for="c-a">${esc(s.a)}</label><select id="c-a"><option value="">${esc(s.choose)}</option>${liveOpt(a)}${options(a)}</select></div>
       <div class="field field-grow"><label for="c-b">${esc(s.b)}</label><select id="c-b"><option value="">${esc(s.choose)}</option>${liveOpt(b)}${options(b)}</select></div>
     </div>
-    <p class="hero-try">${esc(s.suggest)}: ${PAIRS.map(([x, y]) => `<a class="chip" href="#/compare?a=${x}&b=${y}">${esc(pick(getMolecule(x).name))} · ${esc(pick(getMolecule(y).name))}</a>`).join(' ')}</p>
+    <p class="hero-try">${esc(s.suggest)}: ${PAIRS.map(([x, y]) => `<a class="chip" href="/compare?a=${x}&b=${y}">${esc(pick(getMolecule(x).name))} · ${esc(pick(getMolecule(y).name))}</a>`).join(' ')}</p>
     <div data-compare></div>
   </div>`;
 
@@ -137,7 +137,7 @@ export async function render({ main, params, cleanup, isCurrent }) {
       ],
     ];
     box.innerHTML = `<div class="compare-grid">
-      ${[A, B].map((x, i) => `<div class="card"><h2 class="h-small"><a href="#/molecule/${esc(i ? b : a)}">${esc(x.name)}</a></h2><div class="viewer viewer-sm" data-v="${i}"></div></div>`).join('')}
+      ${[A, B].map((x, i) => `<div class="card"><h2 class="h-small"><a href="/molecule/${esc(i ? b : a)}">${esc(x.name)}</a></h2><div class="viewer viewer-sm" data-v="${i}"></div></div>`).join('')}
     </div>
     <div class="table-wrap"><table class="data-table compare-table"><thead><tr><th scope="col">${esc(s.property)}</th><th scope="col">${esc(A.name)}</th><th scope="col">${esc(B.name)}</th></tr></thead>
       <tbody>${rows.map(([k, f, html]) => `<tr><th scope="row">${esc(k)}</th>${[A, B].map(x => `<td lang="${html ? '' : 'en'}">${html ? f(x) : esc(f(x))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>

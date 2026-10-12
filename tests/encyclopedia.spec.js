@@ -14,7 +14,7 @@ test('the knowledge map starts from matter and every domain lists concepts and l
   await expect(page.locator('.matter-chain .chain-step')).toHaveCount(15);
   await expect(page.locator('.chain-step').first()).toContainText('Materi');
   await page.locator('.domain-card', { hasText: 'Isotop' }).first().click();
-  await expect(page).toHaveURL(/#\/peta\/inti/);
+  await expect(page).toHaveURL(/\/peta\/inti/);
   await expect(page.locator('.concept-card').first()).toBeVisible();
   await expect(page.locator('main')).toContainText('Isotop, radioaktivitas & kimia inti');
   expect(errors).toEqual([]);
@@ -28,7 +28,7 @@ test('unified search recognises identifiers and finds every kind of item', async
 
   await open(page, 'search?q=C-14');
   await expect(page.locator('.result-top')).toContainText('Karbon-14');
-  await expect(page.locator('.result-top')).toHaveAttribute('href', '#/isotope/C-14');
+  await expect(page.locator('.result-top')).toHaveAttribute('href', '/isotope/C-14');
 
   await open(page, 'search?q=sulfat');
   for (const group of ['Ion', 'Molekul & senyawa', 'Reaksi'])
@@ -65,8 +65,8 @@ test('isotope explorer: chart of nuclides and a nuclide page with its decay', as
   await open(page, 'isotope/C-14');
   await expect(page.locator('h1')).toHaveText('Karbon-14');
   await expect(page.locator('main')).toContainText('5,7 ribu tahun');
-  await expect(page.locator('main a[href="#/isotope/N-14"]').first()).toBeVisible();
-  await page.locator('a[href^="#/lab/paruh"]').click();
+  await expect(page.locator('main a[href="/isotope/N-14"]').first()).toBeVisible();
+  await page.locator('a[href^="/lab/paruh"]').click();
   await expect(page.locator('#p-nuc option:checked')).toContainText('Karbon-14');
 });
 
@@ -98,7 +98,7 @@ test('ions, reactions and materials link to each other', async ({ page }) => {
   await open(page, 'reaction/fisi-uranium-235');
   await expect(page.locator('.rx-eq-lg .coef')).toHaveText('3');
   await open(page, 'material/baja');
-  await expect(page.locator('main a[href="#/atom/Fe"]').first()).toBeVisible();
+  await expect(page.locator('main a[href="/atom/Fe"]').first()).toBeVisible();
   await open(page, 'reaction?type=redoks');
   await expect(page.locator('.rx-card')).not.toHaveCount(0);
   expect(errors).toEqual([]);

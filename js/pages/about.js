@@ -165,8 +165,8 @@ export function render({ main }) {
         while (queue.length) {
           const path = queue.shift();
           try {
-            const res = await fetch(path);
-            if (res.ok) await cache.put(new URL(path, document.baseURI).href, res);
+            const res = await fetch(new URL(path, location.origin));
+            if (res.ok) await cache.put(new URL(path, location.origin).href, res);
           } catch {}
           done++;
           if (done % 10 === 0 || done === files.length)

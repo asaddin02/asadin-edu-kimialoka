@@ -71,7 +71,7 @@ export async function render({ main }) {
       const [kind, key] = [String(r.key).split(':')[0], String(r.key).slice(String(r.key).indexOf(':') + 1)];
       if (!/^[\w-]{1,60}$/.test(key)) return '';
       const href =
-        kind === 'mol' ? `#/molecule/${key}` : kind === 'cid' ? `#/molecule/cid/${key}` : `#/atom/${key}`;
+        kind === 'mol' ? `/molecule/${key}` : kind === 'cid' ? `/molecule/cid/${key}` : `/atom/${key}`;
       return `<a class="chip" href="${esc(href)}">${esc(r.label)}</a>`;
     })
     .join(' ');

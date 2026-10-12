@@ -38,40 +38,40 @@ function inline(text) {
       const term = findTerm(key);
       const text = label || key;
       return term
-        ? `<a class="term" href="#/glossary/${encodeURIComponent(term.key)}" data-term="${esc(term.key)}">${text}</a>`
-        : `<a class="term" href="#/glossary?q=${encodeURIComponent(key)}">${text}</a>`;
+        ? `<a class="term" href="/glossary/${encodeURIComponent(term.key)}" data-term="${esc(term.key)}">${text}</a>`
+        : `<a class="term" href="/glossary?q=${encodeURIComponent(key)}">${text}</a>`;
     })
     .replace(LINK, (_, kind, id, label) => {
       if (kind === 'm') {
         const m = getMolecule(id);
         return m
-          ? `<a class="mol-link" href="#/molecule/${id}">${label || esc(pick(m.name))}</a>`
+          ? `<a class="mol-link" href="/molecule/${id}">${label || esc(pick(m.name))}</a>`
           : label || id;
       }
       if (kind === 'e') {
         const e = getElement(id);
         return e
-          ? `<a class="el-link" href="#/atom/${e.s}">${label || esc(pick([e.id, e.en]))}</a>`
+          ? `<a class="el-link" href="/atom/${e.s}">${label || esc(pick([e.id, e.en]))}</a>`
           : label || id;
       }
       if (kind === 'i') {
         const ion = getIon(id);
-        return ion ? `<a class="ion-link" href="#/ion/${id}">${label || esc(ion.f)}</a>` : label || id;
+        return ion ? `<a class="ion-link" href="/ion/${id}">${label || esc(ion.f)}</a>` : label || id;
       }
       if (kind === 'r') {
         const r = getReaction(id);
         return r
-          ? `<a class="rx-link" href="#/reaction/${id}">${label || esc(pick(r.name))}</a>`
+          ? `<a class="rx-link" href="/reaction/${id}">${label || esc(pick(r.name))}</a>`
           : label || id;
       }
       if (kind === 'mat') {
         const m = getMaterial(id);
         return m
-          ? `<a class="mat-link" href="#/material/${id}">${label || esc(pick(m.name))}</a>`
+          ? `<a class="mat-link" href="/material/${id}">${label || esc(pick(m.name))}</a>`
           : label || id;
       }
-      if (kind === 'page') return `<a href="#/${id}">${label || id}</a>`;
-      return `<a href="#/${kind}/${id}">${label || id}</a>`;
+      if (kind === 'page') return `<a href="/${id}">${label || id}</a>`;
+      return `<a href="/${kind}/${id}">${label || id}</a>`;
     });
 }
 

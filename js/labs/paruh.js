@@ -1,6 +1,6 @@
 // Half-life lab: a sample of radioactive atoms decays at random. Each atom has the same chance of decaying in
 // each time step, yet the sample as a whole halves every half-life. Real nuclides and their half-lives and main
-// decay modes come from data/isotopes.json (IAEA AMDC via PubChem). #/lab/paruh?z=6&a=14 opens carbon-14.
+// decay modes come from data/isotopes.json (IAEA AMDC via PubChem). /lab/paruh?z=6&a=14 opens carbon-14.
 import { esc, reducedMotion } from '../core/dom.js';
 import { S, pick, fmt, num, atLeast } from '../core/prefs.js';
 import { getElement } from '../data/periodicTable.js';
@@ -167,10 +167,10 @@ function start(host, rows, params) {
       <tr><th scope="row">${esc(s.halfLife)}</th><td>${esc(halfLifeText(r.half, true))}</td></tr>
       <tr><th scope="row">${esc(s.decay)}</th><td>${esc(r.decay ? decayName(r.decay) : '–')}${
         d
-          ? ` · ${esc(nuclideLabel(r.A, e.s))} ${esc(s.becomes)} <a href="#/isotope/${nuclideId(d.element.s, d.A)}">${esc(nuclideLabel(d.A, d.element.s))}</a>`
+          ? ` · ${esc(nuclideLabel(r.A, e.s))} ${esc(s.becomes)} <a href="/isotope/${nuclideId(d.element.s, d.A)}">${esc(nuclideLabel(d.A, d.element.s))}</a>`
           : ''
       }</td></tr></tbody></table>
-      <p><a href="#/isotope/${nuclideId(e.s, r.A)}">${esc(s.open)}</a></p>`;
+      <p><a href="/isotope/${nuclideId(e.s, r.A)}">${esc(s.open)}</a></p>`;
   }
 
   function reset() {

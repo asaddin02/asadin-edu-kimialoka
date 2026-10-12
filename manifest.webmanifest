@@ -4,8 +4,8 @@
   "description": "Ensiklopedia kimia interaktif untuk SD sampai kuliah dan guru: unsur, isotop, ion, molekul, reaksi, material, dan materi belajar, dengan data resmi.",
   "lang": "id",
   "dir": "ltr",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#f7f9fd",
@@ -13,17 +13,17 @@
   "categories": ["education", "science"],
   "icons": [
     {
-      "src": "assets/brand/icon-192.png",
+      "src": "/assets/brand/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/brand/icon-512.png",
+      "src": "/assets/brand/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "assets/brand/icon-maskable-512.png",
+      "src": "/assets/brand/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -32,30 +32,30 @@
   "shortcuts": [
     {
       "name": "Tabel periodik",
-      "url": "./#/table",
+      "url": "/table",
       "icons": [
         {
-          "src": "assets/brand/icon-192.png",
+          "src": "/assets/brand/icon-192.png",
           "sizes": "192x192"
         }
       ]
     },
     {
       "name": "Laboratorium",
-      "url": "./#/lab",
+      "url": "/lab",
       "icons": [
         {
-          "src": "assets/brand/icon-192.png",
+          "src": "/assets/brand/icon-192.png",
           "sizes": "192x192"
         }
       ]
     },
     {
       "name": "Kuis",
-      "url": "./#/quiz",
+      "url": "/quiz",
       "icons": [
         {
-          "src": "assets/brand/icon-192.png",
+          "src": "/assets/brand/icon-192.png",
           "sizes": "192x192"
         }
       ]

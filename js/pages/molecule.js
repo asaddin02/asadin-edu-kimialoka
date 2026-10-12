@@ -1,8 +1,9 @@
-// Molecule profile. Works for catalogue entries (#/molecule/water), any PubChem compound (#/molecule/cid/2244)
-// and names (#/molecule/name/aspirin). Content depth follows the learner's level.
+// Molecule profile. Works for catalogue entries (/molecule/water), any PubChem compound (/molecule/cid/2244)
+// and names (/molecule/name/aspirin). Content depth follows the learner's level.
 import { $, $$, esc, toast, debounce, safeURL } from '../core/dom.js';
 import { S, pick, fmt, num, depth, atLeast, lang } from '../core/prefs.js';
 import { ui } from '../i18n/ui.js';
+import { replace } from '../core/router.js';
 import { icon } from '../components/icons.js';
 import { breadcrumbs, loading, notice, levelBadge, extLink, errorState } from '../components/common.js';
 import { bookmarkButton, moleculeCard } from '../components/cards.js';
@@ -236,14 +237,14 @@ export async function render({ id, main, cleanup, isCurrent }) {
     if (!isCurrent()) return;
     if (!cid) return notFound(main);
     const cur = getMoleculeByCid(cid);
-    location.replace(cur ? `#/molecule/${cur.id}` : `#/molecule/cid/${cid}`);
+    replace(cur ? `/molecule/${cur.id}` : `/molecule/cid/${cid}`);
     return;
   }
   if (id?.startsWith('cid/')) {
     const cid = Number(id.slice(4));
     const cur = getMoleculeByCid(cid);
     if (cur) {
-      location.replace(`#/molecule/${cur.id}`);
+      replace(`/molecule/${cur.id}`);
       return;
     }
     main.innerHTML = `<div class="container">${loading(ui.loadingLive)}</div>`;
@@ -284,8 +285,8 @@ export async function render({ id, main, cleanup, isCurrent }) {
   const photo = rec?.photo?.kind === 'photo' ? rec.photo : null;
 
   const crumbs = [
-    [pick(['Jelajah', 'Explore']), '#/explore'],
-    ...mainPath.map(c => [pick(c.name), `#/classes/${c.id}`]),
+    [pick(['Jelajah', 'Explore']), '/explore'],
+    ...mainPath.map(c => [pick(c.name), `/classes/${c.id}`]),
     [name, ''],
   ];
 
@@ -298,13 +299,13 @@ export async function render({ id, main, cleanup, isCurrent }) {
         ${other && other !== name ? `<p class="mol-other">${esc(other)}</p>` : ''}
         <p class="mol-badges">
           ${m ? levelBadge(m.lv) : `<span class="badge badge-live">${icon('globe', { size: 14 })} ${esc(s.live)}</span>`}
-          ${cls.map(c => `<a class="chip" href="#/classes/${c.id}" style="--accent:${c.color}">${esc(pick(c.name))}</a>`).join('')}
+          ${cls.map(c => `<a class="chip" href="/classes/${c.id}" style="--accent:${c.color}">${esc(pick(c.name))}</a>`).join('')}
         </p>
       </div>
       <div class="mol-actions">
         ${canSpeak() ? `<button class="btn" type="button" data-speak aria-pressed="false">${icon('speaker', { size: 18 })}<span>${esc(ui.listen)}</span></button>` : ''}
         ${bookmarkButton(key, name, false)}
-        <a class="btn" href="#/compare?a=${encodeURIComponent(m ? m.id : `cid/${cid}`)}">${icon('compare', { size: 18 })}<span>${esc(s.compare)}</span></a>
+        <a class="btn" href="/compare?a=${encodeURIComponent(m ? m.id : `cid/${cid}`)}">${icon('compare', { size: 18 })}<span>${esc(s.compare)}</span></a>
         <button class="btn" type="button" data-share>${icon('share', { size: 18 })}<span>${esc(ui.share)}</span></button>
         <button class="btn" type="button" data-print>${icon('print', { size: 18 })}<span>${esc(ui.print)}</span></button>
       </div>
@@ -419,7 +420,7 @@ export async function render({ id, main, cleanup, isCurrent }) {
       onPick: a => {
         const e = a.element;
         $('[data-atom-info]', main).innerHTML = e
-          ? `${esc(fmt(s.atomInfo, { name: pick([e.id, e.en]), s: e.s, z: e.z, bonds: a.neighbours }))} · <a href="#/atom/${e.s}">${esc(s.openElement)}</a>`
+          ? `${esc(fmt(s.atomInfo, { name: pick([e.id, e.en]), s: e.s, z: e.z, bonds: a.neighbours }))} · <a href="/atom/${e.s}">${esc(s.openElement)}</a>`
           : esc(a.symbol);
       },
     });
@@ -537,7 +538,7 @@ function levelLabel(lv, l = 'id') {
 
 function notFound(main) {
   main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><p>${esc(s.notFoundText)}</p>
-    <a class="btn btn-primary" href="#/explore">${esc(s.backExplore)}</a></section>`;
+    <a class="btn btn-primary" href="/explore">${esc(s.backExplore)}</a></section>`;
 }
 
 function legend(atoms) {
@@ -608,14 +609,14 @@ function explain({ m, name, formula, parsed, comp, props, cls, lv }) {
     const g = GEOMETRIES[m.geo];
     out.push(
       esc(fmt(s.geometry, { name: pick(g.name), axe: g.axe, angle: g.angle, hyb: g.hyb })) +
-        ` <a href="#/lab/vsepr?shape=${m.geo}">${esc(pick(['Coba di lab VSEPR', 'Try it in the VSEPR lab']))}</a>`
+        ` <a href="/lab/vsepr?shape=${m.geo}">${esc(pick(['Coba di lab VSEPR', 'Try it in the VSEPR lab']))}</a>`
     );
   }
   const polarity = m ? POLARITY[m.id] : null;
   if (polarity && lv !== 'sd') {
     const ref = reference(POLARITY_REF);
     out.push(
-      `${esc(pick(s.polarity[polarity]))} <a class="term" href="#/glossary/molekul-polar">${esc(pick(['Apa itu molekul polar?', 'What is a polar molecule?']))}</a>${
+      `${esc(pick(s.polarity[polarity]))} <a class="term" href="/glossary/molekul-polar">${esc(pick(['Apa itu molekul polar?', 'What is a polar molecule?']))}</a>${
         lv === 'sma' || lv === 'kuliah'
           ? ` <small class="muted">(${extLink(ref.url, ref.label)})</small>`
           : ''
@@ -775,35 +776,35 @@ function linksSection(m, parsed) {
     els.length
       ? `<h3 class="h-small">${esc(s.linkElements)}</h3>${chips(
           els,
-          e => `#/atom/${e.s}`,
+          e => `/atom/${e.s}`,
           e => `${esc(e.s)} · ${esc(pick([e.id, e.en]))}`
         )}`
       : '',
     ions.length
       ? `<h3 class="h-small">${esc(s.linkIons)}</h3>${chips(
           ions,
-          i => `#/ion/${i.id}`,
+          i => `/ion/${i.id}`,
           i => `${esc(i.f)} · ${esc(pick(i.name))}`
         )}`
       : '',
     reactions.length
       ? `<h3 class="h-small">${esc(s.linkReactions)}</h3>${chips(
           reactions,
-          r => `#/reaction/${r.id}`,
+          r => `/reaction/${r.id}`,
           r => esc(pick(r.name))
         )}`
       : '',
     materials.length
       ? `<h3 class="h-small">${esc(s.linkMaterials)}</h3>${chips(
           materials,
-          x => `#/material/${x.id}`,
+          x => `/material/${x.id}`,
           x => esc(pick(x.name))
         )}`
       : '',
     lessons.length
       ? `<h3 class="h-small">${esc(s.linkLessons)}</h3>${chips(
           lessons,
-          t => `#/learn/${t.id}`,
+          t => `/learn/${t.id}`,
           t => `${icon(t.icon, { size: 14 })} ${esc(pick(t.title))}`
         )}`
       : '',

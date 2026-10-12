@@ -1,9 +1,9 @@
-// Isotope explorer: #/isotope shows the chart of nuclides (N against Z, coloured by half-life) and an element's
-// isotopes as a table; #/isotope/<Symbol>-<A> is one nuclide: half-life, decay modes, daughter, abundance, uses.
+// Isotope explorer: /isotope shows the chart of nuclides (N against Z, coloured by half-life) and an element's
+// isotopes as a table; /isotope/<Symbol>-<A> is one nuclide: half-life, decay modes, daughter, abundance, uses.
 // Data: IAEA Atomic Mass Data Center (NUBASE) and IUPAC CIAAW via PubChem (data/isotopes.json, data/elements/).
 import { $, esc, debounce } from '../core/dom.js';
 import { S, pick, fmt, num, atLeast } from '../core/prefs.js';
-import { replaceQuery } from '../core/router.js';
+import { go, replaceQuery } from '../core/router.js';
 import { icon } from '../components/icons.js';
 import { pageHead, breadcrumbs, loading, notice, extLink, errorState } from '../components/common.js';
 import { getElement } from '../data/periodicTable.js';
@@ -174,7 +174,7 @@ export async function render({ id, main, params, isCurrent }) {
     drawChart($('[data-chart]', main), filtered, el?.z, tip);
     const box = $('[data-hit]', main);
     box.innerHTML = hit
-      ? `<p><a class="btn btn-primary" href="#/isotope/${nuclideId(hit.element.s, hit.A)}">${esc(nuclideLabel(hit.A, hit.element.s))} · ${esc(pick([hit.element.id, hit.element.en]))}-${hit.A} ${icon('arrowRight', { size: 16 })}</a></p>`
+      ? `<p><a class="btn btn-primary" href="/isotope/${nuclideId(hit.element.s, hit.A)}">${esc(nuclideLabel(hit.A, hit.element.s))} · ${esc(pick([hit.element.id, hit.element.en]))}-${hit.A} ${icon('arrowRight', { size: 16 })}</a></p>`
       : '';
     const titleEl = $('[data-table-title]', main);
     if (el) {
@@ -216,8 +216,8 @@ function isotopeTable(list, el = null) {
         const e = el || getElement(r.z);
         const band = halfLifeBand(r.seconds, r.stable);
         return `<tr>
-          <th scope="row"><a href="#/isotope/${nuclideId(e.s, r.A)}"><span class="dot ${band === 'unknown' ? 'dot-outline' : ''}" style="${band === 'unknown' ? '' : `background:${BAND_COLORS[band]}`}" aria-hidden="true"></span> ${esc(nuclideLabel(r.A, e.s))}</a></th>
-          ${el ? '' : `<td><a href="#/atom/${e.s}">${esc(pick([e.id, e.en]))}</a></td>`}
+          <th scope="row"><a href="/isotope/${nuclideId(e.s, r.A)}"><span class="dot ${band === 'unknown' ? 'dot-outline' : ''}" style="${band === 'unknown' ? '' : `background:${BAND_COLORS[band]}`}" aria-hidden="true"></span> ${esc(nuclideLabel(r.A, e.s))}</a></th>
+          ${el ? '' : `<td><a href="/atom/${e.s}">${esc(pick([e.id, e.en]))}</a></td>`}
           <td>${esc(halfLifeText(r.half))}</td>
           <td>${r.stable ? '–' : esc(r.decay ? decayName(r.decay) : '–')}</td>
           <td>${r.abundance ? `<span class="mono">${esc(r.abundance)}</span>` : '–'}</td>
@@ -281,7 +281,7 @@ function drawChart(host, list, highlightZ, tip) {
   svgEl.addEventListener('pointerleave', () => (tip.hidden = true));
   svgEl.addEventListener('click', e => {
     const t = e.target.closest('rect[data-z]');
-    if (t) location.hash = `#/isotope/${nuclideId(getElement(Number(t.dataset.z)).s, t.dataset.a)}`;
+    if (t) go(`/isotope/${nuclideId(getElement(Number(t.dataset.z)).s, t.dataset.a)}`);
   });
 }
 
@@ -289,7 +289,7 @@ async function renderNuclide(main, id, rows, isCurrent) {
   const p = parseNuclide(id);
   const row = p && rows.find(r => r.z === p.element.z && r.A === p.A);
   if (!row) {
-    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="#/isotope">${esc(s.title)}</a></section>`;
+    main.innerHTML = `<section class="container page-state"><h1>${esc(s.notFound)}</h1><a class="btn" href="/isotope">${esc(s.title)}</a></section>`;
     return;
   }
   const el = p.element;
@@ -336,9 +336,9 @@ async function renderNuclide(main, id, rows, isCurrent) {
           : m.op === '?'
             ? s.pctUnknown
             : '';
-      return `<tr><td>${DECAY[m.mode]?.glossary ? `<a href="#/glossary/${DECAY[m.mode].glossary}">${esc(decayName(m.mode))}</a>` : esc(decayName(m.mode))}</td><td>${esc(pct)}</td><td>${
+      return `<tr><td>${DECAY[m.mode]?.glossary ? `<a href="/glossary/${DECAY[m.mode].glossary}">${esc(decayName(m.mode))}</a>` : esc(decayName(m.mode))}</td><td>${esc(pct)}</td><td>${
         d
-          ? `<a href="#/isotope/${nuclideId(d.element.s, d.A)}">${esc(nuclideLabel(d.A, d.element.s))}</a> (${esc(pick([d.element.id, d.element.en]))})`
+          ? `<a href="/isotope/${nuclideId(d.element.s, d.A)}">${esc(nuclideLabel(d.A, d.element.s))}</a> (${esc(pick([d.element.id, d.element.en]))})`
           : '–'
       }</td></tr>`;
     })
@@ -348,15 +348,15 @@ async function renderNuclide(main, id, rows, isCurrent) {
 
   main.innerHTML = `<article class="container nuclide-page">
     ${breadcrumbs([
-      [s.title, '#/isotope'],
-      [pick([el.id, el.en]), `#/isotope?q=${el.s}`],
+      [s.title, '/isotope'],
+      [pick([el.id, el.en]), `/isotope?q=${el.s}`],
       [label, ''],
     ])}
     <header class="mol-head">
       <div class="mol-titles">
         <p class="formula formula-lg">${esc(label)}</p>
         <h1>${esc(name)}</h1>
-        <p class="mol-badges"><span class="chip"><span class="dot ${band === 'unknown' ? 'dot-outline' : ''}" style="${band === 'unknown' ? '' : `background:${BAND_COLORS[band]}`}" aria-hidden="true"></span> ${esc(pick(BANDS[band]))}</span> <a class="chip" href="#/atom/${el.s}">${esc(pick(['Profil unsur', 'Element profile']))}: ${esc(pick([el.id, el.en]))}</a></p>
+        <p class="mol-badges"><span class="chip"><span class="dot ${band === 'unknown' ? 'dot-outline' : ''}" style="${band === 'unknown' ? '' : `background:${BAND_COLORS[band]}`}" aria-hidden="true"></span> ${esc(pick(BANDS[band]))}</span> <a class="chip" href="/atom/${el.s}">${esc(pick(['Profil unsur', 'Element profile']))}: ${esc(pick([el.id, el.en]))}</a></p>
       </div>
     </header>
     <div class="grid grid-2">
@@ -365,11 +365,11 @@ async function renderNuclide(main, id, rows, isCurrent) {
         <h2 class="h-small">${esc(s.modes)}</h2>
         ${row.stable ? `<p>${esc(s.stable)}.</p>` : modes.length ? `<table class="data-table"><thead><tr><th scope="col">${esc(pick(['Mode', 'Mode']))}</th><th scope="col">%</th><th scope="col">${esc(s.daughter)}</th></tr></thead><tbody>${modeRows}</tbody></table>` : `<p class="muted">–</p>`}
         ${eq ? `<p><strong>${esc(s.equation)}:</strong> <span class="equation-inline">${eq}</span></p>` : ''}
-        ${!row.stable ? `<p><a href="#/lab/paruh?z=${el.z}&a=${row.A}">${icon('flask', { size: 16 })} ${esc(s.lab)}</a></p>` : ''}
+        ${!row.stable ? `<p><a href="/lab/paruh?z=${el.z}&a=${row.A}">${icon('flask', { size: 16 })} ${esc(s.lab)}</a></p>` : ''}
       </div>
     </div>
     ${isomers.length && atLeast('kuliah') ? notice(esc(pick([`Nuklida ini juga punya ${isomers.length} keadaan isomer (tereksitasi), misalnya ${row.A}${el.s}${isomers[0].iso} dengan waktu paruh ${halfLifeText(isomers[0].half)}.`, `This nuclide also has ${isomers.length} isomeric (excited) state(s), e.g. ${row.A}${el.s}${isomers[0].iso} with a half-life of ${halfLifeText(isomers[0].half)}.`]))) : ''}
-    ${reaction ? `<p><a class="chip chip-lg" href="#/reaction/${reaction.id}">${icon('flask', { size: 14 })} ${esc(pick(reaction.name))}</a></p>` : ''}
+    ${reaction ? `<p><a class="chip chip-lg" href="/reaction/${reaction.id}">${icon('flask', { size: 14 })} ${esc(pick(reaction.name))}</a></p>` : ''}
     ${
       isoUses.length
         ? `<section class="mol-section"><h2>${esc(s.uses)}</h2>${isoUses
@@ -381,10 +381,10 @@ async function renderNuclide(main, id, rows, isCurrent) {
         : ''
     }
     <section class="mol-section"><h2>${esc(s.others)}</h2>
-      <p class="chip-grid">${nearest.map(r => `<a class="chip" href="#/isotope/${nuclideId(el.s, r.A)}">${esc(nuclideLabel(r.A, el.s))}${r.stable ? ` · ${esc(pick(['stabil', 'stable']))}` : ''}</a>`).join(' ')}</p>
-      <p><a href="#/isotope?q=${el.s}">${esc(fmt(s.isotopesOf, { name: pick([el.id, el.en]) }))} (${others.length + 1})</a></p>
+      <p class="chip-grid">${nearest.map(r => `<a class="chip" href="/isotope/${nuclideId(el.s, r.A)}">${esc(nuclideLabel(r.A, el.s))}${r.stable ? ` · ${esc(pick(['stabil', 'stable']))}` : ''}</a>`).join(' ')}</p>
+      <p><a href="/isotope?q=${el.s}">${esc(fmt(s.isotopesOf, { name: pick([el.id, el.en]) }))} (${others.length + 1})</a></p>
     </section>
-    <p class="source-line">${esc(s.source)}: ${[refs.amdc ? extLink(refs.amdc.url, 'IAEA Atomic Mass Data Center') : 'IAEA AMDC', refs.ciaaw ? extLink(refs.ciaaw.url, 'IUPAC CIAAW') : '', extLink(`https://pubchem.ncbi.nlm.nih.gov/element/${el.z}#section=Isotopes`, 'PubChem')].filter(Boolean).join(' · ')} · <a href="#/learn/nuklir">${esc(s.lesson)}</a></p>
+    <p class="source-line">${esc(s.source)}: ${[refs.amdc ? extLink(refs.amdc.url, 'IAEA Atomic Mass Data Center') : 'IAEA AMDC', refs.ciaaw ? extLink(refs.ciaaw.url, 'IUPAC CIAAW') : '', extLink(`https://pubchem.ncbi.nlm.nih.gov/element/${el.z}#section=Isotopes`, 'PubChem')].filter(Boolean).join(' · ')} · <a href="/learn/nuklir">${esc(s.lesson)}</a></p>
   </article>`;
 }
 

@@ -1,4 +1,4 @@
-// Unified search (#/search?q=): one box for everything in Alchemist (elements, nuclides, ions, catalogue
+// Unified search (/search?q=): one box for everything in Alchemist (elements, nuclides, ions, catalogue
 // molecules, compound classes, reactions, materials, lessons, glossary concepts, knowledge-map domains and labs)
 // plus live PubChem results for names, IUPAC names, CAS numbers, formulas, CIDs, SMILES, InChI and InChIKeys.
 import { $, esc, debounce } from '../core/dom.js';
@@ -74,37 +74,37 @@ const s = S({
 
 /** Result groups in their default order. `more` builds a link to the full explorer for the query. */
 const GROUPS = {
-  element: { name: ['Unsur', 'Elements'], icon: 'atom', more: () => '#/table' },
+  element: { name: ['Unsur', 'Elements'], icon: 'atom', more: () => '/table' },
   nuclide: {
     name: ['Isotop (nuklida)', 'Isotopes (nuclides)'],
     icon: 'nucleus',
-    more: q => `#/isotope?q=${encodeURIComponent(q)}`,
+    more: q => `/isotope?q=${encodeURIComponent(q)}`,
   },
-  ion: { name: ['Ion', 'Ions'], icon: 'charge', more: q => `#/ion?q=${encodeURIComponent(q)}` },
+  ion: { name: ['Ion', 'Ions'], icon: 'charge', more: q => `/ion?q=${encodeURIComponent(q)}` },
   molecule: {
     name: ['Molekul & senyawa', 'Molecules & compounds'],
     icon: 'molecule',
-    more: q => `#/explore?q=${encodeURIComponent(q)}`,
+    more: q => `/explore?q=${encodeURIComponent(q)}`,
   },
-  class: { name: ['Golongan senyawa', 'Compound classes'], icon: 'layers', more: () => '#/classes' },
+  class: { name: ['Golongan senyawa', 'Compound classes'], icon: 'layers', more: () => '/classes' },
   reaction: {
     name: ['Reaksi', 'Reactions'],
     icon: 'swap',
-    more: q => `#/reaction?q=${encodeURIComponent(q)}`,
+    more: q => `/reaction?q=${encodeURIComponent(q)}`,
   },
   material: {
     name: ['Material & campuran', 'Materials & mixtures'],
     icon: 'gem',
-    more: q => `#/material?q=${encodeURIComponent(q)}`,
+    more: q => `/material?q=${encodeURIComponent(q)}`,
   },
-  topic: { name: ['Materi pelajaran', 'Lessons'], icon: 'book', more: () => '#/learn' },
+  topic: { name: ['Materi pelajaran', 'Lessons'], icon: 'book', more: () => '/learn' },
   concept: {
     name: ['Konsep (kamus)', 'Concepts (glossary)'],
     icon: 'bulb',
-    more: q => `#/glossary?q=${encodeURIComponent(q)}`,
+    more: q => `/glossary?q=${encodeURIComponent(q)}`,
   },
-  domain: { name: ['Peta ilmu kimia', 'Chemistry map'], icon: 'map', more: () => '#/peta' },
-  lab: { name: ['Laboratorium virtual', 'Virtual labs'], icon: 'flask', more: () => '#/lab' },
+  domain: { name: ['Peta ilmu kimia', 'Chemistry map'], icon: 'map', more: () => '/peta' },
+  lab: { name: ['Laboratorium virtual', 'Virtual labs'], icon: 'flask', more: () => '/lab' },
 };
 const ORDER = Object.keys(GROUPS);
 const SHOW = 5;
@@ -122,14 +122,14 @@ const EXAMPLES = [
   'kesetimbangan',
 ];
 const BROWSE = [
-  ['#/peta', 'map', ['Peta ilmu kimia', 'Chemistry map']],
-  ['#/table', 'table', ['Tabel periodik', 'Periodic table']],
-  ['#/isotope', 'nucleus', ['Isotop', 'Isotopes']],
-  ['#/ion', 'charge', ['Ion', 'Ions']],
-  ['#/explore', 'molecule', ['Molekul', 'Molecules']],
-  ['#/reaction', 'swap', ['Reaksi', 'Reactions']],
-  ['#/material', 'gem', ['Material', 'Materials']],
-  ['#/glossary', 'bulb', ['Kamus', 'Glossary']],
+  ['/peta', 'map', ['Peta ilmu kimia', 'Chemistry map']],
+  ['/table', 'table', ['Tabel periodik', 'Periodic table']],
+  ['/isotope', 'nucleus', ['Isotop', 'Isotopes']],
+  ['/ion', 'charge', ['Ion', 'Ions']],
+  ['/explore', 'molecule', ['Molekul', 'Molecules']],
+  ['/reaction', 'swap', ['Reaksi', 'Reactions']],
+  ['/material', 'gem', ['Material', 'Materials']],
+  ['/glossary', 'bulb', ['Kamus', 'Glossary']],
 ];
 
 export const title = () => s.title;
@@ -179,7 +179,7 @@ function searchLocal(q, id, idx, nuclide) {
     let sc = score(q, [e.s, e.id, e.en]);
     if (id.kind === 'cid' && id.value === e.z) sc = Math.max(sc, 90);
     add('element', sc, {
-      href: `#/atom/${e.s}`,
+      href: `/atom/${e.s}`,
       title: `${esc(e.s)} · ${esc(pick([e.id, e.en]))}`,
       sub: `Z = ${e.z} · ${pick(CATEGORIES[e.cat]?.name || ['', ''])}`,
     });
@@ -190,7 +190,7 @@ function searchLocal(q, id, idx, nuclide) {
   for (const i of IONS) {
     const sc = score(q, [i.f, i.name[0], i.name[1], i.id, ...(i.q || [])], `${i.about[0]} ${i.about[1]}`);
     add('ion', sc, {
-      href: `#/ion/${i.id}`,
+      href: `/ion/${i.id}`,
       title: `<span class="ion-formula">${esc(i.f)}</span> ${esc(pick(i.name))}`,
       sub: `${i.kind === 'cation' ? s.cation : s.anion} · ${clip(pick(i.about), 90)}`,
     });
@@ -211,7 +211,7 @@ function searchLocal(q, id, idx, nuclide) {
       isomer = true;
     }
     add('molecule', sc, {
-      href: `#/molecule/${m.id}`,
+      href: `/molecule/${m.id}`,
       title: esc(pick(m.name)),
       sub: [r.cas, isomer ? s.isomer : ''].filter(Boolean).join(' · '),
       formula: r.formula,
@@ -221,7 +221,7 @@ function searchLocal(q, id, idx, nuclide) {
 
   for (const c of CLASSES)
     add('class', score(q, [c.name[0], c.name[1], c.id.replace(/-/g, ' ')], `${c.def[0]} ${c.def[1]}`), {
-      href: `#/classes/${c.id}`,
+      href: `/classes/${c.id}`,
       title: esc(pick(c.name)),
       sub: clip(pick(c.def)),
     });
@@ -235,7 +235,7 @@ function searchLocal(q, id, idx, nuclide) {
       Math.min(50, score(q, species))
     );
     add('reaction', sc, {
-      href: `#/reaction/${r.id}`,
+      href: `/reaction/${r.id}`,
       title: esc(pick(r.name)),
       sub: r.types.map(t => pick(REACTION_TYPES[t]?.name || [t, t])).join(' · '),
       badge: levelBadge(r.lv),
@@ -247,7 +247,7 @@ function searchLocal(q, id, idx, nuclide) {
       'material',
       score(q, [m.name[0], m.name[1], m.id.replace(/-/g, ' '), m.pdb], `${m.about[0]} ${m.about[1]}`),
       {
-        href: `#/material/${m.id}`,
+        href: `/material/${m.id}`,
         title: esc(pick(m.name)),
         sub: `${pick(MATERIAL_TYPES[m.type].name)} · ${clip(pick(m.about), 90)}`,
         badge: levelBadge(m.lv),
@@ -259,7 +259,7 @@ function searchLocal(q, id, idx, nuclide) {
       'topic',
       score(q, [t.title[0], t.title[1], t.id.replace(/-/g, ' ')], `${t.summary[0]} ${t.summary[1]}`),
       {
-        href: `#/learn/${t.id}`,
+        href: `/learn/${t.id}`,
         title: esc(pick(t.title)),
         sub: clip(pick(t.summary)),
       }
@@ -275,7 +275,7 @@ function searchLocal(q, id, idx, nuclide) {
         `${g.simple[0]} ${g.simple[1]} ${g.sci[0]} ${g.sci[1]}`
       ),
       {
-        href: `#/glossary/${g.key}`,
+        href: `/glossary/${g.key}`,
         title: esc(pick(g.term)),
         sub: clip(pick(deep ? g.sci : g.simple)),
       }
@@ -283,14 +283,14 @@ function searchLocal(q, id, idx, nuclide) {
 
   for (const d of DOMAINS)
     add('domain', score(q, [d.name[0], d.name[1], d.id.replace(/-/g, ' ')], `${d.lead[0]} ${d.lead[1]}`), {
-      href: `#/peta/${d.id}`,
+      href: `/peta/${d.id}`,
       title: esc(pick(d.name)),
       sub: clip(pick(d.lead)),
     });
 
   for (const l of LABS)
     add('lab', score(q, [l.title[0], l.title[1], l.id], `${l.summary[0]} ${l.summary[1]}`), {
-      href: `#/lab/${l.id}`,
+      href: `/lab/${l.id}`,
       title: esc(pick(l.title)),
       sub: clip(pick(l.summary)),
     });
@@ -307,7 +307,7 @@ async function nuclideHit(value) {
   if (!row) return { missing: fmt(s.unknownNuclide, { n: name }) };
   const half = row.stable ? s.stable : fmt(s.halfLife, { t: halfLifeText(row.half) });
   return {
-    href: `#/isotope/${nuclideId(e.s, A)}`,
+    href: `/isotope/${nuclideId(e.s, A)}`,
     title: `<span class="nuc">${esc(nuclideLabel(A, e.s))}</span> ${esc(name)}`,
     sub: [half, row.decay ? decayName(row.decay) : '', row.abundance ? `${row.abundance} %` : '']
       .filter(Boolean)
@@ -342,7 +342,7 @@ function groupHTML(key, items, q, expanded) {
 function startHTML() {
   return `<section class="search-start">
     <h2 class="h-small">${esc(s.tryTitle)}</h2>
-    <p class="chip-row">${EXAMPLES.map(e => `<a class="chip" href="#/search?q=${encodeURIComponent(e)}">${esc(e)}</a>`).join('')}</p>
+    <p class="chip-row">${EXAMPLES.map(e => `<a class="chip" href="/search?q=${encodeURIComponent(e)}">${esc(e)}</a>`).join('')}</p>
     <h2 class="h-small">${esc(s.browse)}</h2>
     <div class="grid grid-4">${BROWSE.map(([href, ic, name]) => `<a class="card browse-card" href="${href}">${icon(ic, { size: 22 })}<span class="card-title">${esc(pick(name))}</span></a>`).join('')}</div>
   </section>`;
@@ -442,7 +442,7 @@ export async function render({ main, params, isCurrent }) {
     if (mine !== liveToken || !isCurrent()) return;
     const nameList = names.filter(n => !rows.some(r => r.title.toLowerCase() === n.toLowerCase()));
     box.innerHTML = `${head}
-      ${known.length ? `<h3 class="h-small">${icon('check', { size: 16 })} ${esc(s.inCatalog)}</h3><ul class="result-list">${known.map(m => row({ href: `#/molecule/${m.id}`, title: esc(pick(m.name)), formula: idx.get(m.id)?.formula, sub: `CID ${m.cid}`, badge: levelBadge(m.lv) })).join('')}</ul>` : ''}
+      ${known.length ? `<h3 class="h-small">${icon('check', { size: 16 })} ${esc(s.inCatalog)}</h3><ul class="result-list">${known.map(m => row({ href: `/molecule/${m.id}`, title: esc(pick(m.name)), formula: idx.get(m.id)?.formula, sub: `CID ${m.cid}`, badge: levelBadge(m.lv) })).join('')}</ul>` : ''}
       ${rows.length ? `<p class="muted">${esc(s.liveLead)}</p><div class="grid grid-cards">${rows.map(r => liveCard({ ...r, label: labels.get(r.cid) })).join('')}</div>` : ''}
       ${nameList.length ? `<h3 class="h-small">${esc(s.suggestions)}</h3><ul class="suggest-list">${nameList.map(nameResult).join('')}</ul>` : ''}
       ${!known.length && !rows.length && !nameList.length ? `<p>${esc(s.noneLive)}</p>` : ''}`;

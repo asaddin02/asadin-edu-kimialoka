@@ -17,9 +17,9 @@ import {
 let basePromise = null;
 /** "api/pubchem/" behind our server or Cloudflare Function, else the public PubChem host. */
 function base() {
-  basePromise ||= fetch(new URL('api/health', document.baseURI), { signal: AbortSignal.timeout(2000) })
+  basePromise ||= fetch(new URL('api/health', location.origin), { signal: AbortSignal.timeout(2000) })
     .then(r => (r.ok ? r.json() : null))
-    .then(j => (j?.proxy ? new URL(CONFIG.proxy, document.baseURI).href : CONFIG.pubchem))
+    .then(j => (j?.proxy ? new URL(CONFIG.proxy, location.origin).href : CONFIG.pubchem))
     .catch(() => CONFIG.pubchem);
   return basePromise;
 }

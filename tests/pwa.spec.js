@@ -7,7 +7,7 @@ test('installable manifest with icons', async ({ request }) => {
   const manifest = await (await request.get('/manifest.webmanifest')).json();
   expect(manifest.short_name).toBe('Alchemist');
   expect(manifest.icons.some(i => i.purpose === 'maskable')).toBe(true);
-  for (const icon of manifest.icons) expect((await request.get(`/${icon.src}`)).ok()).toBe(true);
+  for (const icon of manifest.icons) expect((await request.get(icon.src)).ok()).toBe(true);
 });
 
 test('the service worker precaches the app so it works offline', async ({ page, context }) => {
@@ -27,7 +27,7 @@ test('the service worker precaches the app so it works offline', async ({ page, 
   await open(page, 'molecule/water');
   await expect(page.locator('h1')).toHaveText('Air');
   await expect
-    .poll(() => page.evaluate(async () => Boolean(await caches.match('data/molecules/water.json'))))
+    .poll(() => page.evaluate(async () => Boolean(await caches.match('/data/molecules/water.json'))))
     .toBe(true);
   await context.setOffline(true);
   await page.reload();
@@ -41,7 +41,7 @@ test('the service worker precaches the app so it works offline', async ({ page, 
   expect(
     await page.evaluate(async () => (await document.fonts.load('400 16px "Plus Jakarta Sans"')).length)
   ).toBeGreaterThan(0);
-  await page.goto('/#/table');
+  await page.goto('/table');
   await expect(page.locator('.el-tile')).toHaveCount(118);
   await context.setOffline(false);
 });

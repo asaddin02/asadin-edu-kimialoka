@@ -151,7 +151,7 @@ export function mount(host, { params }) {
       <p><strong>${esc(axe)}</strong> · ${esc(fmt(s.domains, { n: bonds + lone }))}</p>
       <p><strong>${esc(s.angle)}:</strong> ${esc(g.angle)} · <strong>${esc(s.hyb)}:</strong> ${esc(g.hyb)}</p>
       ${lone ? `<p class="muted small">${esc(s.lpNote)}</p>` : ''}
-      ${examples.length ? `<p><strong>${esc(s.examples)}:</strong> ${examples.map(m => `<a class="chip" href="#/molecule/${m.id}">${esc(pick(m.name))}</a>`).join(' ')}</p>` : ''}
+      ${examples.length ? `<p><strong>${esc(s.examples)}:</strong> ${examples.map(m => `<a class="chip" href="/molecule/${m.id}">${esc(pick(m.name))}</a>`).join(' ')}</p>` : ''}
       <p class="muted small">${esc(s.exampleText)}: ${esc(EXTRA[key] || '')}</p>`;
     viewer.setData(model(bonds, lone));
     replaceQuery({ shape: key });

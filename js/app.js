@@ -1,13 +1,15 @@
 // Alchemist entry point: shell, routing, global event delegation and the service worker.
 import { $, $$, esc, toast } from './core/dom.js';
 import { applyPrefs, pick } from './core/prefs.js';
-import { configureRouter, render, go, routeURL } from './core/router.js';
+import { configureRouter, render, go, routeURL, upgradeLegacyHash } from './core/router.js';
 import { toggleBookmark, bookmarks } from './core/userdata.js';
 import { renderHeader, renderFooter, markActive, bindShell } from './components/layout.js';
 import { icon } from './components/icons.js';
 import { imageURL } from './services/pubchem.js';
 import { ui } from './i18n/ui.js';
 
+// Old "#/page" links become "/page" before anything renders.
+upgradeLegacyHash();
 applyPrefs();
 renderHeader();
 renderFooter();
@@ -17,7 +19,7 @@ configureRouter({ before: route => markActive(route.page) });
 window.addEventListener('alchemist:prefs', () => {
   renderHeader();
   renderFooter();
-  // The skip link moves focus without touching the hash route.
+  // The skip link moves focus without touching the route.
   $('.skip-link')?.addEventListener('click', e => {
     e.preventDefault();
     $('#main').focus();
@@ -91,7 +93,7 @@ if (
 ) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('sw.js')
+      .register('/sw.js')
       .then(reg => {
         reg.addEventListener('updatefound', () => {
           const next = reg.installing;
@@ -121,7 +123,7 @@ function showUpdate(worker) {
     .addEventListener('click', () => worker.postMessage({ type: 'SKIP_WAITING' }));
 }
 
-// The skip link moves focus without touching the hash route.
+// The skip link moves focus without touching the route.
 $('.skip-link')?.addEventListener('click', e => {
   e.preventDefault();
   $('#main').focus();

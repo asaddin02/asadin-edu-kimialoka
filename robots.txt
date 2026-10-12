@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-# The PubChem proxy and data files are for the app, not for search engines (and count against quotas).
+# The PubChem proxy is for the app only (live upstream requests with quotas). The reference data in /data/ stays
+# crawlable: search engines that run JavaScript need it to render pages.
 Disallow: /api/
-Disallow: /data/

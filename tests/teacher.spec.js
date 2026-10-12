@@ -17,7 +17,7 @@ test('a teacher creates an assignment link and a learner answers it', async ({ p
   await page.locator('#task-q').fill('Mengapa cuka terasa masam?\nSebutkan dua indikator alami.');
   await page.getByRole('button', { name: 'Buat tautan tugas' }).click();
   const link = await page.locator('#task-link').inputValue();
-  expect(link).toContain('#/assignment?d=');
+  expect(link).toContain('/assignment?d=');
 
   await page.goto(link);
   await expect(page.locator('h1')).toHaveText('Tugas asam basa');
@@ -31,7 +31,7 @@ test('a teacher creates an assignment link and a learner answers it', async ({ p
 
 test('a damaged assignment link is rejected safely', async ({ page }) => {
   await prefs(page);
-  await page.goto('/#/assignment?d=%3Cscript%3E');
+  await page.goto('/assignment?d=%3Cscript%3E');
   await expect(page.locator('.notice-warn')).toContainText('tidak valid');
 });
 

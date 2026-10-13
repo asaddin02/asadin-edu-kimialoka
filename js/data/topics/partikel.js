@@ -126,7 +126,7 @@ At the atomic level electrons can only be described by quantum mechanics (wave�
   labs: ['wujud'],
   activity: {
     sd: ['Teteskan pewarna makanan ke segelas air dingin dan segelas air hangat. Amati di gelas mana warnanya lebih cepat menyebar, lalu jelaskan dengan gerak partikel.', 'Drop food colouring into a glass of cold water and a glass of warm water. Watch where it spreads faster and explain it with moving particles.'],
-    smp: ['Buat tabel enam kolom (partikel, atom, ion, molekul, unsur, senyawa) dan isi masing-masing dengan tiga contoh dari katalog Alchemist.', 'Make a six-column table (particle, atom, ion, molecule, element, compound) and fill each with three examples from the Alchemist catalogue.'],
+    smp: ['Buat tabel enam kolom (partikel, atom, ion, molekul, unsur, senyawa) dan isi masing-masing dengan tiga contoh dari katalog Kimialoka.', 'Make a six-column table (particle, atom, ion, molecule, element, compound) and fill each with three examples from the Kimialoka catalogue.'],
     sma: ['Gambar diagram partikel untuk He, O₂, H₂O, NaCl, dan udara. Tandai mana unsur, senyawa, dan campuran, lalu tunjukkan kuark penyusun satu proton dan satu neutron.', 'Draw particle diagrams for He, O₂, H₂O, NaCl and air. Label element, compound and mixture, and show the quarks in one proton and one neutron.'],
     kuliah: ['Hitung defek massa inti ⁴He dari massa proton, neutron, dan inti helium, ubah menjadi energi (MeV), lalu bandingkan dengan energi ikatan H–H (sekitar 4,5 eV).', 'Compute the mass defect of the ⁴He nucleus from the proton, neutron and helium-nucleus masses, convert it to energy (MeV) and compare it with the H–H bond energy (about 4.5 eV).'],
   },
@@ -155,14 +155,14 @@ At the atomic level electrons can only be described by quantum mechanics (wave�
       ['Pemantik: pewarna dalam air dingin dan hangat; siswa menebak apa yang terjadi.', 'Hook: food colouring in cold and warm water; pupils predict what happens.'],
       ['Kartu sortir: kelompokkan 20 kartu zat menjadi unsur, senyawa, dan campuran.', 'Card sort: group 20 substance cards into elements, compounds and mixtures.'],
       ['Diagram partikel: siswa menggambar lalu saling mengoreksi.', 'Particle diagrams: pupils draw and peer-check.'],
-      ['Refleksi: tuliskan satu perbedaan molekul dan ion dengan contoh dari Alchemist.', 'Reflection: write one difference between molecules and ions with Alchemist examples.'],
+      ['Refleksi: tuliskan satu perbedaan molekul dan ion dengan contoh dari Kimialoka.', 'Reflection: write one difference between molecules and ions with Kimialoka examples.'],
     ],
     misconceptions: [
       ['"Partikel dapat dilihat dengan mikroskop biasa." Atom dan molekul terlalu kecil untuk mikroskop cahaya.', '"Particles can be seen under an ordinary microscope." Atoms and molecules are too small for light microscopes.'],
       ['"Semua senyawa tersusun atas molekul." Senyawa ion seperti NaCl tersusun atas ion dalam kisi.', '"All compounds are made of molecules." Ionic compounds such as NaCl are lattices of ions.'],
       ['"Partikel ikut memuai atau meleleh." Yang berubah adalah jarak dan gerak partikel, bukan partikelnya.', '"Particles themselves expand or melt." It is their spacing and motion that change, not the particles.'],
     ],
-    assessment: ['Kuis Alchemist dan tugas diagram partikel dengan rubrik (ketepatan jenis partikel, perbandingan, keterangan).', 'The Alchemist quiz and a particle-diagram task with a rubric (particle types, ratios, labels).'],
+    assessment: ['Kuis Kimialoka dan tugas diagram partikel dengan rubrik (ketepatan jenis partikel, perbandingan, keterangan).', 'The Kimialoka quiz and a particle-diagram task with a rubric (particle types, ratios, labels).'],
   },
   refs: ['1-2-phases-and-classification-of-matter', '2-2-evolution-of-atomic-theory', '2-3-atomic-structure-and-symbolism', '21-1-nuclear-structure-and-stability'],
 };

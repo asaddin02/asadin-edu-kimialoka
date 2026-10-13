@@ -85,14 +85,14 @@ Energi ikat inti berasal dari defek massa: E = Δm·c², dengan 1 u setara 931,5
 
 Kimia radiasi dan dosimetri: dosis serap dalam gray (Gy, J/kg), dosis ekuivalen dalam sievert (Sv) dengan faktor bobot radiasi (α jauh lebih merusak di dalam tubuh). Radiofarmaka menggabungkan kimia koordinasi dan kimia inti, misalnya ⁹⁹ᵐTc (waktu paruh sekitar 6 jam) yang dikompleksasi ligan untuk pencitraan organ, dan ¹⁸F-fluorodeoksiglukosa untuk PET.
 
-Isotop stabil juga penting: rasio δ¹³C dan δ¹⁸O merekam iklim purba dan asal pangan, efek isotop kinetik (ikatan C–D lebih lambat putus daripada C–H) membuktikan mekanisme reaksi, dan analisis aktivasi neutron menentukan unsur jejak tanpa merusak sampel. Data massa, waktu paruh, dan mode peluruhan seluruh nuklida di Alchemist berasal dari IAEA Atomic Mass Data Center melalui PubChem.`,
+Isotop stabil juga penting: rasio δ¹³C dan δ¹⁸O merekam iklim purba dan asal pangan, efek isotop kinetik (ikatan C–D lebih lambat putus daripada C–H) membuktikan mekanisme reaksi, dan analisis aktivasi neutron menentukan unsur jejak tanpa merusak sampel. Data massa, waktu paruh, dan mode peluruhan seluruh nuklida di Kimialoka berasal dari IAEA Atomic Mass Data Center melalui PubChem.`,
       `Radioactive decay follows first-order kinetics: −dN/dt = λN, N = N₀e^(−λt), t½ = ln 2/λ. Activity A = λN is measured in becquerels (1 Bq = one decay per second). Half-lives are not changed by temperature, pressure or chemical bonding (except slightly for electron capture).
 
 Nuclear binding energy comes from the mass defect: E = Δm·c², where 1 u corresponds to 931.5 MeV. Binding energy per nucleon peaks at about 8.8 MeV around iron and nickel, so heavy nuclei release energy by splitting and light ones by merging. The liquid-drop model (semi-empirical mass formula) explains the trend, while the magic numbers 2, 8, 20, 28, 50, 82 and 126 reveal nuclear shell structure.
 
 Radiation chemistry and dosimetry: absorbed dose in grays (Gy, J/kg), equivalent dose in sieverts (Sv) with radiation weighting factors (α is far more damaging inside the body). Radiopharmaceuticals join coordination and nuclear chemistry, such as ⁹⁹ᵐTc (half-life about 6 hours) complexed with ligands for organ imaging, and ¹⁸F-fluorodeoxyglucose for PET.
 
-Stable isotopes matter too: δ¹³C and δ¹⁸O ratios record past climates and food origin, the kinetic isotope effect (C–D bonds break more slowly than C–H) proves reaction mechanisms, and neutron activation analysis measures trace elements without destroying a sample. The masses, half-lives and decay modes of every nuclide in Alchemist come from the IAEA Atomic Mass Data Center via PubChem.`,
+Stable isotopes matter too: δ¹³C and δ¹⁸O ratios record past climates and food origin, the kinetic isotope effect (C–D bonds break more slowly than C–H) proves reaction mechanisms, and neutron activation analysis measures trace elements without destroying a sample. The masses, half-lives and decay modes of every nuclide in Kimialoka come from the IAEA Atomic Mass Data Center via PubChem.`,
     ],
   },
   points: [
@@ -107,8 +107,8 @@ Stable isotopes matter too: δ¹³C and δ¹⁸O ratios record past climates and
   activity: {
     sd: ['Cari tanda radiasi di sekitar rumah sakit atau di buku, lalu buat poster "radiasi yang bermanfaat" dengan tiga contoh pemakaian.', 'Find the radiation sign in a hospital or a book, then make a "useful radiation" poster with three uses.'],
     smp: ['Simulasi waktu paruh dengan 100 koin: lempar, singkirkan yang "gambar", ulangi. Catat sisa koin tiap lemparan dan buat grafiknya.', 'Half-life simulation with 100 coins: toss, remove the tails, repeat. Record the coins left after each toss and graph them.'],
-    sma: ['Pilih tiga radioisotop di penjelajah isotop Alchemist (misalnya ¹⁴C, ¹³¹I, ⁹⁹Tc), tuliskan persamaan peluruhannya, dan hitung sisa setelah 3 waktu paruh.', 'Pick three radioisotopes in the Alchemist isotope explorer (e.g. ¹⁴C, ¹³¹I, ⁹⁹Tc), write their decay equations and find what remains after 3 half-lives.'],
-    kuliah: ['Hitung energi ikat per nukleon ⁵⁶Fe dan ²³⁵U dari massa atom (data AMDC di halaman unsur Alchemist) dan jelaskan mengapa fisi uranium melepaskan energi.', 'Compute the binding energy per nucleon of ⁵⁶Fe and ²³⁵U from atomic masses (AMDC data on Alchemist’s element pages) and explain why uranium fission releases energy.'],
+    sma: ['Pilih tiga radioisotop di penjelajah isotop Kimialoka (misalnya ¹⁴C, ¹³¹I, ⁹⁹Tc), tuliskan persamaan peluruhannya, dan hitung sisa setelah 3 waktu paruh.', 'Pick three radioisotopes in the Kimialoka isotope explorer (e.g. ¹⁴C, ¹³¹I, ⁹⁹Tc), write their decay equations and find what remains after 3 half-lives.'],
+    kuliah: ['Hitung energi ikat per nukleon ⁵⁶Fe dan ²³⁵U dari massa atom (data AMDC di halaman unsur Kimialoka) dan jelaskan mengapa fisi uranium melepaskan energi.', 'Compute the binding energy per nucleon of ⁵⁶Fe and ²³⁵U from atomic masses (AMDC data on Kimialoka’s element pages) and explain why uranium fission releases energy.'],
   },
   quiz: [
     { lv: 'sd', q: ['Matahari bersinar karena…', 'The Sun shines because…'], options: [['Ada api biasa yang membakar kayu', 'Ordinary fire burning wood'], ['Inti-inti atom kecil bergabung (fusi)', 'Tiny nuclei join together (fusion)'], ['Memantulkan cahaya Bulan', 'It reflects moonlight'], ['Ada listrik di dalamnya', 'It has electricity inside']], answer: 1, explain: ['Di inti Matahari, inti hidrogen bergabung menjadi helium dan melepaskan energi.', 'In the Sun’s core, hydrogen nuclei fuse into helium, releasing energy.'] },
@@ -134,7 +134,7 @@ Stable isotopes matter too: δ¹³C and δ¹⁸O ratios record past climates and
     duration: ['3 × 45 menit', '3 × 45 min'],
     steps: [
       ['Pemantik: foto rontgen dan artefak purba; bagaimana umurnya diketahui?', 'Hook: an X-ray and an ancient artefact — how do we know its age?'],
-      ['Simulasi waktu paruh dengan koin atau lab Waktu paruh Alchemist.', 'Half-life simulation with coins or the Alchemist Half-life lab.'],
+      ['Simulasi waktu paruh dengan koin atau lab Waktu paruh Kimialoka.', 'Half-life simulation with coins or the Kimialoka Half-life lab.'],
       ['Latihan menyetarakan persamaan inti dengan kartu nuklida.', 'Balancing nuclear equations with nuclide cards.'],
       ['Debat singkat: PLTN untuk Indonesia, pro dan kontra berbasis data.', 'Short debate: nuclear power for Indonesia, pros and cons from data.'],
     ],
@@ -143,7 +143,7 @@ Stable isotopes matter too: δ¹³C and δ¹⁸O ratios record past climates and
       ['"Setelah dua waktu paruh zat habis." Tersisa ¼, bukan nol.', '"After two half-lives it is all gone." A quarter remains, not zero.'],
       ['"Benda yang terkena radiasi menjadi radioaktif." Penyinaran gamma untuk sterilisasi tidak membuat benda radioaktif.', '"Irradiated objects become radioactive." Gamma sterilisation does not make things radioactive.'],
     ],
-    assessment: ['Kuis Alchemist, laporan simulasi waktu paruh, dan esai singkat tentang satu pemakaian radioisotop di Indonesia.', 'The Alchemist quiz, a half-life simulation report and a short essay on one use of radioisotopes in Indonesia.'],
+    assessment: ['Kuis Kimialoka, laporan simulasi waktu paruh, dan esai singkat tentang satu pemakaian radioisotop di Indonesia.', 'The Kimialoka quiz, a half-life simulation report and a short essay on one use of radioisotopes in Indonesia.'],
   },
   refs: ['21-1-nuclear-structure-and-stability', '21-2-nuclear-equations', '21-3-radioactive-decay', '21-4-transmutation-and-nuclear-energy', '21-5-uses-of-radioisotopes', '21-6-biological-effects-of-radiation'],
 };

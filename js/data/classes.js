@@ -1,4 +1,4 @@
-// The Alchemist classification of matter ("golongan"): a learning tree from broad families to classes.
+// The Kimialoka classification of matter ("golongan"): a learning tree from broad families to classes.
 // Every molecule in the catalogue belongs to one or more classes (its `cls` list, first = main class).
 // Text pairs are [Bahasa Indonesia, English]. `smarts` (optional) is a substructure pattern used to ask
 // PubChem for more real members of the class; it is only offered where the pattern is reliable.
@@ -62,7 +62,7 @@ export const CLASSES = [
       'Compounds used to prevent, diagnose or treat disease. Their effect depends on a molecular shape that fits a target in the body, such as an enzyme or receptor.',
     ],
     feat: [
-      'Informasi di Alchemist untuk belajar, bukan petunjuk pengobatan. Selalu ikuti dokter atau apoteker.',
+      'Informasi di Kimialoka untuk belajar, bukan petunjuk pengobatan. Selalu ikuti dokter atau apoteker.',
       'Information here is for learning, not medical advice. Always follow a doctor or pharmacist.',
     ],
   },

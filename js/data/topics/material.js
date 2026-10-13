@@ -94,7 +94,7 @@ Polymers are characterised by molar-mass distribution, crystallinity and glass-t
   labs: ['kristal'],
   activity: {
     sd: ['Kumpulkan 10 benda di kelas dan kelompokkan menurut materialnya (logam, kaca, plastik, kayu, karet). Uji mana yang ditarik magnet.', 'Collect 10 classroom objects and sort them by material (metal, glass, plastic, wood, rubber). Test which a magnet attracts.'],
-    smp: ['Kumpulkan kemasan plastik di rumah dan kelompokkan berdasarkan kode daur ulang 1–7. Cari polimernya di Alchemist.', 'Collect plastic packaging at home and sort by recycling code 1–7. Look up each polymer in Alchemist.'],
+    smp: ['Kumpulkan kemasan plastik di rumah dan kelompokkan berdasarkan kode daur ulang 1–7. Cari polimernya di Kimialoka.', 'Collect plastic packaging at home and sort by recycling code 1–7. Look up each polymer in Kimialoka.'],
     sma: ['Hitung jumlah atom per sel satuan fcc dan bcc serta efisiensi pengepakannya; bandingkan dengan model di lab Kristal.', 'Count atoms per fcc and bcc unit cell and their packing efficiency; compare with the Crystals lab models.'],
     kuliah: ['Presentasikan rantai pasok nikel Indonesia dari bijih laterit hingga katode NMC, termasuk dampak lingkungannya.', 'Present Indonesia’s nickel supply chain from laterite ore to NMC cathode, including its environmental impact.'],
   },
@@ -122,7 +122,7 @@ Polymers are characterised by molar-mass distribution, crystallinity and glass-t
       ['Proyek pilah plastik dan audit sampah sekolah.', 'Plastic-sorting project and school waste audit.'],
     ],
     misconceptions: [['"Kaca adalah padatan kristal." Kaca adalah padatan amorf tanpa keteraturan jangka panjang.', '"Glass is a crystalline solid." Glass is amorphous, with no long-range order.']],
-    assessment: ['Kuis Alchemist dan laporan audit plastik.', 'Alchemist quiz and a plastic-audit report.'],
+    assessment: ['Kuis Kimialoka dan laporan audit plastik.', 'Kimialoka quiz and a plastic-audit report.'],
   },
   refs: ["10-5-the-solid-state-of-matter", "10-6-lattice-structures-in-crystalline-solids", "oc:31-7-polymer-structure-and-physical-properties"],
 };

@@ -129,7 +129,7 @@ K relates to ΔG° (ΔG° = −RT ln K) and the van ’t Hoff equation (d ln K/d
       ['Diskusi industri: proses Haber–Bosch dan pabrik pupuk di Indonesia.', 'Industry discussion: Haber–Bosch and Indonesian fertiliser plants.'],
     ],
     misconceptions: [['"Saat setimbang reaksi berhenti." Reaksi terus berjalan ke dua arah dengan laju sama.', '"At equilibrium the reaction stops." Both directions continue at equal rates.']],
-    assessment: ['Kuis Alchemist dan laporan percobaan laju.', 'Alchemist quiz and a rate experiment report.'],
+    assessment: ['Kuis Kimialoka dan laporan percobaan laju.', 'Kimialoka quiz and a rate experiment report.'],
   },
   refs: ["12-1-chemical-reaction-rates", "12-2-factors-affecting-reaction-rates", "12-3-rate-laws", "12-5-collision-theory", "12-7-catalysis"],
 };

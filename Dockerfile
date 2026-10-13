@@ -1,8 +1,8 @@
-# Alchemist production image: the static app, the synced reference data and the caching PubChem proxy
+# Kimialoka production image: the static app, the synced reference data and the caching PubChem proxy
 # (server/server.mjs). The server has no npm dependencies, so nothing is installed at build time.
 #
-#   docker build -t alchemist .
-#   docker run -d -p 8080:8080 --name alchemist alchemist
+#   docker build -t kimialoka .
+#   docker run -d -p 8080:8080 --name kimialoka kimialoka
 #
 # Behind a reverse proxy (nginx, Caddy, a PaaS router) also pass -e TRUST_PROXY=1, and -e HSTS=1 when it
 # terminates HTTPS. See README.md for every setting.

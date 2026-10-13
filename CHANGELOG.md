@@ -2,15 +2,17 @@
 
 ## Belum dirilis
 
+- Berganti nama menjadi **Kimialoka** dan pindah ke https://kimialoka.pages.dev. Data yang tersimpan di browser
+  pada alamat lama tidak ikut pindah: ekspor cadangan di situs lama, lalu impor di alamat baru.
 - Alamat halaman kini berupa path (`/atom/Fe`, `/molecule/water`, `/learn/zat`, `/search?q=…`), bukan `#/…`;
   tautan lama `#/…` tetap bekerja dan diarahkan otomatis.
 - Setiap halaman publik dirender di awal saat build (`scripts/prerender.mjs`) menjadi HTML statis dengan judul,
   deskripsi, URL kanonis, Open Graph, JSON-LD, dan isi yang terbaca tanpa JavaScript, sehingga mesin pencari dapat
   mengindeksnya; `sitemap.xml` memuat semua URL, `robots.txt` mengizinkan `/data/`, dan `404.html` memuat aplikasi.
 
-## 3.0.0 — Alchemist (2026-09-29)
+## 3.0.0 — Kimialoka (2026-09-29)
 
-Moleculium berganti nama menjadi **Alchemist** dan diperluas dari atlas molekul menjadi ensiklopedia kimia
+Atlas molekul diperluas menjadi **ensiklopedia kimia**
 interaktif dan platform belajar. Audit cakupan sebelum dan sesudah perubahan: [docs/AUDIT-CHEMISTRY.md](docs/AUDIT-CHEMISTRY.md).
 
 ### Konten
@@ -52,11 +54,10 @@ interaktif dan platform belajar. Audit cakupan sebelum dan sesudah perubahan: [d
   InChIKey, SMILES, dan InChI; CSP mengizinkan gambar RCSB PDB.
 - `npm run build` kini juga membuat indeks materi dan judul rujukan; `npm run audit` baru; `data:check` memeriksa
   topik empat lapis, ion, reaksi (atom, muatan, A dan Z), material, peta kimia, rujukan OpenStax, dan data isotop.
-- Kunci penyimpanan lokal `moleculium:` dipindahkan otomatis ke `alchemist:`.
 
-## 2.0.0 — Moleculium (2026-09-26)
+## 2.0.0 (2026-09-26)
 
-ChemTaxa dibangun ulang dan berganti nama menjadi **Moleculium**.
+Atlas molekul dibangun ulang dari awal.
 
 ### Konten
 

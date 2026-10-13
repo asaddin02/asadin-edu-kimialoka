@@ -146,7 +146,7 @@ Every group has a spectroscopic fingerprint (see {{learn:spektroskopi|spectrosco
   labs: ['rakit'],
   activity: {
     sd: ['Cium (dengan cara mengibaskan tangan) vanili, cuka, dan pisang. Kelompokkan baunya dan tebak mana yang berasal dari molekul "ester" yang wangi buah.', 'Waft the smells of vanilla, vinegar and banana towards you. Group the smells and guess which comes from fruity "ester" molecules.'],
-    smp: ['Cari 10 produk di rumah (cuka, alkohol 70%, aseton, pupuk urea, dsb.), catat zat aktifnya, dan cocokkan dengan gugus fungsinya di katalog Alchemist.', 'Find 10 products at home (vinegar, 70% alcohol, acetone, urea fertiliser, etc.), note their active substance and match its functional group in the Alchemist catalogue.'],
+    smp: ['Cari 10 produk di rumah (cuka, alkohol 70%, aseton, pupuk urea, dsb.), catat zat aktifnya, dan cocokkan dengan gugus fungsinya di katalog Kimialoka.', 'Find 10 products at home (vinegar, 70% alcohol, acetone, urea fertiliser, etc.), note their active substance and match its functional group in the Kimialoka catalogue.'],
     sma: ['Di lab Perakit molekul, rakit semua isomer C₃H₆O dan C₂H₄O₂ yang ada di PubChem, lalu beri nama IUPAC dan golongannya.', 'In the Molecule builder lab, build every C₃H₆O and C₂H₄O₂ isomer in PubChem and give each its IUPAC name and class.'],
     kuliah: ['Urutkan keasaman etanol, fenol, asam asetat, dan asam trikloroasetat, jelaskan dengan resonansi dan efek induksi, lalu cek nilai pKa di data eksperimen PubChem.', 'Rank ethanol, phenol, acetic acid and trichloroacetic acid by acidity, explain with resonance and induction, and check the pKa values in PubChem’s experimental data.'],
   },
@@ -177,14 +177,14 @@ Every group has a spectroscopic fingerprint (see {{learn:spektroskopi|spectrosco
       ['Pemantik: tebak bau (vanili, cuka, pisang, alkohol).', 'Hook: a smell guessing game (vanilla, vinegar, banana, alcohol).'],
       ['Kartu gugus fungsi: sortir struktur ke golongannya.', 'Functional-group cards: sort structures into classes.'],
       ['Praktikum uji Tollens/Fehling atau uji air bromin (sesuai ketersediaan).', 'Practical: Tollens/Fehling or bromine-water tests (as available).'],
-      ['Latihan tata nama dengan molekul katalog Alchemist.', 'Naming practice with Alchemist catalogue molecules.'],
+      ['Latihan tata nama dengan molekul katalog Kimialoka.', 'Naming practice with Kimialoka catalogue molecules.'],
     ],
     misconceptions: [
       ['"Semua senyawa ber-OH adalah basa." Alkohol bukan basa; OH-nya kovalen, bukan ion hidroksida.', '"Every –OH compound is a base." Alcohols are not bases; their OH is covalent, not a hydroxide ion.'],
       ['"Ester adalah asam." Ester tidak memiliki H asam; ester dapat terhidrolisis menjadi asam dan alkohol.', '"Esters are acids." Esters have no acidic H; they can hydrolyse into an acid and an alcohol.'],
       ['"Aroma buah berarti alami." Banyak ester perisa dibuat secara sintetis dengan struktur yang sama persis.', '"Fruity smells mean natural." Many flavour esters are made synthetically with exactly the same structure.'],
     ],
-    assessment: ['Kuis Alchemist, lembar tata nama, dan laporan uji gugus fungsi.', 'The Alchemist quiz, a naming worksheet and a functional-group test report.'],
+    assessment: ['Kuis Kimialoka, lembar tata nama, dan laporan uji gugus fungsi.', 'The Kimialoka quiz, a naming worksheet and a functional-group test report.'],
   },
   refs: ['20-2-alcohols-and-ethers', '20-3-aldehydes-ketones-carboxylic-acids-and-esters', '20-4-amines-and-amides', 'oc:3-1-functional-groups', 'oc:20-1-naming-carboxylic-acids-and-nitriles', 'oc:24-1-naming-amines'],
 };

@@ -91,7 +91,7 @@ Modern battery materials are judged by cell voltage, specific capacity (mAh/g), 
   activity: {
     sd: ['Buat baterai jeruk nipis dengan paku galvanis dan kawat tembaga (beberapa buah berderet) untuk menyalakan LED. Bandingkan dengan larutan garam.', 'Build a lime battery with galvanised nails and copper wire (several in a row) to light an LED. Compare with salt water.'],
     smp: ['Elektrolisis larutan tembaga(II) sulfat dengan dua pensil grafit dan baterai 9 V. Amati elektrode mana yang dilapisi tembaga dan mana yang mengeluarkan gas.', 'Electrolyse copper(II) sulfate solution with two graphite pencils and a 9 V battery. Note which electrode gets copper-plated and which gives off gas.'],
-    sma: ['Susun sel volta Zn–Cu dan Mg–Cu di lab Sel volta Alchemist, bandingkan E°sel terukur dengan hitungan dari tabel potensial standar.', 'Build Zn–Cu and Mg–Cu cells in the Alchemist Voltaic cell lab and compare the E°cell values with those from the standard-potential table.'],
+    sma: ['Susun sel volta Zn–Cu dan Mg–Cu di lab Sel volta Kimialoka, bandingkan E°sel terukur dengan hitungan dari tabel potensial standar.', 'Build Zn–Cu and Mg–Cu cells in the Kimialoka Voltaic cell lab and compare the E°cell values with those from the standard-potential table.'],
     kuliah: ['Hitung E sel Daniell bila [Zn²⁺] = 1,0 M dan [Cu²⁺] = 0,010 M pada 25 °C, lalu jelaskan arah perubahan tegangannya.', 'Calculate the Daniell cell E when [Zn²⁺] = 1.0 M and [Cu²⁺] = 0.010 M at 25 °C, and explain the direction of the voltage change.'],
   },
   quiz: [
@@ -127,7 +127,7 @@ Modern battery materials are judged by cell voltage, specific capacity (mAh/g), 
       ['"Anode selalu positif." Anode negatif pada sel volta dan positif pada sel elektrolisis; yang tetap adalah oksidasinya.', '"The anode is always positive." It is negative in a galvanic cell and positive in an electrolytic cell; what is constant is that oxidation happens there.'],
       ['"Baterai menyimpan listrik." Baterai menyimpan energi kimia yang diubah menjadi listrik saat dipakai.', '"Batteries store electricity." They store chemical energy that becomes electricity when used.'],
     ],
-    assessment: ['Laporan praktikum elektrolisis, kuis Alchemist, dan soal potensial sel dan hukum Faraday.', 'An electrolysis report, the Alchemist quiz and cell-potential and Faraday problems.'],
+    assessment: ['Laporan praktikum elektrolisis, kuis Kimialoka, dan soal potensial sel dan hukum Faraday.', 'An electrolysis report, the Kimialoka quiz and cell-potential and Faraday problems.'],
   },
   refs: ['17-1-review-of-redox-chemistry', '17-2-galvanic-cells', '17-3-electrode-and-cell-potentials', '17-4-potential-free-energy-and-equilibrium', '17-5-batteries-and-fuel-cells', '17-6-corrosion', '17-7-electrolysis'],
 };

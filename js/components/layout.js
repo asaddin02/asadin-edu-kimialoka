@@ -57,9 +57,9 @@ export function renderHeader() {
     `<a class="nav-link" href="/${page === 'home' ? '' : page}" data-nav="${page}">${icon(ic, { size: 20 })}<span>${esc(ui[key])}</span>${
       page === 'saved' ? `<span class="count" aria-label="${count}">${count}</span>` : ''
     }</a>`;
-  const brand = `<a class="brand" href="/" aria-label="Alchemist, ${esc(ui.home)}">
+  const brand = `<a class="brand" href="/" aria-label="Kimialoka, ${esc(ui.home)}">
     <img src="/assets/brand/logo.png" alt="" width="44" height="44" />
-    <span class="brand-text"><strong>Alchemist<span class="brand-dot">.</span></strong><small>BY ASADIN EDU</small></span>
+    <span class="brand-text"><strong>Kimialoka<span class="brand-dot">.</span></strong><small>BY ASADIN EDU</small></span>
   </a>`;
   $('#header').innerHTML = `
     <aside class="learning-sidebar" aria-label="${esc(pick(['Ruang belajar', 'Learning space']))}">
@@ -72,7 +72,7 @@ export function renderHeader() {
     </aside>
     <div class="header-bar container">
       <div class="mobile-brand">${brand}</div>
-      <p class="shell-location"><span>Alchemist</span>${icon('chevronRight', { size: 14 })}<strong data-current-page>${esc(ui.home)}</strong></p>
+      <p class="shell-location"><span>Kimialoka</span>${icon('chevronRight', { size: 14 })}<strong data-current-page>${esc(ui.home)}</strong></p>
       <div class="header-tools">
         <form class="header-search" role="search" data-search>
           <label class="sr-only" for="site-search">${esc(ui.searchLabel)}</label>
@@ -167,11 +167,11 @@ export function renderFooter() {
   $('#footer').innerHTML = `
     <div class="container footer-grid">
       <div>
-        <p class="footer-brand"><img src="/assets/brand/logo.png" alt="" width="28" height="28" /> <strong>Alchemist</strong></p>
+        <p class="footer-brand"><img src="/assets/brand/logo.png" alt="" width="28" height="28" /> <strong>Kimialoka</strong></p>
         <p>${esc(
           pick([
-            'Ensiklopedia kimia interaktif yang terbuka untuk pelajar SD sampai mahasiswa, serta guru. Bagian dari Asadin Edu, bersama BioTaxa.',
-            'An open interactive chemistry encyclopedia for primary pupils to university students, and teachers. Part of Asadin Edu, alongside BioTaxa.',
+            'Ensiklopedia kimia interaktif yang terbuka untuk pelajar SD sampai mahasiswa, serta guru. Bagian dari Asadin Edu, bersama Biotaloka.',
+            'An open interactive chemistry encyclopedia for primary pupils to university students, and teachers. Part of Asadin Edu, alongside Biotaloka.',
           ])
         )}</p>
         <p class="muted">${esc(ui.eduNote)}</p>
@@ -189,7 +189,7 @@ export function renderFooter() {
         </ul>
       </div>
       <div>
-        <h2 class="footer-title">Alchemist</h2>
+        <h2 class="footer-title">Kimialoka</h2>
         <ul class="footer-links">
           <li><a href="/dukung">${esc(ui.dukung)}</a></li>
           <li><a href="/about">${esc(ui.about)}</a></li>

@@ -110,7 +110,7 @@ In Indonesia key issues include peatland fires (CO₂ and particulates), mercury
       ['Rancang solusi: bank sampah, kompos, atau penjernih air.', 'Design a solution: waste bank, compost or water filter.'],
     ],
     misconceptions: [['"Lubang ozon penyebab utama pemanasan global." Keduanya masalah berbeda; pemanasan global terutama akibat gas rumah kaca.', '"The ozone hole causes global warming." They are different problems; warming is mainly from greenhouse gases.']],
-    assessment: ['Kuis Alchemist dan presentasi proyek solusi lingkungan.', 'Alchemist quiz and an environmental-solution project presentation.'],
+    assessment: ['Kuis Kimialoka dan presentasi proyek solusi lingkungan.', 'Kimialoka quiz and an environmental-solution project presentation.'],
   },
   refs: ["18-9-occurrence-preparation-and-compounds-of-oxygen", "18-10-occurrence-preparation-and-properties-of-sulfur", "11-5-colloids"],
 };

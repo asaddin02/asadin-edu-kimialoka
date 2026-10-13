@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Alchemist production server: static files (allow-listed paths only, the app shell for every route) + a caching
+// Kimialoka production server: static files (allow-listed paths only, the app shell for every route) + a caching
 // proxy for PubChem.
 // No dependencies. Node 20+.
 //
@@ -317,7 +317,7 @@ server.on('clientError', (error, socket) => {
   if (socket.writable) socket.end('HTTP/1.1 400 Bad Request\r\nConnection: close\r\n\r\n');
 });
 server.listen(PORT, HOST, () =>
-  console.log(`Alchemist ${VERSION} on http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`)
+  console.log(`Kimialoka ${VERSION} on http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`)
 );
 for (const signal of ['SIGTERM', 'SIGINT']) {
   process.on(signal, () => {

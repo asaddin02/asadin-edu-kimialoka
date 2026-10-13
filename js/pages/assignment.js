@@ -16,7 +16,7 @@ const s = S({
     'Tautan tugas tidak valid atau rusak. Minta tautan baru kepada gurumu.',
     'This assignment link is invalid or damaged. Ask your teacher for a new one.',
   ],
-  from: ['Tugas dari guru melalui Alchemist', 'An assignment from your teacher via Alchemist'],
+  from: ['Tugas dari guru melalui Kimialoka', 'An assignment from your teacher via Kimialoka'],
   name: ['Nama', 'Name'],
   klass: ['Kelas', 'Class'],
   due: ['Batas waktu', 'Due'],

@@ -24,7 +24,7 @@ export function setPref(key, value) {
   if (key === 'level') state.chosen = true;
   save('prefs', state);
   applyPrefs();
-  window.dispatchEvent(new CustomEvent('alchemist:prefs', { detail: { key, value } }));
+  window.dispatchEvent(new CustomEvent('kimialoka:prefs', { detail: { key, value } }));
 }
 
 export function applyPrefs() {

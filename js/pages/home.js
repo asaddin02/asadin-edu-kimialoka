@@ -136,7 +136,7 @@ export async function render({ main }) {
   <div class="container">
     <section class="discovery-hero" aria-labelledby="discovery-title">
       <div class="discovery-copy">
-        <p class="hero-label">${icon('atom', { size: 16 })} ${esc(pick(['ALCHEMIST · ENSIKLOPEDIA KIMIA', 'ALCHEMIST · CHEMISTRY ENCYCLOPEDIA']))}</p>
+        <p class="hero-label">${icon('atom', { size: 16 })} ${esc(pick(['KIMIALOKA · ENSIKLOPEDIA KIMIA', 'KIMIALOKA · CHEMISTRY ENCYCLOPEDIA']))}</p>
         <h2 id="discovery-title">${pick(['Kenali materi.<br>Jelajahi <span>perubahannya.</span>', 'Discover matter.<br>Explore <span>how it changes.</span>'])}</h2>
         <p>${esc(s.lead)}</p>
         <div class="hero-actions"><a class="btn btn-yellow" href="/learn/${next?.id || 'zat'}">${icon('play', { size: 18 })} ${esc(pick(['Mulai petualangan', 'Start exploring']))}</a><a class="hero-secondary" href="/molecule/water">${esc(pick(['Lihat molekul 3D', 'Meet a 3D molecule']))} ${icon('arrowRight', { size: 17 })}</a></div>
@@ -258,7 +258,7 @@ export async function render({ main }) {
       <div><h2>${icon('teacher', { size: 22 })} ${esc(s.teacherTitle)}</h2><p>${esc(s.teacherLead)}</p></div>
       <a class="btn btn-primary" href="/teacher">${esc(s.teacherGo)}</a>
     </section>
-  <section class="support-banner"><div><h2>${pick(['Suka belajar di Alchemist?', 'Enjoy learning with Alchemist?'])}</h2><p>${pick(['Bantu ruang belajar ini terus tumbuh. Dukungan sukarela, belajar tetap gratis.', 'Help this learning space grow. Support is optional; learning stays free.'])}</p></div><a class="btn" href="/dukung">${pick(['Dukung Alchemist', 'Support Alchemist'])} →</a></section></div>`;
+  <section class="support-banner"><div><h2>${pick(['Suka belajar di Kimialoka?', 'Enjoy learning with Kimialoka?'])}</h2><p>${pick(['Bantu ruang belajar ini terus tumbuh. Dukungan sukarela, belajar tetap gratis.', 'Help this learning space grow. Support is optional; learning stays free.'])}</p></div><a class="btn" href="/dukung">${pick(['Dukung Kimialoka', 'Support Kimialoka'])} →</a></section></div>`;
 
   main.querySelector('.mode-grid').addEventListener('click', e => {
     const b = e.target.closest('[data-level]');

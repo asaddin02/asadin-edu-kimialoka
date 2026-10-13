@@ -81,14 +81,14 @@ Kapasitas kalor: C_p = (∂H/∂T)_p dan C_v = (∂U/∂T)_v; untuk gas ideal C_
 
 **Siklus Born–Haber** memakai hukum Hess untuk memperoleh energi kisi yang tidak dapat diukur langsung. Entalpi pelarutan adalah jumlah energi kisi dan entalpi hidrasi ion. Energi ikatan rata-rata berbeda dari entalpi disosiasi ikatan tertentu: melepas H pertama dari CH₄ memerlukan energi berbeda dari H terakhir.
 
-Data termokimia rujukan (ΔHf°, S°, C_p) dikumpulkan misalnya dalam NIST Chemistry WebBook dan lampiran buku OpenStax *Chemistry 2e*; nilai "Heat of Combustion" untuk ribuan senyawa juga tercantum di data eksperimen PubChem pada halaman molekul Alchemist. Kimia komputasi (metode ab initio dan DFT) dapat memperkirakan entalpi reaksi yang belum diukur.`,
+Data termokimia rujukan (ΔHf°, S°, C_p) dikumpulkan misalnya dalam NIST Chemistry WebBook dan lampiran buku OpenStax *Chemistry 2e*; nilai "Heat of Combustion" untuk ribuan senyawa juga tercantum di data eksperimen PubChem pada halaman molekul Kimialoka. Kimia komputasi (metode ab initio dan DFT) dapat memperkirakan entalpi reaksi yang belum diukur.`,
       `The first law: ΔU = q + w, with expansion work w = −PΔV (IUPAC convention). Enthalpy is H = U + PV, so at constant pressure ΔH = q_p, while at constant volume (bomb calorimeter) ΔU = q_v. For ideal-gas reactions ΔH = ΔU + Δn_gas·RT.
 
 Heat capacities: C_p = (∂H/∂T)_p and C_v = (∂U/∂T)_v; for an ideal gas C_p − C_v = R per mole. **Kirchhoff’s law** gives ΔH at another temperature: ΔH(T₂) = ΔH(T₁) + ∫ΔC_p dT.
 
 The **Born–Haber cycle** uses Hess’s law to obtain lattice energies that cannot be measured directly. The enthalpy of solution is the sum of lattice energy and ion hydration enthalpy. Average bond energies differ from specific bond-dissociation enthalpies: removing the first H from CH₄ takes a different energy from the last.
 
-Reference thermochemical data (ΔHf°, S°, C_p) are collected in, for example, the NIST Chemistry WebBook and the appendices of OpenStax *Chemistry 2e*; "Heat of Combustion" values for thousands of compounds also appear in the PubChem experimental data on Alchemist molecule pages. Computational chemistry (ab initio and DFT methods) can estimate reaction enthalpies not yet measured.`,
+Reference thermochemical data (ΔHf°, S°, C_p) are collected in, for example, the NIST Chemistry WebBook and the appendices of OpenStax *Chemistry 2e*; "Heat of Combustion" values for thousands of compounds also appear in the PubChem experimental data on Kimialoka molecule pages. Computational chemistry (ab initio and DFT methods) can estimate reaction enthalpies not yet measured.`,
     ],
   },
   points: [
@@ -137,7 +137,7 @@ Reference thermochemical data (ΔHf°, S°, C_p) are collected in, for example, 
       ['"Memutus ikatan melepaskan energi." Memutus ikatan selalu memerlukan energi; energi dilepas saat ikatan terbentuk.', '"Breaking bonds releases energy." Breaking bonds always needs energy; energy is released when bonds form.'],
       ['"Reaksi eksoterm tidak perlu pemicu." Banyak reaksi eksoterm tetap memerlukan energi aktivasi (korek api).', '"Exothermic reactions need no start." Many still need activation energy (a match).'],
     ],
-    assessment: ['Laporan praktikum kalorimetri, kuis Alchemist, dan soal hukum Hess.', 'A calorimetry report, the Alchemist quiz and Hess’s-law problems.'],
+    assessment: ['Laporan praktikum kalorimetri, kuis Kimialoka, dan soal hukum Hess.', 'A calorimetry report, the Kimialoka quiz and Hess’s-law problems.'],
   },
   refs: ['5-1-energy-basics', '5-2-calorimetry', '5-3-enthalpy', '7-5-strengths-of-ionic-and-covalent-bonds'],
 };

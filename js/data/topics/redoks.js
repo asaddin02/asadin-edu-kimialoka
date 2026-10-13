@@ -131,7 +131,7 @@ Corrosion is a micro galvanic cell: Fe oxidises at anodic sites while O₂ is re
       ['Studi kasus: nikel Indonesia dan baterai kendaraan listrik.', 'Case study: Indonesian nickel and EV batteries.'],
     ],
     misconceptions: [['"Elektron mengalir melalui larutan." Elektron mengalir di kawat; ion bergerak di larutan dan jembatan garam.', '"Electrons flow through the solution." Electrons flow in the wire; ions move in the solution and salt bridge.']],
-    assessment: ['Kuis Alchemist dan laporan proyek baterai buah.', 'Alchemist quiz and a fruit-battery project report.'],
+    assessment: ['Kuis Kimialoka dan laporan proyek baterai buah.', 'Kimialoka quiz and a fruit-battery project report.'],
   },
   refs: ["17-1-review-of-redox-chemistry", "17-2-galvanic-cells", "17-6-corrosion", "17-7-electrolysis"],
 };

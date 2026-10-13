@@ -80,7 +80,7 @@ In solids, countless orbitals merge into energy bands. Metals have partly filled
   activity: {
     sd: ["Buat model molekul air, oksigen, dan metana dari plastisin dan tusuk gigi, lalu hitung berapa ikatan pada masing-masing atom.", "Build water, oxygen and methane models from play dough and toothpicks, then count the bonds on each atom."],
     smp: ['Uji daya hantar listrik larutan garam, gula, dan air suling dengan rangkaian baterai dan lampu LED. Hubungkan hasilnya dengan jenis ikatan.', 'Test the conductivity of salt water, sugar water and distilled water with a battery and LED. Link the results to bond type.'],
-    sma: ['Gambar struktur Lewis 8 molekul dari halaman Alchemist, lalu cocokkan dengan model 3D-nya.', 'Draw Lewis structures for 8 molecules from Alchemist and compare them with their 3D models.'],
+    sma: ['Gambar struktur Lewis 8 molekul dari halaman Kimialoka, lalu cocokkan dengan model 3D-nya.', 'Draw Lewis structures for 8 molecules from Kimialoka and compare them with their 3D models.'],
     kuliah: ['Susun diagram MO untuk N₂, O₂, dan F₂; hitung orde ikatan dan bandingkan dengan panjang ikatan data eksperimen.', 'Build MO diagrams for N₂, O₂ and F₂; compute bond orders and compare with experimental bond lengths.'],
   },
   quiz: [
@@ -107,14 +107,14 @@ In solids, countless orbitals merge into energy bands. Metals have partly filled
     steps: [
       ['Demonstrasi daya hantar listrik larutan.', 'Demonstrate the conductivity of solutions.'],
       ['Model kisi NaCl dan tembaga di lab Kristal & material.', 'Explore NaCl and copper lattices in the Crystals lab.'],
-      ['Latihan struktur Lewis berpasangan; cek dengan model 3D Alchemist.', 'Pair practice on Lewis structures; check against Alchemist 3D models.'],
+      ['Latihan struktur Lewis berpasangan; cek dengan model 3D Kimialoka.', 'Pair practice on Lewis structures; check against Kimialoka 3D models.'],
       ['Kuis dan refleksi.', 'Quiz and reflection.'],
     ],
     misconceptions: [
       ['"NaCl terdiri atas molekul NaCl." Kristal NaCl adalah kisi ion; rumusnya perbandingan.', '"NaCl is made of NaCl molecules." It is an ionic lattice; the formula is a ratio.'],
       ['"Ikatan pecah melepaskan energi." Memutus ikatan selalu memerlukan energi.', '"Breaking bonds releases energy." Breaking bonds always needs energy.'],
     ],
-    assessment: ['Kuis Alchemist dan lembar struktur Lewis.', 'Alchemist quiz and a Lewis-structure worksheet.'],
+    assessment: ['Kuis Kimialoka dan lembar struktur Lewis.', 'Kimialoka quiz and a Lewis-structure worksheet.'],
   },
   refs: ["7-1-ionic-bonding", "7-2-covalent-bonding", "7-3-lewis-symbols-and-structures", "7-4-formal-charges-and-resonance", "7-5-strengths-of-ionic-and-covalent-bonds", "8-4-molecular-orbital-theory"],
 };

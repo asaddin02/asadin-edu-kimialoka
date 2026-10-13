@@ -150,7 +150,7 @@ Testing laboratories work under quality systems (such as ISO/IEC 17025) so resul
       ['"Data yang presisi pasti akurat." Alat yang salah kalibrasi memberi data presisi tetapi bias.', '"Precise data must be accurate." A miscalibrated instrument gives precise but biased data.'],
       ['"Nilai Rf hanya bergantung pada zatnya." Rf juga bergantung pada pelarut dan fase diam.', '"Rf depends only on the substance." It also depends on the solvent and the stationary phase.'],
     ],
-    assessment: ['Laporan titrasi dengan analisis galat, kuis Alchemist, dan kromatogram berlabel.', 'A titration report with error analysis, the Alchemist quiz and a labelled chromatogram.'],
+    assessment: ['Laporan titrasi dengan analisis galat, kuis Kimialoka, dan kromatogram berlabel.', 'A titration report with error analysis, the Kimialoka quiz and a labelled chromatogram.'],
   },
   refs: ['1-5-measurement-uncertainty-accuracy-and-precision', '4-5-quantitative-chemical-analysis', '14-7-acid-base-titrations', '15-1-precipitation-and-dissolution'],
 };

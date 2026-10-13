@@ -128,7 +128,7 @@ Heat capacities and Kirchhoff’s law (dΔH/dT = ΔCp) give ΔH at other tempera
       ['Praktikum kalorimeter sederhana.', 'Simple calorimetry practical.'],
     ],
     misconceptions: [['"Pembakaran menghancurkan materi." Materi berubah menjadi gas dan abu; massa kekal.', '"Burning destroys matter." It becomes gases and ash; mass is conserved.']],
-    assessment: ['Kuis Alchemist dan laporan kalorimetri.', 'Alchemist quiz and a calorimetry report.'],
+    assessment: ['Kuis Kimialoka dan laporan kalorimetri.', 'Kimialoka quiz and a calorimetry report.'],
   },
   refs: ["4-2-classifying-chemical-reactions", "5-3-enthalpy", "16-4-free-energy"],
 };

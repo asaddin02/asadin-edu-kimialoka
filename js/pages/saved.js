@@ -44,7 +44,7 @@ const s = S({
   import: ['Impor data', 'Import data'],
   imported: ['Data berhasil diimpor.', 'Data imported.'],
   badFile: ['Berkas tidak dikenali.', 'File not recognised.'],
-  clear: ['Hapus semua data Alchemist di perangkat ini', 'Delete all Alchemist data on this device'],
+  clear: ['Hapus semua data Kimialoka di perangkat ini', 'Delete all Kimialoka data on this device'],
   confirmClear: ['Hapus semua simpanan, catatan, dan kemajuan?', 'Delete all bookmarks, notes and progress?'],
   cleared: ['Data dihapus.', 'Data deleted.'],
 });
@@ -121,7 +121,7 @@ export async function render({ main }) {
   </div>`;
 
   $('[data-export]', main).addEventListener('click', () =>
-    download(`alchemist-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(exportData(), null, 2))
+    download(`kimialoka-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(exportData(), null, 2))
   );
   $('[data-import]', main).addEventListener('change', async e => {
     const file = e.target.files?.[0];
@@ -144,7 +144,7 @@ export async function render({ main }) {
     if (e.target.closest('[data-clear]') && confirm(s.confirmClear)) {
       for (const k of ['bookmarks', 'notes', 'quiz', 'lessons', 'labs', 'recent', 'answers']) remove(k);
       toast(s.cleared);
-      window.dispatchEvent(new CustomEvent('alchemist:bookmarks'));
+      window.dispatchEvent(new CustomEvent('kimialoka:bookmarks'));
       render({ main });
     }
   });

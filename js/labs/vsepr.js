@@ -13,7 +13,7 @@ const s = S({
   domains: ['{n} domain elektron', '{n} electron domains'],
   angle: ['Sudut ikatan', 'Bond angle'],
   hyb: ['Hibridisasi atom pusat', 'Central-atom hybridisation'],
-  examples: ['Contoh di Alchemist', 'Examples in Alchemist'],
+  examples: ['Contoh di Kimialoka', 'Examples in Kimialoka'],
   exampleText: ['Contoh lain', 'Other examples'],
   legend: [
     'A = atom pusat · X = atom terikat · E = pasangan elektron bebas',

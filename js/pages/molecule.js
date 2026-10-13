@@ -478,7 +478,7 @@ export async function render({ id, main, cleanup, isCurrent }) {
     const url = location.href;
     try {
       if (navigator.share)
-        await navigator.share({ title: `${name} · Alchemist`, text: formulaUnicode(formula), url });
+        await navigator.share({ title: `${name} · Kimialoka`, text: formulaUnicode(formula), url });
       else {
         await navigator.clipboard.writeText(url);
         toast(ui.copied);
@@ -761,7 +761,7 @@ function identitySection(props, rec, cid, lv) {
     </div>`;
 }
 
-/** Everything in Alchemist this compound is part of: its elements, ions, reactions, materials and lessons. */
+/** Everything in Kimialoka this compound is part of: its elements, ions, reactions, materials and lessons. */
 function linksSection(m, parsed) {
   const chips = (list, href, label) =>
     `<p class="chip-grid">${list.map(x => `<a class="chip" href="${href(x)}">${label(x)}</a>`).join(' ')}</p>`;
@@ -809,7 +809,7 @@ function linksSection(m, parsed) {
         )}`
       : '',
   ].join('');
-  return `<h2>${esc(s.sectionLinks)}</h2>${blocks || `<p class="muted">${esc(pick(['Belum ada tautan lain di Alchemist.', 'No other links in Alchemist yet.']))}</p>`}`;
+  return `<h2>${esc(s.sectionLinks)}</h2>${blocks || `<p class="muted">${esc(pick(['Belum ada tautan lain di Kimialoka.', 'No other links in Kimialoka yet.']))}</p>`}`;
 }
 
 function relatedSection(m, idx) {

@@ -2,7 +2,7 @@
 import { S } from '../core/prefs.js';
 
 export const ui = S({
-  appName: ['Alchemist', 'Alchemist'],
+  appName: ['Kimialoka', 'Kimialoka'],
   tagline: ['Ensiklopedia kimia interaktif', 'Interactive chemistry encyclopedia'],
   skip: ['Lewati ke konten utama', 'Skip to main content'],
   home: ['Beranda', 'Home'],
@@ -23,7 +23,7 @@ export const ui = S({
   material: ['Material & campuran', 'Materials & mixtures'],
   saved: ['Tersimpan', 'Saved'],
   teacher: ['Ruang guru', 'Teacher room'],
-  dukung: ['Dukung Alchemist', 'Support Alchemist'],
+  dukung: ['Dukung Kimialoka', 'Support Kimialoka'],
   about: ['Tentang & sumber', 'About & sources'],
   more: ['Lainnya', 'More'],
   menu: ['Menu', 'Menu'],

@@ -67,12 +67,12 @@ Coefficients in a balanced equation are mole ratios. When {{m:propane|propane}} 
 Calculate the Mr of anything in the {{lab:stoikiometri|Molar mass lab}}.`,
     ],
     kuliah: [
-      `Penyetaraan dapat diformulasikan sebagai aljabar linear: matriks komposisi A (unsur × spesi) dengan koefisien positif x sehingga Ax = 0. Ruang nol berdimensi satu memberi satu reaksi yang unik; dimensi lebih besar berarti beberapa reaksi independen dapat terjadi bersamaan. Lab Penyetaraan Alchemist memakai eliminasi Gauss dengan pecahan eksak untuk mencari solusi bilangan bulat terkecil.
+      `Penyetaraan dapat diformulasikan sebagai aljabar linear: matriks komposisi A (unsur × spesi) dengan koefisien positif x sehingga Ax = 0. Ruang nol berdimensi satu memberi satu reaksi yang unik; dimensi lebih besar berarti beberapa reaksi independen dapat terjadi bersamaan. Lab Penyetaraan Kimialoka memakai eliminasi Gauss dengan pecahan eksak untuk mencari solusi bilangan bulat terkecil.
 
 Reaksi redoks kompleks disetarakan dengan metode setengah reaksi (ion-elektron) di suasana asam atau basa, yang juga menjaga kekekalan muatan. Contoh: 2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ + 8H₂O.
 
 Dalam kimia industri, stoikiometri dikaitkan dengan ekonomi atom (persentase massa reaktan yang menjadi produk yang diinginkan) dan faktor-E (massa limbah per massa produk), dua indikator [[kimia-hijau]]. Proses Haber–Bosch (N₂ + 3H₂ ⇌ 2NH₃) memiliki ekonomi atom 100%, tetapi konversi per lintasan hanya sekitar 15% sehingga gas didaur ulang.`,
-      `Balancing can be framed as linear algebra: a composition matrix A (elements × species) with positive coefficients x such that Ax = 0. A one-dimensional null space gives a unique reaction; a larger one means several independent reactions can run together. Alchemist’s balancing lab uses exact-fraction Gaussian elimination to find the smallest whole-number solution.
+      `Balancing can be framed as linear algebra: a composition matrix A (elements × species) with positive coefficients x such that Ax = 0. A one-dimensional null space gives a unique reaction; a larger one means several independent reactions can run together. Kimialoka’s balancing lab uses exact-fraction Gaussian elimination to find the smallest whole-number solution.
 
 Complex redox reactions are balanced by the half-equation (ion–electron) method in acidic or basic solution, which also conserves charge. Example: 2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ + 8H₂O.
 
@@ -117,10 +117,10 @@ In industry, stoichiometry links to atom economy (the percentage of reactant mas
     steps: [
       ['Demonstrasi kekekalan massa dengan balon dan soda kue.', 'Conservation-of-mass demo with a balloon and baking soda.'],
       ['Permainan penyetaraan di lab Penyetaraan reaksi (level bertahap).', 'Balancing game in the Balancing lab (graded levels).'],
-      ['Latihan soal konsep mol dengan kalkulator massa molar Alchemist.', 'Mole-concept practice with the Alchemist molar-mass calculator.'],
+      ['Latihan soal konsep mol dengan kalkulator massa molar Kimialoka.', 'Mole-concept practice with the Kimialoka molar-mass calculator.'],
     ],
     misconceptions: [['"Menyetarakan boleh mengubah indeks rumus." Mengubah indeks berarti mengubah zatnya.', '"You can balance by changing subscripts." That changes the substance itself.']],
-    assessment: ['Kuis Alchemist dan tugas proyek jejak karbon LPG keluarga.', 'Alchemist quiz and a family LPG carbon-footprint project.'],
+    assessment: ['Kuis Kimialoka dan tugas proyek jejak karbon LPG keluarga.', 'Kimialoka quiz and a family LPG carbon-footprint project.'],
   },
   refs: ["3-1-formula-mass-and-the-mole-concept", "3-3-molarity", "4-1-writing-and-balancing-chemical-equations", "4-3-reaction-stoichiometry", "4-4-reaction-yields"],
 };

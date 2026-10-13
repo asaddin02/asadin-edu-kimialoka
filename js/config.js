@@ -2,9 +2,9 @@
 export const CONFIG = {
   donateLocalURL: 'https://saweria.co/asadin02',
   donateInternationalURL: 'https://ko-fi.com/asadin02',
-  feedbackURL: 'https://github.com/asaddin02/asadin-edu-alchemist/issues',
+  feedbackURL: 'https://github.com/asaddin02/asadin-edu-kimialoka/issues',
   // Source code link shown in "About" (update after renaming the GitHub repository).
-  repository: 'https://github.com/asaddin02/asadin-edu-alchemist',
+  repository: 'https://github.com/asaddin02/asadin-edu-kimialoka',
   // Official, free, key-less data sources.
   pubchem: 'https://pubchem.ncbi.nlm.nih.gov/',
   wikidata: 'https://www.wikidata.org/w/api.php',

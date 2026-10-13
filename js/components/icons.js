@@ -1,4 +1,4 @@
-// Alchemist icon set: 24×24 stroke icons drawn for this project (no external requests).
+// Kimialoka icon set: 24×24 stroke icons drawn for this project (no external requests).
 const P = {
   atom: '<circle cx="12" cy="12" r="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>',
   molecule:

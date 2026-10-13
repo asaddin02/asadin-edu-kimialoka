@@ -105,7 +105,7 @@ Indonesia’s inorganic chemical industry includes fertilisers (ammonia, urea), 
   activity: {
     sd: ['Kumpulkan contoh batu, kapur, garam, dan paku berkarat. Kelompokkan mana yang ditambang, mana yang dibuat dari laut, dan mana hasil reaksi dengan udara.', 'Collect samples of rock, chalk, salt and a rusty nail. Sort them into mined, from the sea, and made by reacting with air.'],
     smp: ['Panaskan sedikit kristal terusi di tabung reaksi (dengan pengawasan guru), amati perubahan warna, lalu teteskan air kembali. Jelaskan dengan konsep hidrat.', 'Heat a few blue vitriol crystals in a test tube (with a teacher), watch the colour change, then add water back. Explain it with hydrates.'],
-    sma: ['Buat 20 kartu kation dan anion, lalu tuliskan rumus dan nama Stock untuk setiap pasangan; periksa jawabannya dengan penjelajah ion Alchemist.', 'Make 20 cation and anion cards, then write formulas and Stock names for each pair; check with the Alchemist ion explorer.'],
+    sma: ['Buat 20 kartu kation dan anion, lalu tuliskan rumus dan nama Stock untuk setiap pasangan; periksa jawabannya dengan penjelajah ion Kimialoka.', 'Make 20 cation and anion cards, then write formulas and Stock names for each pair; check with the Kimialoka ion explorer.'],
     kuliah: ['Ramalkan jumlah elektron tak berpasangan untuk [Fe(H₂O)₆]²⁺ dan [Fe(CN)₆]⁴⁻ dengan teori medan kristal, lalu jelaskan perbedaan warnanya.', 'Predict the unpaired electrons in [Fe(H₂O)₆]²⁺ and [Fe(CN)₆]⁴⁻ with crystal-field theory and explain their different colours.'],
   },
   quiz: [
@@ -142,7 +142,7 @@ Indonesia’s inorganic chemical industry includes fertilisers (ammonia, urea), 
       ['"Pirit adalah emas." Pirit (FeS₂) berkilau kuning tetapi besi sulfida.', '"Pyrite is gold." Pyrite (FeS₂) is shiny yellow but an iron sulfide.'],
       ['"Angka Romawi menunjukkan jumlah atom." Angka Romawi menunjukkan bilangan oksidasi logam.', '"Roman numerals give the number of atoms." They give the metal’s oxidation number.'],
     ],
-    assessment: ['Kuis Alchemist, lembar tata nama, dan laporan praktikum hidrat dan oksida.', 'The Alchemist quiz, a naming worksheet and a hydrate-and-oxide practical report.'],
+    assessment: ['Kuis Kimialoka, lembar tata nama, dan laporan praktikum hidrat dan oksida.', 'The Kimialoka quiz, a naming worksheet and a hydrate-and-oxide practical report.'],
   },
   refs: ['2-7-chemical-nomenclature', '18-1-periodicity', '18-2-occurrence-and-preparation-of-the-representative-metals', '18-9-occurrence-preparation-and-compounds-of-oxygen', '19-1-occurrence-preparation-and-properties-of-transition-metals-and-their-compounds', '19-2-coordination-chemistry-of-transition-metals', '19-3-spectroscopic-and-magnetic-properties-of-coordination-compounds'],
 };

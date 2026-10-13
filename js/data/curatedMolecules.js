@@ -1,4 +1,4 @@
-// The Alchemist catalogue: hand-written learning cards for molecules, materials and minerals.
+// The Kimialoka catalogue: hand-written learning cards for molecules, materials and minerals.
 // Structures, properties, hazards, photos and encyclopedia text come from PubChem, Wikidata, Wikipedia
 // and Wikimedia Commons (see scripts/sync-molecules.mjs → data/molecules/<id>.json).
 // Content license: CC BY-SA 4.0.

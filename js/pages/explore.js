@@ -24,8 +24,8 @@ import { kindLabel } from '../services/identify.js';
 const s = S({
   title: ['Jelajah molekul', 'Explore molecules'],
   lead: [
-    'Cari di katalog Alchemist dan di lebih dari 100 juta senyawa PubChem. Ketik nama (Indonesia atau Inggris), nama IUPAC, rumus kimia, nomor CAS, CID, SMILES, InChI, atau InChIKey.',
-    'Search the Alchemist catalogue and over 100 million PubChem compounds. Type a name (Indonesian or English), IUPAC name, formula, CAS number, CID, SMILES, InChI or InChIKey.',
+    'Cari di katalog Kimialoka dan di lebih dari 100 juta senyawa PubChem. Ketik nama (Indonesia atau Inggris), nama IUPAC, rumus kimia, nomor CAS, CID, SMILES, InChI, atau InChIKey.',
+    'Search the Kimialoka catalogue and over 100 million PubChem compounds. Type a name (Indonesian or English), IUPAC name, formula, CAS number, CID, SMILES, InChI or InChIKey.',
   ],
   q: ['Kata kunci', 'Search term'],
   placeholder: ['Contoh: cuka, C2H5OH, 64-17-5, CCO', 'e.g. vinegar, C2H5OH, 64-17-5, CCO'],
@@ -37,7 +37,7 @@ const s = S({
   byName: ['Nama', 'Name'],
   byMass: ['Massa molar', 'Molar mass'],
   byLevel: ['Jenjang', 'Level'],
-  catalog: ['Katalog Alchemist', 'Alchemist catalogue'],
+  catalog: ['Katalog Kimialoka', 'Kimialoka catalogue'],
   count: ['{n} molekul', '{n} molecules'],
   more: ['Tampilkan lebih banyak', 'Show more'],
   live: ['Hasil langsung dari PubChem', 'Live results from PubChem'],
@@ -54,7 +54,7 @@ const s = S({
   ],
   elementHit: ['Unsur {name} ({s})', 'Element {name} ({s})'],
   recognised: ['Dikenali sebagai {kind}', 'Recognised as {kind}'],
-  inCatalog: ['Ada di katalog Alchemist', 'In the Alchemist catalogue'],
+  inCatalog: ['Ada di katalog Kimialoka', 'In the Kimialoka catalogue'],
   reset: ['Hapus filter', 'Clear filters'],
 });
 

@@ -116,7 +116,7 @@ Many-electron atoms and molecules need approximations: Born–Oppenheimer (nucle
       ['"Semua partikel gas bergerak sama cepat." Kecepatannya tersebar menurut distribusi Maxwell–Boltzmann.', '"All gas particles move equally fast." Their speeds spread per the Maxwell–Boltzmann distribution.'],
       ['"Struktur Lewis selalu benar." Struktur Lewis O₂ tidak menjelaskan sifat paramagnetiknya; teori MO bisa.', '"Lewis structures are always right." O₂’s Lewis structure misses its paramagnetism; MO theory explains it.'],
     ],
-    assessment: ['Kuis Alchemist, perhitungan garis Balmer, dan tugas diagram MO.', 'The Alchemist quiz, Balmer-line calculations and an MO-diagram task.'],
+    assessment: ['Kuis Kimialoka, perhitungan garis Balmer, dan tugas diagram MO.', 'The Kimialoka quiz, Balmer-line calculations and an MO-diagram task.'],
   },
   refs: ['6-1-electromagnetic-energy', '6-2-the-bohr-model', '6-3-development-of-quantum-theory', '8-4-molecular-orbital-theory', '9-5-the-kinetic-molecular-theory'],
 };

@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const CACHE_DIR = join(ROOT, 'data', '.sync-cache');
 const USER_AGENT =
-  'Alchemist-sync/3.0 (Asadin Edu chemistry encyclopedia; https://github.com/asaddin02/asadin-edu-alchemist)';
+  'Kimialoka-sync/3.0 (Asadin Edu chemistry encyclopedia; https://github.com/asaddin02/asadin-edu-kimialoka)';
 const INTERVAL = { 'pubchem.ncbi.nlm.nih.gov': 260, 'query.wikidata.org': 1200 };
 const DEFAULT_INTERVAL = 150;
 const TTL = Number(process.env.SYNC_CACHE_DAYS || 30) * 86400e3;

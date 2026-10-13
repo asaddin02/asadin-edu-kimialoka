@@ -3,7 +3,7 @@
 // prerendered HTML page per route (scripts/prerender.mjs), sitemap.xml, 404.html and a _headers file with the
 // same security policy as server/server.mjs.
 //   npm run build:site                                   (also refreshes the sw.js precache list)
-//   SITE_URL=https://alchemist.example npm run build:site  absolute link-preview URLs for that address
+//   SITE_URL=https://kimialoka.example npm run build:site  absolute link-preview URLs for that address
 // The Pages Function in functions/ is deployed from the project root by `wrangler pages deploy dist`.
 import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';

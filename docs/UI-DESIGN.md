@@ -1,4 +1,4 @@
-# Alchemist — Curiosity Studio
+# Kimialoka — Curiosity Studio
 
 ## Design direction
 
@@ -8,7 +8,7 @@ The home page provides a starting lesson, 3D molecule link, catalogue search, da
 
 ## Shared system
 
-- `css/alchemist.css`: visual tokens, responsive shell, home composition, shared cards, headers, reading layouts, laboratories, quizzes, print, and reduced motion.
+- `css/kimialoka.css`: visual tokens, responsive shell, home composition, shared cards, headers, reading layouts, laboratories, quizzes, print, and reduced motion.
 - `css/explorer.css`: the encyclopedia layer — knowledge-map chain and domain cards, unified search results, nuclear notation and reaction equations, the chart of nuclides, ion cards, PDB figures and reference lists. Mobile-first with 44 px touch targets.
 - The chart of nuclides and the half-life lab use one ordinal blue ramp for half-life bands (sub-second `#86b6ef` → stable `#0d366b`), with an outline for unknown half-lives, so colour is never the only cue. The half-life lab draws parent atoms as filled squares and decay products as orange outlines.
 - Primary blue: `#2563eb`; strong blue: `#194dc5`; yellow: `#ffda66`; page: `#f7f9fd`; ink: `#192c4b`.
@@ -19,11 +19,11 @@ The home page provides a starting lesson, 3D molecule link, catalogue search, da
 
 ## Brand assets
 
-Alchemist uses a cobalt-blue tile with a white flask silhouette shaped like an A, yellow liquid, and a yellow particle. The flask connects the name to chemistry and transformation; its simple geometry stays legible at navigation and favicon sizes.
+Kimialoka uses a cobalt-blue tile with a white flask silhouette shaped like an A, yellow liquid, and a yellow particle. The flask connects the name to chemistry and transformation; its simple geometry stays legible at navigation and favicon sizes.
 
 `assets/brand/mark.svg` is the editable vector source. `npm run icons` renders `logo.png`, the favicon, Apple/PWA icons, the maskable icon, and the sharing image from this one source. Header and footer use `logo.png`. The maskable version keeps the mark within the safe zone.
 
-The public identity is **Alchemist · Asadin Edu**, an interactive chemistry encyclopedia and learning platform from primary school to university, including teacher resources. Home copy covers elements, isotopes, ions, molecules, materials and reactions, with level-based lessons, quizzes and virtual labs. Indonesian and English describe the same scope.
+The public identity is **Kimialoka · Asadin Edu**, an interactive chemistry encyclopedia and learning platform from primary school to university, including teacher resources. Home copy covers elements, isotopes, ions, molecules, materials and reactions, with level-based lessons, quizzes and virtual labs. Indonesian and English describe the same scope.
 
 ## Maintenance and verification
 

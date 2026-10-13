@@ -100,7 +100,7 @@ Conditions (temperature, solvent, base/nucleophile strength) decide the contest 
   labs: ['rakit'],
   activity: {
     sd: ['Buat adonan roti sederhana dengan dan tanpa ragi. Bandingkan setelah satu jam dan ceritakan dari mana gelembung gasnya.', 'Make simple bread dough with and without yeast. Compare after an hour and explain where the gas bubbles come from.'],
-    smp: ['Kelompokkan 10 reaksi di pustaka reaksi Alchemist menjadi pembakaran, fermentasi, esterifikasi, penyabunan, dan polimerisasi.', 'Sort 10 reactions from the Alchemist reaction library into combustion, fermentation, esterification, saponification and polymerisation.'],
+    smp: ['Kelompokkan 10 reaksi di pustaka reaksi Kimialoka menjadi pembakaran, fermentasi, esterifikasi, penyabunan, dan polimerisasi.', 'Sort 10 reactions from the Kimialoka reaction library into combustion, fermentation, esterification, saponification and polymerisation.'],
     sma: ['Buat peta reaksi yang menghubungkan etena, etanol, etanal, asam etanoat, etil etanoat, dan kloroetana; tulis jenis reaksi dan pereaksi di setiap panah.', 'Draw a reaction map linking ethene, ethanol, ethanal, ethanoic acid, ethyl ethanoate and chloroethane, writing the reaction type and reagent on every arrow.'],
     kuliah: ['Gambarkan mekanisme lengkap (panah lengkung) untuk reaksi SN1 t-butil bromida dengan air dan SN2 bromometana dengan OH⁻, lalu bandingkan hukum laju dan stereokimianya.', 'Draw full curved-arrow mechanisms for the SN1 reaction of t-butyl bromide with water and the SN2 reaction of bromomethane with OH⁻, and compare their rate laws and stereochemistry.'],
   },
@@ -131,14 +131,14 @@ Conditions (temperature, solvent, base/nucleophile strength) decide the contest 
       ['Pemantik: sabun, roti, dan plastik — dari mana asalnya?', 'Hook: soap, bread and plastic — where do they come from?'],
       ['Praktikum esterifikasi (aroma) atau penyabunan skala kecil dengan pengawasan.', 'Supervised small-scale esterification (smells) or saponification practical.'],
       ['Membuat peta reaksi organik berkelompok.', 'Group work on an organic reaction map.'],
-      ['Latihan mengenali jenis reaksi di pustaka reaksi Alchemist.', 'Practice classifying reactions in the Alchemist reaction library.'],
+      ['Latihan mengenali jenis reaksi di pustaka reaksi Kimialoka.', 'Practice classifying reactions in the Kimialoka reaction library.'],
     ],
     misconceptions: [
       ['"Adisi dan substitusi sama saja karena ada atom yang masuk." Pada adisi tidak ada atom yang keluar.', '"Addition and substitution are the same because atoms come in." In addition nothing leaves.'],
       ['"Semua alkohol dapat dioksidasi menjadi asam." Alkohol sekunder menjadi keton; tersier sukar dioksidasi.', '"All alcohols oxidise to acids." Secondary alcohols give ketones; tertiary ones resist oxidation.'],
       ['"Katalis ikut habis dalam esterifikasi." Asam sulfat pekat hanya katalis dan penarik air.', '"The catalyst is used up in esterification." Concentrated sulfuric acid is only a catalyst and drying agent.'],
     ],
-    assessment: ['Kuis Alchemist, peta reaksi, dan laporan praktikum esterifikasi atau penyabunan.', 'The Alchemist quiz, a reaction map and an esterification or saponification report.'],
+    assessment: ['Kuis Kimialoka, peta reaksi, dan laporan praktikum esterifikasi atau penyabunan.', 'The Kimialoka quiz, a reaction map and an esterification or saponification report.'],
   },
   refs: ['20-1-hydrocarbons', 'oc:6-1-kinds-of-organic-reactions', 'oc:7-8-orientation-of-electrophilic-additions-markovnikovs-rule', 'oc:11-2-the-sn2-reaction', 'oc:11-4-the-sn1-reaction', 'oc:11-7-elimination-reactions-zaitsevs-rule', 'oc:17-7-oxidation-of-alcohols', 'oc:31-1-chain-growth-polymers'],
 };

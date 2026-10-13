@@ -1,12 +1,12 @@
-# Alchemist · Asadin Edu
+# Kimialoka · Asadin Edu
 
 **Ensiklopedia kimia interaktif dan platform belajar** untuk pelajar SD sampai mahasiswa, serta guru: dari
 materi, partikel, atom, unsur, isotop, ion, molekul, senyawa, material, dan campuran sampai sifat, ikatan, reaksi,
 dan cabang-cabang ilmu kimia. Dwibahasa (Bahasa Indonesia dan English), tanpa akun, tanpa iklan, tanpa analitik,
-dan bisa dipakai offline. Saudara dari [BioTaxa](https://github.com/asaddin02/asadin-edu-biotaxa) dalam keluarga
-Asadin Edu. Sebelumnya bernama Moleculium (dan ChemTaxa).
+dan bisa dipakai offline. Saudara dari [Biotaloka](https://github.com/asaddin02/asadin-edu-biotaloka) dalam keluarga
+Asadin Edu.
 
-> _English summary:_ Alchemist is an open, bilingual interactive chemistry encyclopedia and learning platform. A
+> _English summary:_ Kimialoka is an open, bilingual interactive chemistry encyclopedia and learning platform. A
 > knowledge map leads from matter to transformation across 23 branches of chemistry (309 concepts); 118 elements
 > with IUPAC standard atomic weights, natural isotopes and history/uses from reference institutions; 3,557 nuclides;
 > 60 ions; 292 curated molecules and materials plus search across 100+ million PubChem compounds by name, formula,
@@ -54,12 +54,12 @@ Pilih salah satu:
 
 1. **Cloudflare Pages (disarankan).** Isi variable `CLOUDFLARE_PAGES_PROJECT` serta secret `CLOUDFLARE_API_TOKEN`
    dan `CLOUDFLARE_ACCOUNT_ID` di GitHub (opsional: variable `SITE_URL`). Workflow **Deploy** berjalan setiap CI di
-   `main` lulus, atau jalankan manual. Proxy PubChem berjalan sebagai Pages Function dengan cache di edge. Nama
-   `alchemist` sudah dipakai di `pages.dev`; pilih nama lain, misalnya `asadin-alchemist`.
+   `main` lulus, atau jalankan manual. Proxy PubChem berjalan sebagai Pages Function dengan cache di edge. Proyek ini
+   memakai nama `kimialoka`, sehingga alamatnya https://kimialoka.pages.dev.
 2. **Docker / server sekolah.**
    ```bash
-   docker build -t alchemist .
-   docker run -d -p 8080:8080 --restart unless-stopped alchemist
+   docker build -t kimialoka .
+   docker run -d -p 8080:8080 --restart unless-stopped kimialoka
    ```
 3. **Hosting statis** (GitHub Pages, Netlify, dll.): `npm run build:site`, lalu unggah folder `dist/`.
 
@@ -117,7 +117,7 @@ Tes browser men-stub jaringan PubChem/Wikimedia sehingga berjalan offline dan de
 
 ```
 index.html · sw.js · manifest.webmanifest
-css/            style.css (token & komponen) · layouts.css (halaman, lab, cetak) · alchemist.css (tampilan)
+css/            style.css (token & komponen) · layouts.css (halaman, lab, cetak) · kimialoka.css (tampilan)
                 · explorer.css (peta, pencarian, isotop, ion, reaksi, material)
 js/app.js       shell, router, service worker
 js/core/        router, preferensi, penyimpanan lokal, data pengguna
@@ -143,4 +143,4 @@ docs/           sumber data, audit kimia (AUDIT-CHEMISTRY.md), desain
 - Materi belajar (kartu, topik, kuis, kamus): [CC BY-SA 4.0](LICENSE-CONTENT.md).
 - Data dan media pihak ketiga mengikuti lisensi sumbernya; lihat [docs/DATA-SOURCES.md](docs/DATA-SOURCES.md).
 
-Alchemist adalah alat belajar, bukan petunjuk medis, farmasi, atau keselamatan kerja.
+Kimialoka adalah alat belajar, bukan petunjuk medis, farmasi, atau keselamatan kerja.

@@ -112,7 +112,7 @@ export async function render(navigated = false) {
   const loader = Object.hasOwn(PAGES, route.page) ? PAGES[route.page] : null;
   if (!loader) {
     main.innerHTML = notFound();
-    document.title = 'Alchemist';
+    document.title = 'Kimialoka';
     document.body.dataset.route = startURL;
     return;
   }
@@ -132,8 +132,8 @@ export async function render(navigated = false) {
     if (mine !== token) return;
     const title = mod.title?.(route);
     document.title = title
-      ? `${title} · Alchemist`
-      : pick(['Alchemist · Ensiklopedia kimia interaktif', 'Alchemist · Interactive chemistry encyclopedia']);
+      ? `${title} · Kimialoka`
+      : pick(['Kimialoka · Ensiklopedia kimia interaktif', 'Kimialoka · Interactive chemistry encyclopedia']);
     window.scrollTo(0, 0);
     // After navigation, move focus to the page heading so screen-reader users hear where they are,
     // unless the user has already moved focus elsewhere (for example into the open menu).
@@ -163,7 +163,7 @@ export async function render(navigated = false) {
 function notFound() {
   return `<section class="container page-state">
     <h1>${esc(pick(['Halaman tidak ditemukan', 'Page not found']))}</h1>
-    <p>${esc(pick(['Alamat ini tidak ada di Alchemist.', 'This address does not exist in Alchemist.']))}</p>
+    <p>${esc(pick(['Alamat ini tidak ada di Kimialoka.', 'This address does not exist in Kimialoka.']))}</p>
     <a class="btn btn-primary" href="/">${esc(pick(['Ke beranda', 'Go home']))}</a>
   </section>`;
 }

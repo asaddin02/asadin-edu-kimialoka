@@ -2,7 +2,7 @@
 // recently viewed items. No account, no server, no analytics. Export/import lets learners move it.
 import { load, save, dump } from './storage.js';
 
-const emit = name => window.dispatchEvent(new CustomEvent(`alchemist:${name}`));
+const emit = name => window.dispatchEvent(new CustomEvent(`kimialoka:${name}`));
 
 // ---------- Bookmarks: curated ids ("water") or live PubChem compounds ("cid:2244") ----------
 export const bookmarks = () => load('bookmarks', []);
@@ -110,7 +110,7 @@ export const BADGES = [
   {
     id: 'master',
     icon: 'star',
-    name: ['Master Alchemist', 'Alchemist master'],
+    name: ['Master Kimialoka', 'Kimialoka master'],
     test: s => s.lessons >= 12 && s.perfect >= 8,
     goal: ['12 materi dan 8 kuis sempurna', '12 lessons and 8 perfect quizzes'],
   },
@@ -134,11 +134,13 @@ export const earnedBadges = () => {
 
 // ---------- Export / import ----------
 export function exportData() {
-  return { app: 'alchemist', version: 1, exported: new Date().toISOString(), data: dump() };
+  return { app: 'kimialoka', version: 1, exported: new Date().toISOString(), data: dump() };
 }
+// Backups exported before the site was renamed carry the old app id; accept them so progress can move over.
+const APP_IDS = ['kimialoka', 'alchemist'];
 const ALLOWED = ['bookmarks', 'notes', 'quiz', 'lessons', 'labs', 'recent', 'prefs', 'answers'];
 export function importData(json) {
-  if (!json || json.app !== 'alchemist' || typeof json.data !== 'object') return false;
+  if (!json || !APP_IDS.includes(json.app) || typeof json.data !== 'object') return false;
   for (const key of ALLOWED) if (key in json.data) save(key, json.data[key]);
   emit('bookmarks');
   emit('progress');

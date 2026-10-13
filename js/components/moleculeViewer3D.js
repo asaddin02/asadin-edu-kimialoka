@@ -1,4 +1,4 @@
-// Alchemist 3D viewer: a dependency-free Canvas 2D renderer for molecules and crystal models.
+// Kimialoka 3D viewer: a dependency-free Canvas 2D renderer for molecules and crystal models.
 // Drag / touch to rotate, wheel / pinch / +− to zoom, arrow keys to turn, Home to reset.
 // Styles: ball-and-stick, space-filling (van der Waals radii) and wireframe. Atoms use CPK colours from PubChem.
 import { getElement } from '../data/periodicTable.js';

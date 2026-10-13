@@ -91,7 +91,7 @@ Linking forces to bulk properties: the Clausius–Clapeyron equation, ln(P₂/P�
   activity: {
     sd: ['Letakkan klip kertas perlahan di atas air dalam mangkuk sampai mengapung, lalu teteskan sabun di pinggirnya. Ceritakan apa yang terjadi.', 'Gently float a paper clip on water in a bowl, then add a drop of soap at the edge. Describe what happens.'],
     smp: ['Teteskan air, alkohol, dan minyak goreng di atas kaca. Ukur waktu masing-masing mengering, lalu urutkan kekuatan gaya antarmolekulnya.', 'Put drops of water, rubbing alcohol and cooking oil on glass. Time how long each takes to dry and rank their intermolecular forces.'],
-    sma: ['Buat grafik titik didih hidrida golongan 14–17 dari data PubChem di Alchemist, lalu jelaskan anomali H₂O, HF, dan NH₃.', 'Graph the boiling points of the group 14–17 hydrides from Alchemist’s PubChem data and explain the anomalies of H₂O, HF and NH₃.'],
+    sma: ['Buat grafik titik didih hidrida golongan 14–17 dari data PubChem di Kimialoka, lalu jelaskan anomali H₂O, HF, dan NH₃.', 'Graph the boiling points of the group 14–17 hydrides from Kimialoka’s PubChem data and explain the anomalies of H₂O, HF and NH₃.'],
     kuliah: ['Dengan dua titik tekanan uap air dari literatur, hitung ΔH penguapan dengan persamaan Clausius–Clapeyron dan bandingkan dengan nilai rujukan 40,7 kJ/mol.', 'From two literature vapour pressures of water, compute ΔH of vaporisation with the Clausius–Clapeyron equation and compare it with the reference 40.7 kJ/mol.'],
   },
   quiz: [
@@ -126,7 +126,7 @@ Linking forces to bulk properties: the Clausius–Clapeyron equation, ln(P₂/P�
       ['"Ikatan hidrogen adalah ikatan kovalen dengan hidrogen." Ikatan hidrogen adalah gaya antarmolekul.', '"A hydrogen bond is a covalent bond to hydrogen." It is an intermolecular force.'],
       ['"Molekul berat selalu mendidih lebih tinggi." H₂O lebih ringan daripada H₂S tetapi mendidih jauh lebih tinggi.', '"Heavier molecules always boil higher." H₂O is lighter than H₂S but boils far higher.'],
     ],
-    assessment: ['Kuis Alchemist dan laporan percobaan penguapan dengan penjelasan gaya antarmolekul.', 'The Alchemist quiz and an evaporation report explained with intermolecular forces.'],
+    assessment: ['Kuis Kimialoka dan laporan percobaan penguapan dengan penjelasan gaya antarmolekul.', 'The Kimialoka quiz and an evaporation report explained with intermolecular forces.'],
   },
   refs: ['10-1-intermolecular-forces', '10-2-properties-of-liquids', '7-6-molecular-structure-and-polarity', 'oc:2-12-noncovalent-interactions-between-molecules'],
 };

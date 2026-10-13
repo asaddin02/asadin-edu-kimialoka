@@ -118,13 +118,13 @@ Besides solid, liquid, gas and [[plasma]] there are intermediate phases such as 
       ['Pemantik: tunjukkan es batu, air, dan uap dari teko. Tanyakan: "Apakah ketiganya zat yang sama?"', 'Hook: show ice, water and steam from a kettle. Ask: "Are they the same substance?"'],
       ['Eksplorasi simulasi Partikel & wujud zat; siswa menggambar susunan partikel.', 'Explore the Particles & states simulation; learners draw particle arrangements.'],
       ['Praktikum pemisahan campuran dalam kelompok.', 'Group practical on separating mixtures.'],
-      ['Refleksi dan kuis singkat Alchemist.', 'Reflection and a short Alchemist quiz.'],
+      ['Refleksi dan kuis singkat Kimialoka.', 'Reflection and a short Kimialoka quiz.'],
     ],
     misconceptions: [
       ['"Gelembung air mendidih berisi udara." Sebenarnya berisi uap air.', '"Bubbles in boiling water are air." They are water vapour.'],
       ['"Gas tidak punya massa." Gas punya massa; balon berisi udara lebih berat daripada balon kempis.', '"Gases have no mass." They do; an inflated balloon weighs more than a flat one.'],
     ],
-    assessment: ['Kuis Alchemist + laporan praktikum pemisahan campuran (rubrik: prosedur, data, kesimpulan).', 'Alchemist quiz + separation practical report (rubric: method, data, conclusion).'],
+    assessment: ['Kuis Kimialoka + laporan praktikum pemisahan campuran (rubrik: prosedur, data, kesimpulan).', 'Kimialoka quiz + separation practical report (rubric: method, data, conclusion).'],
   },
   refs: ["1-2-phases-and-classification-of-matter", "1-3-physical-and-chemical-properties", "10-3-phase-transitions", "10-4-phase-diagrams"],
 };

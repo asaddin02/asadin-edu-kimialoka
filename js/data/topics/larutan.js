@@ -151,7 +151,7 @@ Colloid stability is explained by DLVO theory: electric double-layer repulsion a
       ['"Semua campuran bening adalah larutan." Koloid encer bisa tampak bening tetapi menunjukkan efek Tyndall.', '"Every clear mixture is a solution." Dilute colloids can look clear but show the Tyndall effect.'],
       ['"Molaritas dan molalitas sama saja." Molaritas per liter larutan, molalitas per kg pelarut.', '"Molarity and molality are the same." Molarity is per litre of solution; molality per kg of solvent.'],
     ],
-    assessment: ['Laporan praktikum pemisahan campuran, kuis Alchemist, dan soal hitungan konsentrasi.', 'A separation practical report, the Alchemist quiz and concentration problems.'],
+    assessment: ['Laporan praktikum pemisahan campuran, kuis Kimialoka, dan soal hitungan konsentrasi.', 'A separation practical report, the Kimialoka quiz and concentration problems.'],
   },
   refs: ['1-2-phases-and-classification-of-matter', '3-3-molarity', '3-4-other-units-for-solution-concentrations', '11-3-solubility', '11-4-colligative-properties', '11-5-colloids'],
 };

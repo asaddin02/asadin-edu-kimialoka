@@ -29,8 +29,8 @@ import { parseFormula } from '../js/services/formula.js';
 import { DECAY, daughter, nuclideLabel, nuclideId } from '../js/services/nuclide.js';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const SITE_NAME = 'Alchemist';
-const DEFAULT_TITLE = 'Alchemist · Ensiklopedia kimia interaktif';
+const SITE_NAME = 'Kimialoka';
+const DEFAULT_TITLE = 'Kimialoka · Ensiklopedia kimia interaktif';
 
 /* ---------- Small helpers ---------- */
 const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -197,7 +197,7 @@ const SECTIONS = [
   ['/about', 'Tentang dan sumber'],
 ];
 const sectionLinks = () =>
-  `<nav class="prerender-sections" aria-label="Bagian Alchemist"><h2>Jelajahi Alchemist</h2>${list(
+  `<nav class="prerender-sections" aria-label="Bagian Kimialoka"><h2>Jelajahi Kimialoka</h2>${list(
     SECTIONS.map(([href, label]) => link(href, label))
   )}</nav>`;
 const refList = codes =>
@@ -258,14 +258,14 @@ async function loadData() {
 
 function homePage(data) {
   const lead =
-    'Alchemist adalah ensiklopedia kimia interaktif berbahasa Indonesia untuk SD, SMP, SMA, kuliah, dan guru: ' +
+    'Kimialoka adalah ensiklopedia kimia interaktif berbahasa Indonesia untuk SD, SMP, SMA, kuliah, dan guru: ' +
     '118 unsur dengan isotopnya, ion, molekul 3D, golongan senyawa, reaksi setara, material dan campuran, ' +
     '29 materi belajar empat lapis, 14 laboratorium virtual, kuis, dan kamus kimia, dengan data resmi PubChem, ' +
     'IUPAC, dan IAEA.';
   const path = PATHS.smp.slice(0, 6).map(findTopic).filter(Boolean);
   const featured = MOLECULES.filter(m => m.lv === 'smp').slice(0, 12);
   const main = `<div class="container">
-    ${pageHead({ title: 'Alchemist · Ensiklopedia kimia interaktif', lead, eyebrow: 'Rasa ingin tahu dimulai di sini' })}
+    ${pageHead({ title: 'Kimialoka · Ensiklopedia kimia interaktif', lead, eyebrow: 'Rasa ingin tahu dimulai di sini' })}
     <p>Kenali materi, jelajahi perubahannya. Mulai dari ${link('/learn/zat', 'zat dan wujudnya')}, lihat ${link('/molecule/water', 'molekul air dalam 3D')}, atau buka ${link('/table', 'tabel periodik')} dan ${link('/search', 'cari apa saja')}: nama zat, rumus kimia, nomor CAS, unsur, isotop, ion, reaksi, atau istilah.</p>
     ${section(
       'Rantai materi: dari materi ke transformasi',
@@ -288,7 +288,7 @@ function homePage(data) {
       list(LABS.map(l => `${link(`/lab/${l.id}`, id(l.title))} — ${esc(id(l.summary))}`))
     )}
     ${section(
-      'Angka Alchemist',
+      'Angka Kimialoka',
       facts([
         ['Unsur', link('/table', '118 unsur dengan data IUPAC CIAAW dan PubChem')],
         [
@@ -318,7 +318,7 @@ function homePage(data) {
     path: '/',
     title: DEFAULT_TITLE,
     description:
-      'Alchemist: ensiklopedia kimia interaktif untuk SD sampai kuliah dan guru. Peta kimia, 118 unsur dan isotopnya, ion, molekul 3D, reaksi, material, 29 materi empat lapis, 14 laboratorium virtual, data resmi PubChem, IUPAC, dan IAEA.',
+      'Kimialoka: ensiklopedia kimia interaktif untuk SD sampai kuliah dan guru. Peta kimia, 118 unsur dan isotopnya, ion, molekul 3D, reaksi, material, 29 materi empat lapis, 14 laboratorium virtual, data resmi PubChem, IUPAC, dan IAEA.',
     main,
     jsonld: [
       {
@@ -598,7 +598,7 @@ function classesHubPage() {
       childClasses(c.id).length ? `<ul>${childClasses(c.id).map(tree).join('')}</ul>` : ''
     }</li>`;
   const main = `<div class="container">
-    ${pageHead({ title: 'Golongan senyawa', crumbs: [['Golongan', '']], lead: `${CLASSES.length} golongan senyawa dari unsur dan alotrop sampai biomolekul dan material: definisi, ciri khas, tata nama, dan contoh molekul dari katalog Alchemist.` })}
+    ${pageHead({ title: 'Golongan senyawa', crumbs: [['Golongan', '']], lead: `${CLASSES.length} golongan senyawa dari unsur dan alotrop sampai biomolekul dan material: definisi, ciri khas, tata nama, dan contoh molekul dari katalog Kimialoka.` })}
     <ul class="class-tree">${rootClasses().map(tree).join('')}</ul>
     ${sectionLinks()}
   </div>`;
@@ -1244,7 +1244,7 @@ function glossaryPage(g) {
         name: term,
         description: id(g.sci) || id(g.simple),
         inLanguage: 'id',
-        inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'Kamus kimia Alchemist' },
+        inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'Kamus kimia Kimialoka' },
       },
     ],
   };
@@ -1347,7 +1347,7 @@ function staticPages() {
   return [
     shellPage(
       '/search',
-      'Cari di Alchemist',
+      'Cari di Kimialoka',
       'Satu kotak untuk semuanya: nama zat dalam bahasa Indonesia atau Inggris, rumus kimia, nomor CAS, SMILES, unsur, isotop (misalnya C-14), ion, golongan, reaksi, material, materi belajar, istilah kamus, dan jutaan senyawa PubChem.',
       'Cari',
       `<p>Coba: ${['air', 'besi', 'C-14', 'sulfat', 'C6H12O6', 'baja'].map(q => link(`/search?q=${encodeURIComponent(q)}`, q)).join(', ')}.</p>`
@@ -1361,15 +1361,15 @@ function staticPages() {
     ),
     shellPage(
       '/about',
-      'Tentang Alchemist dan sumber data',
-      'Alchemist adalah ensiklopedia kimia interaktif dan platform belajar terbuka dari Asadin Edu, tanpa iklan dan pelacak. Data berasal dari sumber resmi dan bebas: PubChem (NIH), IUPAC CIAAW, IAEA Atomic Mass Data Center, Wikidata, Wikipedia, Wikimedia Commons, RCSB PDB, dan buku teks OpenStax (CC BY 4.0). Konten Alchemist berlisensi CC BY-SA 4.0, kodenya MIT.',
+      'Tentang Kimialoka dan sumber data',
+      'Kimialoka adalah ensiklopedia kimia interaktif dan platform belajar terbuka dari Asadin Edu, tanpa iklan dan pelacak. Data berasal dari sumber resmi dan bebas: PubChem (NIH), IUPAC CIAAW, IAEA Atomic Mass Data Center, Wikidata, Wikipedia, Wikimedia Commons, RCSB PDB, dan buku teks OpenStax (CC BY 4.0). Konten Kimialoka berlisensi CC BY-SA 4.0, kodenya MIT.',
       'Tentang',
-      `<p>Kode sumber: <a href="https://github.com/asaddin02/asadin-edu-alchemist" rel="noopener">github.com/asaddin02/asadin-edu-alchemist</a>. Lihat juga ${link('/dukung', 'cara mendukung Alchemist')}.</p>`
+      `<p>Kode sumber: <a href="https://github.com/asaddin02/asadin-edu-kimialoka" rel="noopener">github.com/asaddin02/asadin-edu-kimialoka</a>. Lihat juga ${link('/dukung', 'cara mendukung Kimialoka')}.</p>`
     ),
     shellPage(
       '/dukung',
-      'Dukung Alchemist',
-      'Alchemist gratis, terbuka, dan bebas iklan. Dukung pengembangannya lewat donasi (Saweria atau Ko-fi), laporan kesalahan, atau kontribusi konten dan kode di GitHub.',
+      'Dukung Kimialoka',
+      'Kimialoka gratis, terbuka, dan bebas iklan. Dukung pengembangannya lewat donasi (Saweria atau Ko-fi), laporan kesalahan, atau kontribusi konten dan kode di GitHub.',
       'Dukung'
     ),
     shellPage(
@@ -1455,7 +1455,7 @@ export function renderShell(shell, page, siteURL) {
   const main = `<main id="main" tabindex="-1" data-prerendered="${esc(page.path)}">
       ${page.main}
       <noscript>
-        <p class="container muted small">Model 3D, laboratorium virtual, kuis, dan pencarian PubChem memerlukan JavaScript. Alchemist tidak memakai pelacak atau iklan.</p>
+        <p class="container muted small">Model 3D, laboratorium virtual, kuis, dan pencarian PubChem memerlukan JavaScript. Kimialoka tidak memakai pelacak atau iklan.</p>
       </noscript>
     </main>`;
   html = html.replace(/<main id="main" tabindex="-1">[\s\S]*?<\/main>/, main);
@@ -1523,12 +1523,12 @@ export function notFoundShell(shell) {
   const page = {
     path: '/404',
     title: 'Halaman tidak ditemukan',
-    description: 'Alamat ini tidak ada di Alchemist.',
+    description: 'Alamat ini tidak ada di Kimialoka.',
     noindex: true,
     main: `<section class="container page-state">
         <h1>Halaman tidak ditemukan</h1>
-        <p>Alamat ini tidak ada di Alchemist.</p>
-        <p><a class="btn btn-primary" href="/">Kembali ke beranda Alchemist</a></p>
+        <p>Alamat ini tidak ada di Kimialoka.</p>
+        <p><a class="btn btn-primary" href="/">Kembali ke beranda Kimialoka</a></p>
         ${sectionLinks()}
       </section>`,
   };

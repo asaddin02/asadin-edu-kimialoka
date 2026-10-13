@@ -20,7 +20,7 @@ const s = S({
   features: ['Ciri khas', 'Key features'],
   naming: ['Tata nama', 'Naming'],
   subclasses: ['Golongan di dalamnya', 'Classes inside'],
-  members: ['Anggota di katalog Alchemist', 'Members in the Alchemist catalogue'],
+  members: ['Anggota di katalog Kimialoka', 'Members in the Kimialoka catalogue'],
   more: ['Anggota lain dari PubChem', 'More members from PubChem'],
   moreLead: [
     'Senyawa nyata dengan gugus/struktur golongan ini, dicari di PubChem dengan pola SMARTS {smarts}.',

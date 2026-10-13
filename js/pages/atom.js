@@ -1,6 +1,6 @@
 // Atoms: /atom is the hub for atomic structure; /atom/<symbol> is an element profile: properties, isotopes and
 // the IUPAC standard atomic weight, history, uses and occurrence from the reference sources PubChem gathers, GHS
-// hazards of the elemental substance, and everything in Alchemist that contains the element (ions, molecules,
+// hazards of the elemental substance, and everything in Kimialoka that contains the element (ions, molecules,
 // reactions, materials, lessons).
 import { $, esc, safeURL } from '../core/dom.js';
 import { S, pick, fmt, num, atLeast, depth } from '../core/prefs.js';

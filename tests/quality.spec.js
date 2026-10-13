@@ -92,12 +92,12 @@ test('keyboard users can skip to content and rotate the 3D model', async ({ page
 test('pages set a descriptive document title and a single h1', async ({ page }) => {
   await prefs(page);
   for (const [hash, title] of [
-    ['molecule/water', 'Air · Alchemist'],
-    ['atom/Au', 'Emas · Alchemist'],
-    ['learn/zat', 'Zat dan wujudnya · Alchemist'],
-    ['isotope/C-14', 'C-14 · Alchemist'],
-    ['reaction/haber-bosch', 'Proses Haber–Bosch (amonia) · Alchemist'],
-    ['peta/inti', 'Isotop & kimia inti · Alchemist'],
+    ['molecule/water', 'Air · Kimialoka'],
+    ['atom/Au', 'Emas · Kimialoka'],
+    ['learn/zat', 'Zat dan wujudnya · Kimialoka'],
+    ['isotope/C-14', 'C-14 · Kimialoka'],
+    ['reaction/haber-bosch', 'Proses Haber–Bosch (amonia) · Kimialoka'],
+    ['peta/inti', 'Isotop & kimia inti · Kimialoka'],
   ]) {
     await open(page, hash);
     await expect(page).toHaveTitle(title);

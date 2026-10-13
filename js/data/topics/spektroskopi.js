@@ -65,7 +65,7 @@ Reading example: a C₂H₆O compound with a broad IR band near 3300 cm⁻¹ is 
 
 **Spektrometri massa**: pola isotop membantu identifikasi — senyawa berklorin menunjukkan puncak M dan M+2 dengan rasio sekitar 3:1, berbromin sekitar 1:1; resolusi tinggi memberi rumus molekul dari massa eksak (bandingkan dengan "Exact Mass" PubChem di halaman molekul).
 
-Dalam [[interpretasi-spektrum|interpretasi spektrum]], penentuan struktur modern menggabungkan MS (rumus), IR (gugus fungsi), ¹H/¹³C NMR dan NMR 2D (kerangka dan konektivitas), serta kristalografi sinar-X untuk struktur tiga dimensi. Data spektrum rujukan tersedia di bagian "Spectral Information" rekaman PubChem, yang ditautkan dari setiap halaman molekul Alchemist.`,
+Dalam [[interpretasi-spektrum|interpretasi spektrum]], penentuan struktur modern menggabungkan MS (rumus), IR (gugus fungsi), ¹H/¹³C NMR dan NMR 2D (kerangka dan konektivitas), serta kristalografi sinar-X untuk struktur tiga dimensi. Data spektrum rujukan tersedia di bagian "Spectral Information" rekaman PubChem, yang ditautkan dari setiap halaman molekul Kimialoka.`,
       `**UV-Vis**: π → π* and n → π* transitions; conjugation narrows the HOMO–LUMO gap, shifting λmax to longer wavelengths. That is why long polyenes such as {{m:beta-carotene|β-carotene}} and {{m:lycopene|lycopene}} are coloured while ethene absorbs in the far UV. In transition-metal complexes colour comes from d–d and charge-transfer transitions.
 
 **Infrared**: vibrations are modelled as harmonic oscillators, ν̃ = (1/2πc)√(k/μ); stronger bonds (large k) and lighter atoms (small μ) vibrate at higher wavenumbers, so C≡C > C=C > C–C and O–H lies far above O–D. A vibration is IR-active if its dipole moment changes; **Raman**-active if its polarisability changes, so the two complement each other (the symmetric stretch of CO₂ is Raman-active only).
@@ -74,7 +74,7 @@ Dalam [[interpretasi-spektrum|interpretasi spektrum]], penentuan struktur modern
 
 **Mass spectrometry**: isotope patterns help identification — chlorine compounds show M and M+2 peaks in about a 3:1 ratio, bromine compounds about 1:1; high resolution gives the molecular formula from the exact mass (compare PubChem’s "Exact Mass" on the molecule page).
 
-In [[interpretasi-spektrum|spectral interpretation]], modern structure determination combines MS (formula), IR (functional groups), ¹H/¹³C and 2D NMR (skeleton and connectivity), and X-ray crystallography for 3D structures. Reference spectra are available in the "Spectral Information" section of PubChem records, linked from every Alchemist molecule page.`,
+In [[interpretasi-spektrum|spectral interpretation]], modern structure determination combines MS (formula), IR (functional groups), ¹H/¹³C and 2D NMR (skeleton and connectivity), and X-ray crystallography for 3D structures. Reference spectra are available in the "Spectral Information" section of PubChem records, linked from every Kimialoka molecule page.`,
     ],
   },
   points: [
@@ -89,7 +89,7 @@ In [[interpretasi-spektrum|spectral interpretation]], modern structure determina
   activity: {
     sd: ['Buat pelangi dengan gelas berisi air di bawah sinar Matahari atau dengan CD bekas. Gambar urutan warnanya.', 'Make a rainbow with a glass of water in sunlight or an old CD. Draw the order of colours.'],
     smp: ['Amati larutan berwarna (teh, sirup, terusi) di depan layar ponsel yang menampilkan warna merah, hijau, dan biru. Warna mana yang diserap tiap larutan?', 'Hold coloured solutions (tea, syrup, blue vitriol) in front of a phone screen showing red, green and blue. Which colour does each absorb?'],
-    sma: ['Diberikan data IR dan ¹H NMR untuk tiga isomer C₃H₆O (dari buku atau basis data), tentukan mana propanal, propanon, dan prop-2-en-1-ol. Cek strukturnya di Alchemist.', 'Given IR and ¹H NMR data for three C₃H₆O isomers (from a book or database), decide which is propanal, propanone and prop-2-en-1-ol. Check the structures in Alchemist.'],
+    sma: ['Diberikan data IR dan ¹H NMR untuk tiga isomer C₃H₆O (dari buku atau basis data), tentukan mana propanal, propanon, dan prop-2-en-1-ol. Cek strukturnya di Kimialoka.', 'Given IR and ¹H NMR data for three C₃H₆O isomers (from a book or database), decide which is propanal, propanone and prop-2-en-1-ol. Check the structures in Kimialoka.'],
     kuliah: ['Ramalkan jumlah sinyal, geseran kimia, integrasi, dan pola pemecahan ¹H NMR etil asetat, lalu bandingkan dengan spektrum rujukan yang ditautkan PubChem.', 'Predict the number of ¹H NMR signals, shifts, integrals and splitting for ethyl acetate, then compare with the reference spectrum linked from PubChem.'],
   },
   quiz: [
@@ -125,7 +125,7 @@ In [[interpretasi-spektrum|spectral interpretation]], modern structure determina
       ['"Semua radiasi berbahaya." Bahayanya bergantung pada energi; gelombang radio dan cahaya tampak tidak mengionkan.', '"All radiation is dangerous." It depends on energy; radio waves and visible light are non-ionising.'],
       ['"NMR memakai radiasi pengion." NMR memakai gelombang radio dan medan magnet, bukan radiasi pengion.', '"NMR uses ionising radiation." NMR uses radio waves and a magnetic field.'],
     ],
-    assessment: ['Kuis Alchemist dan tugas penentuan struktur dari data spektrum.', 'The Alchemist quiz and a structure-from-spectra task.'],
+    assessment: ['Kuis Kimialoka dan tugas penentuan struktur dari data spektrum.', 'The Kimialoka quiz and a structure-from-spectra task.'],
   },
   refs: ['6-1-electromagnetic-energy', '6-2-the-bohr-model', 'oc:12-2-interpreting-mass-spectra', 'oc:12-5-spectroscopy-and-the-electromagnetic-spectrum', 'oc:12-7-interpreting-infrared-spectra', 'oc:13-3-chemical-shifts', 'oc:13-6-spin-spin-splitting-in-1h-nmr-spectra', 'oc:14-7-ultraviolet-spectroscopy'],
 };

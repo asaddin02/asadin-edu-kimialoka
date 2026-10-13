@@ -94,9 +94,9 @@ In solution, ions move in an electric field with different mobilities (H⁺ and 
   labs: ['nyala'],
   activity: {
     sd: ['Uji daya hantar listrik: sambungkan baterai, lampu kecil, dan dua paku ke gelas air murni, air gula, dan air garam. Catat mana yang menyalakan lampu.', 'Conductivity test: connect a battery, small bulb and two nails in pure water, sugar water and salt water. Record which lights the bulb.'],
-    smp: ['Buat kartu kation dan anion, lalu pasangkan menjadi 10 rumus senyawa ion yang netral beserta namanya. Cek jawabanmu di penjelajah ion Alchemist.', 'Make cation and anion cards, pair them into 10 neutral ionic formulas and name them. Check with the Alchemist ion explorer.'],
-    sma: ['Rancang urutan uji untuk mengenali ion dalam larutan tak dikenal (Cl⁻, SO₄²⁻, CO₃²⁻, Fe³⁺, Cu²⁺) memakai pustaka reaksi Alchemist, lalu tulis persamaan ion bersihnya.', 'Design a test sequence to identify ions in an unknown solution (Cl⁻, SO₄²⁻, CO₃²⁻, Fe³⁺, Cu²⁺) using the Alchemist reaction library, and write the net ionic equations.'],
-    kuliah: ['Susun siklus Born–Haber NaCl dan MgO dari data energi ionisasi dan afinitas elektron di halaman unsur Alchemist, lalu jelaskan perbedaan titik lelehnya.', 'Build Born–Haber cycles for NaCl and MgO using ionisation energies and electron affinities from Alchemist’s element pages, and explain their different melting points.'],
+    smp: ['Buat kartu kation dan anion, lalu pasangkan menjadi 10 rumus senyawa ion yang netral beserta namanya. Cek jawabanmu di penjelajah ion Kimialoka.', 'Make cation and anion cards, pair them into 10 neutral ionic formulas and name them. Check with the Kimialoka ion explorer.'],
+    sma: ['Rancang urutan uji untuk mengenali ion dalam larutan tak dikenal (Cl⁻, SO₄²⁻, CO₃²⁻, Fe³⁺, Cu²⁺) memakai pustaka reaksi Kimialoka, lalu tulis persamaan ion bersihnya.', 'Design a test sequence to identify ions in an unknown solution (Cl⁻, SO₄²⁻, CO₃²⁻, Fe³⁺, Cu²⁺) using the Kimialoka reaction library, and write the net ionic equations.'],
+    kuliah: ['Susun siklus Born–Haber NaCl dan MgO dari data energi ionisasi dan afinitas elektron di halaman unsur Kimialoka, lalu jelaskan perbedaan titik lelehnya.', 'Build Born–Haber cycles for NaCl and MgO using ionisation energies and electron affinities from Kimialoka’s element pages, and explain their different melting points.'],
   },
   quiz: [
     { lv: 'sd', q: ['Air garam dapat menghantarkan listrik karena mengandung…', 'Salt water conducts electricity because it contains…'], options: [['Gula', 'Sugar'], ['Ion yang bergerak bebas', 'Freely moving ions'], ['Udara', 'Air'], ['Minyak', 'Oil']], answer: 1, explain: ['Garam terurai menjadi ion Na⁺ dan Cl⁻ yang dapat membawa arus.', 'Salt splits into Na⁺ and Cl⁻ ions that can carry current.'] },
@@ -123,14 +123,14 @@ In solution, ions move in an electric field with different mobilities (H⁺ and 
       ['Pemantik: uji daya hantar air murni, air gula, dan air garam.', 'Hook: conductivity of pure water, sugar water and salt water.'],
       ['Permainan kartu ion: pasangkan muatan menjadi rumus netral.', 'Ion card game: pair charges into neutral formulas.'],
       ['Praktikum uji ion (Cl⁻, SO₄²⁻, CO₃²⁻, Cu²⁺) dan uji nyala virtual.', 'Practical: ion tests (Cl⁻, SO₄²⁻, CO₃²⁻, Cu²⁺) and the virtual flame test.'],
-      ['Refleksi dengan penjelajah ion Alchemist.', 'Reflection with the Alchemist ion explorer.'],
+      ['Refleksi dengan penjelajah ion Kimialoka.', 'Reflection with the Kimialoka ion explorer.'],
     ],
     misconceptions: [
       ['"Ion positif terbentuk karena menerima proton." Kation terbentuk karena kehilangan elektron; jumlah proton tetap.', '"Positive ions form by gaining protons." Cations form by losing electrons; the proton count is unchanged.'],
       ['"NaCl padat terdiri atas molekul NaCl." Padatannya kisi ion.', '"Solid NaCl is made of NaCl molecules." The solid is an ionic lattice.'],
       ['"SO₄²⁻ berarti S bermuatan +6 dan tiap O −2 secara nyata." Bilangan oksidasi adalah hitungan, bukan muatan sebenarnya.', '"SO₄²⁻ means S really carries +6 and each O −2." Oxidation numbers are book-keeping, not real charges.'],
     ],
-    assessment: ['Kuis Alchemist, lembar kerja rumus senyawa ion, dan laporan uji ion.', 'The Alchemist quiz, an ionic-formula worksheet and an ion-test report.'],
+    assessment: ['Kuis Kimialoka, lembar kerja rumus senyawa ion, dan laporan uji ion.', 'The Kimialoka quiz, an ionic-formula worksheet and an ion-test report.'],
   },
   refs: ['2-6-ionic-and-molecular-compounds', '2-7-chemical-nomenclature', '7-1-ionic-bonding', '11-2-electrolytes', '15-1-precipitation-and-dissolution'],
 };

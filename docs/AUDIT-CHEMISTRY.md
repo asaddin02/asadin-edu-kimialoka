@@ -1,6 +1,6 @@
-# Audit cakupan dan akurasi Kimia Alchemist
+# Audit cakupan dan akurasi Kimia Kimialoka
 
-Dokumen ini mencatat dua audit terhadap Alchemist (sebelumnya bernama Moleculium) sesuai lingkup "ensiklopedia
+Dokumen ini mencatat dua audit terhadap Kimialoka sesuai lingkup "ensiklopedia
 Kimia interaktif + platform belajar": dari materi, partikel, atom, unsur, isotop, ion, molekul, senyawa, material,
 sifat, ikatan, reaksi, sampai cabang-cabang ilmu kimia.
 
@@ -103,7 +103,7 @@ sumber. Kamus tidak memuat definisi yang salah.
    kuis per jenjang, dan perbaikan akurasi.
 4. Pencarian terpadu (nama, rumus, lambang, CAS, CID, SMILES, InChI, InChIKey, IUPAC, konsep, reaksi, materi) dan
    relasi antarhalaman agar tidak ada halaman buntu.
-5. Mengganti nama Moleculium menjadi Alchemist di seluruh aplikasi dan dokumen.
+5. Mengganti nama lama menjadi Kimialoka di seluruh aplikasi dan dokumen.
 6. Audit ulang dari data setelah implementasi.
 
 ## B. Audit ulang setelah implementasi (29 September 2026, versi 3.0.0)
@@ -336,5 +336,5 @@ datanya, halaman menulis "Data belum tersedia" (misalnya GHS unsur tanpa klasifi
    ketentuan pemakaiannya diperiksa dulu.
 5. **Relasi katalog.** 84 molekul katalog belum dirujuk materi, ion, reaksi, atau material (masih dapat dicari dan
    dijelajahi per golongan). 87 istilah kamus belum ditautkan langsung dari teks materi, tetapi semuanya masuk peta.
-6. **Identitas merek.** Selesai: logo huruf "m" dari Moleculium sudah diganti dengan labu kimia berbentuk "A"
+6. **Identitas merek.** Selesai: logo huruf "m" yang lama sudah diganti dengan labu kimia berbentuk "A"
    (`assets/brand/mark.svg` dan ikon turunannya).

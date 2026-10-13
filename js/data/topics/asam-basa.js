@@ -126,7 +126,7 @@ Superacids such as HSbF₆ are more acidic than 100% sulfuric acid and can proto
       ['"Semua asam berbahaya dan korosif." Banyak asam lemah aman dimakan (sitrat, askorbat).', '"All acids are dangerous." Many weak acids are edible (citric, ascorbic).'],
       ['"pH 0 berarti tidak ada asam." Justru sangat asam.', '"pH 0 means no acid." It means very acidic.'],
     ],
-    assessment: ['Kuis Alchemist dan laporan titrasi cuka.', 'Alchemist quiz and a vinegar titration report.'],
+    assessment: ['Kuis Kimialoka dan laporan titrasi cuka.', 'Kimialoka quiz and a vinegar titration report.'],
   },
   refs: ["14-1-bronsted-lowry-acids-and-bases", "14-2-ph-and-poh", "14-3-relative-strengths-of-acids-and-bases", "14-6-buffers", "14-7-acid-base-titrations", "15-2-lewis-acids-and-bases"],
 };

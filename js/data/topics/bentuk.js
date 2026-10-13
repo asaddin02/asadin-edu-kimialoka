@@ -17,7 +17,7 @@ export default {
 
 Bentuk molekul menentukan sifatnya. Karena bentuk air bengkok, air bisa menarik partikel gula dan garam sehingga keduanya larut.
 
-Di setiap [[bentuk-molekul|halaman molekul]] Alchemist kamu bisa memutar model 3D-nya dengan jari atau tetikus.`,
+Di setiap [[bentuk-molekul|halaman molekul]] Kimialoka kamu bisa memutar model 3D-nya dengan jari atau tetikus.`,
       `Molecules are not flat like pictures in a book. They have 3D shapes, like toys you can turn around:
 
 - {{m:water|Water}} is bent like the letter V.
@@ -26,7 +26,7 @@ Di setiap [[bentuk-molekul|halaman molekul]] Alchemist kamu bisa memutar model 3
 
 A molecule’s shape decides how it behaves. Because water is bent, it can pull on sugar and salt particles so they dissolve.
 
-On every [[bentuk-molekul|molecule page]] in Alchemist you can spin the 3D model with a finger or mouse.`,
+On every [[bentuk-molekul|molecule page]] in Kimialoka you can spin the 3D model with a finger or mouse.`,
     ],
     smp: [
       `Atom-atom dalam molekul tersusun dengan sudut tertentu, bukan asal menempel. Pasangan elektron di sekitar atom pusat saling tolak dan menjauh sejauh mungkin, sehingga muncul bentuk khas:
@@ -93,14 +93,14 @@ Bentuk molekul berukuran besar ditentukan analisis konformasi: rotasi C–C pada
 
 Gaya antarmolekul dapat dikuantifikasi: energi dispersi ∝ α²/r⁶ (polarisabilitas), dipol–dipol ∝ μ²/r³ (rata-rata termal ∝ μ⁴/(kT·r⁶)), ikatan hidrogen 10–40 kJ/mol. Ikatan hidrogen menjelaskan struktur heliks ganda DNA, lipatan protein, dan anomali air.
 
-Koordinat 3D di Alchemist adalah konformer hasil perhitungan PubChem (MMFF94); bandingkan sudut hasil perhitungan dengan prediksi VSEPR.`,
+Koordinat 3D di Kimialoka adalah konformer hasil perhitungan PubChem (MMFF94); bandingkan sudut hasil perhitungan dengan prediksi VSEPR.`,
       `[[hibridisasi|Hybridisation]] links VSEPR to orbitals: sp (linear), sp² (trigonal planar), sp³ (tetrahedral), sp³d and sp³d² for expanded octets (though bonding in PCl₅ and SF₆ is now better described by 3-centre 4-electron bonds without d orbitals). For carbon, sp³ gives single bonds, sp² double bonds (1 [[ikatan-sigma-pi|σ + 1 π]]) as in ethene, and sp triple bonds as in {{m:acetylene|acetylene}}.
 
 The shape of larger molecules comes from conformational analysis: C–C rotation in {{m:ethane|ethane}} (staggered vs eclipsed), the chair of {{m:cyclohexane|cyclohexane}}, and [[kiral|chirality]] separating drug enantiomers such as {{m:ibuprofen|ibuprofen}}.
 
 Intermolecular forces can be quantified: dispersion ∝ α²/r⁶ (polarisability), dipole–dipole ∝ μ²/r³ (thermal average ∝ μ⁴/(kT·r⁶)), hydrogen bonds 10–40 kJ/mol. Hydrogen bonding explains DNA’s double helix, protein folding and water’s anomalies.
 
-Alchemist’s 3D coordinates are PubChem’s computed conformers (MMFF94); compare the computed angles with VSEPR predictions.`,
+Kimialoka’s 3D coordinates are PubChem’s computed conformers (MMFF94); compare the computed angles with VSEPR predictions.`,
     ],
   },
   points: [
@@ -112,9 +112,9 @@ Alchemist’s 3D coordinates are PubChem’s computed conformers (MMFF94); compa
   labs: ['vsepr', 'rakit'],
   activity: {
     smp: ["Buat model CO₂, BF₃, CH₄, NH₃, dan H₂O dari balon atau plastisin; ukur sudutnya dengan busur derajat dan bandingkan dengan lab VSEPR.", "Make CO₂, BF₃, CH₄, NH₃ and H₂O models from balloons or play dough; measure the angles with a protractor and compare with the VSEPR lab."],
-    sd: ["Buat model air (bengkok), karbon dioksida (lurus), dan metana (limas) dari bola plastisin dan tusuk gigi. Putar model 3D-nya di Alchemist dan bandingkan.", "Make water (bent), carbon dioxide (straight) and methane (pyramid) models from play-dough balls and toothpicks. Spin the 3D models in Alchemist and compare."],
+    sd: ["Buat model air (bengkok), karbon dioksida (lurus), dan metana (limas) dari bola plastisin dan tusuk gigi. Putar model 3D-nya di Kimialoka dan bandingkan.", "Make water (bent), carbon dioxide (straight) and methane (pyramid) models from play-dough balls and toothpicks. Spin the 3D models in Kimialoka and compare."],
     sma: ['Buat model VSEPR dari balon (2–6 balon diikat di tengah) dan bandingkan dengan lab Bentuk molekul.', 'Build VSEPR models from balloons (2–6 tied together) and compare with the Molecular shapes lab.'],
-    kuliah: ['Ukur sudut H–O–H dan H–N–H pada model 3D PubChem di Alchemist (klik atom), bandingkan dengan nilai eksperimen.', 'Measure the H–O–H and H–N–H angles on PubChem 3D models in Alchemist and compare with experiment.'],
+    kuliah: ['Ukur sudut H–O–H dan H–N–H pada model 3D PubChem di Kimialoka (klik atom), bandingkan dengan nilai eksperimen.', 'Measure the H–O–H and H–N–H angles on PubChem 3D models in Kimialoka and compare with experiment.'],
   },
   quiz: [
     { lv: 'smp', q: ["Molekul CO₂ berbentuk…", "The CO₂ molecule is…"], options: [["Bengkok", "Bent"], ["Lurus (linear)", "Straight (linear)"], ["Tetrahedral", "Tetrahedral"], ["Piramida", "Pyramidal"]], answer: 1, explain: ["Dua ikatan C=O di kiri dan kanan atom karbon membentuk sudut 180°.", "The two C=O bonds on either side of carbon make a 180° angle."] },
@@ -140,10 +140,10 @@ Alchemist’s 3D coordinates are PubChem’s computed conformers (MMFF94); compa
     steps: [
       ['Model balon VSEPR.', 'Balloon VSEPR models.'],
       ['Lab Bentuk molekul: siswa mengisi tabel AXₘEₙ–bentuk–sudut.', 'Molecular shapes lab: fill in an AXₘEₙ–shape–angle table.'],
-      ['Diskusi data titik didih dari halaman molekul Alchemist (PubChem).', 'Discuss boiling-point data from Alchemist molecule pages (PubChem).'],
+      ['Diskusi data titik didih dari halaman molekul Kimialoka (PubChem).', 'Discuss boiling-point data from Kimialoka molecule pages (PubChem).'],
     ],
     misconceptions: [['"Ikatan hidrogen adalah ikatan antara atom H di dalam molekul." Ikatan hidrogen adalah gaya antarmolekul.', '"A hydrogen bond is the bond to H inside a molecule." It is an intermolecular force.']],
-    assessment: ['Kuis Alchemist dan tabel prediksi bentuk 10 molekul.', 'Alchemist quiz and a shape-prediction table for 10 molecules.'],
+    assessment: ['Kuis Kimialoka dan tabel prediksi bentuk 10 molekul.', 'Kimialoka quiz and a shape-prediction table for 10 molecules.'],
   },
   refs: ["7-6-molecular-structure-and-polarity", "8-1-valence-bond-theory", "8-2-hybrid-atomic-orbitals", "10-1-intermolecular-forces"],
 };

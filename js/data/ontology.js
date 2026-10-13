@@ -1,4 +1,4 @@
-// The Alchemist chemistry knowledge map. Matter is the entry point: a chain from matter to transformation, and
+// The Kimialoka chemistry knowledge map. Matter is the entry point: a chain from matter to transformation, and
 // the branches (domains) of chemistry. Every concept is a glossary key, every lesson a topic id, every explorer a
 // route. The map page (/peta), concept search and scripts/audit.mjs all read this file, so coverage is measured
 // against one explicit list rather than by guessing from keywords. Text pairs are [Bahasa Indonesia, English].

@@ -1,4 +1,4 @@
-// Unified search (/search?q=): one box for everything in Alchemist (elements, nuclides, ions, catalogue
+// Unified search (/search?q=): one box for everything in Kimialoka (elements, nuclides, ions, catalogue
 // molecules, compound classes, reactions, materials, lessons, glossary concepts, knowledge-map domains and labs)
 // plus live PubChem results for names, IUPAC names, CAS numbers, formulas, CIDs, SMILES, InChI and InChIKeys.
 import { $, esc, debounce } from '../core/dom.js';
@@ -25,7 +25,7 @@ import { LABS } from '../data/curriculum.js';
 import { DOMAINS } from '../data/ontology.js';
 
 const s = S({
-  title: ['Cari di Alchemist', 'Search Alchemist'],
+  title: ['Cari di Kimialoka', 'Search Kimialoka'],
   lead: [
     'Satu kotak untuk semuanya: unsur, isotop, ion, molekul, reaksi, material, konsep, materi pelajaran, dan laboratorium. Juga menerima nama IUPAC, rumus, nomor CAS, CID, SMILES, InChI, dan InChIKey untuk mencari di PubChem.',
     'One box for everything: elements, isotopes, ions, molecules, reactions, materials, concepts, lessons and labs. It also takes IUPAC names, formulas, CAS numbers, CIDs, SMILES, InChI and InChIKeys to search PubChem.',
@@ -39,8 +39,8 @@ const s = S({
     'This CAS number’s check digit does not match; check what you typed.',
   ],
   top: ['Hasil teratas', 'Top result'],
-  count: ['{n} hasil di Alchemist', '{n} results in Alchemist'],
-  none: ['Tidak ada yang cocok di Alchemist.', 'Nothing in Alchemist matches.'],
+  count: ['{n} hasil di Kimialoka', '{n} results in Kimialoka'],
+  none: ['Tidak ada yang cocok di Kimialoka.', 'Nothing in Kimialoka matches.'],
   seeAll: ['Lihat semua ({n})', 'See all ({n})'],
   showAll: ['Tampilkan semua ({n})', 'Show all ({n})'],
   live: ['Hasil langsung dari PubChem', 'Live results from PubChem'],
@@ -48,15 +48,15 @@ const s = S({
     'Senyawa di luar katalog; datanya diambil saat dibuka.',
     'Compounds outside the catalogue, fetched when opened.',
   ],
-  inCatalog: ['Ada di katalog Alchemist', 'In the Alchemist catalogue'],
+  inCatalog: ['Ada di katalog Kimialoka', 'In the Kimialoka catalogue'],
   suggestions: ['Nama yang mirip di PubChem', 'Similar names in PubChem'],
   noneLive: [
     'PubChem tidak menemukan senyawa yang cocok, atau PubChem sedang tidak dapat dihubungi.',
     'PubChem found no matching compound, or PubChem cannot be reached right now.',
   ],
   offline: [
-    'Pencarian PubChem memerlukan internet; hasil di atas berasal dari data Alchemist.',
-    'PubChem search needs a connection; the results above come from Alchemist’s own data.',
+    'Pencarian PubChem memerlukan internet; hasil di atas berasal dari data Kimialoka.',
+    'PubChem search needs a connection; the results above come from Kimialoka’s own data.',
   ],
   tryTitle: ['Coba cari', 'Try searching for'],
   browse: ['Atau jelajahi', 'Or browse'],

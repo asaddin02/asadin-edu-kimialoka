@@ -5,7 +5,7 @@ test.use({ serviceWorkers: 'allow' });
 
 test('installable manifest with icons', async ({ request }) => {
   const manifest = await (await request.get('/manifest.webmanifest')).json();
-  expect(manifest.short_name).toBe('Alchemist');
+  expect(manifest.short_name).toBe('Kimialoka');
   expect(manifest.icons.some(i => i.purpose === 'maskable')).toBe(true);
   for (const icon of manifest.icons) expect((await request.get(icon.src)).ok()).toBe(true);
 });

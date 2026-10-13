@@ -1,6 +1,6 @@
 # Berkontribusi
 
-Terima kasih! Alchemist dipakai pelajar dan guru, jadi ketepatan kimia dan kejelasan bahasa paling penting.
+Terima kasih! Kimialoka dipakai pelajar dan guru, jadi ketepatan kimia dan kejelasan bahasa paling penting.
 
 1. `npm ci`, lalu `npm run dev`.
 2. Konten ditulis berpasangan `[Bahasa Indonesia, English]`. Tulis untuk pembaca jenjang yang dituju; hindari

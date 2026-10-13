@@ -1,6 +1,6 @@
 # Keamanan / Security
 
-Alchemist tidak punya akun, basis data, atau data pribadi di server. Yang disimpan pengguna (simpanan, catatan,
+Kimialoka tidak punya akun, basis data, atau data pribadi di server. Yang disimpan pengguna (simpanan, catatan,
 kemajuan, jawaban tugas) hanya ada di `localStorage` perangkatnya.
 
 Lapisan pengamanan:
@@ -14,5 +14,5 @@ Lapisan pengamanan:
   dari API pihak ketiga di-escape; URL pihak ketiga hanya dipakai bila berskema http(s).
 
 Menemukan celah? Mohon laporkan secara privat lewat
-[GitHub Security Advisories](https://github.com/asaddin02/asadin-edu-alchemist/security/advisories/new),
+[GitHub Security Advisories](https://github.com/asaddin02/asadin-edu-kimialoka/security/advisories/new),
 bukan lewat issue publik. Kami akan menanggapi secepatnya.

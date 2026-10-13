@@ -31,7 +31,7 @@ const s = S({
     'Valensi: C 4 · N 3 · O 2 · S 2 · H dan halogen 1',
     'Valence: C 4 · N 3 · O 2 · S 2 · H and halogens 1',
   ],
-  inCatalog: ['Di katalog Alchemist', 'In the Alchemist catalogue'],
+  inCatalog: ['Di katalog Kimialoka', 'In the Kimialoka catalogue'],
 });
 
 const ATOMS = ['C', 'H', 'O', 'N', 'S', 'P', 'F', 'Cl', 'Br'];

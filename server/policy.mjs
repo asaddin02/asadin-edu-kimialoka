@@ -1,9 +1,9 @@
 // Security headers and PubChem proxy rules shared by server/server.mjs, the Cloudflare Pages Function
 // (functions/api/[[path]].js) and the static build (scripts/build-site.mjs), so every way of hosting
-// Alchemist sends the same policy. No Node-only APIs: this module also runs on Cloudflare.
+// Kimialoka sends the same policy. No Node-only APIs: this module also runs on Cloudflare.
 
-export const REPOSITORY = 'https://github.com/asaddin02/asadin-edu-alchemist';
-export const DEFAULT_USER_AGENT = `Alchemist/3 (open-source chemistry encyclopedia and learning platform; +${REPOSITORY})`;
+export const REPOSITORY = 'https://github.com/asaddin02/asadin-edu-kimialoka';
+export const DEFAULT_USER_AGENT = `Kimialoka/3 (open-source chemistry encyclopedia and learning platform; +${REPOSITORY})`;
 
 /** The app's page routes (first path segment); keep in step with PAGES in js/core/router.js. */
 export const APP_ROUTES = [

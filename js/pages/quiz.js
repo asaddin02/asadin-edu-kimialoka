@@ -19,8 +19,8 @@ import { quizResults, earnedBadges, BADGES, progressStats } from '../core/userda
 const s = S({
   title: ['Kuis', 'Quizzes'],
   lead: [
-    'Kuis materi mengikuti jenjangmu. Kuis tantangan dibuat acak dari data Alchemist setiap kali dimainkan, jadi selalu ada soal baru.',
-    'Lesson quizzes follow your level. Challenge quizzes are generated at random from Alchemist data every time, so there are always new questions.',
+    'Kuis materi mengikuti jenjangmu. Kuis tantangan dibuat acak dari data Kimialoka setiap kali dimainkan, jadi selalu ada soal baru.',
+    'Lesson quizzes follow your level. Challenge quizzes are generated at random from Kimialoka data every time, so there are always new questions.',
   ],
   challenges: ['Kuis tantangan', 'Challenge quizzes'],
   lessons: ['Kuis per materi', 'Lesson quizzes'],

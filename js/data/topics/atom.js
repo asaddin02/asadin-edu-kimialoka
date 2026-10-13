@@ -101,7 +101,7 @@ The quantum foundations are developed in {{learn:kuantum|Quantum & physical chem
   labs: ['orbital', 'nyala'],
   activity: {
     sd: ['Buat model atom dari plastisin: bola besar di tengah (inti) dan bola kecil (elektron) pada lingkaran kawat.', 'Build an atom model from play dough: a big ball in the middle (nucleus) and small balls (electrons) on wire rings.'],
-    smp: ['Pilih 5 unsur di tabel periodik Alchemist, tentukan jumlah proton, neutron, elektron, dan susunan elektron per kulitnya.', 'Pick 5 elements in the Alchemist periodic table and find their protons, neutrons, electrons and electrons per shell.'],
+    smp: ['Pilih 5 unsur di tabel periodik Kimialoka, tentukan jumlah proton, neutron, elektron, dan susunan elektron per kulitnya.', 'Pick 5 elements in the Kimialoka periodic table and find their protons, neutrons, electrons and electrons per shell.'],
     sma: ['Gunakan lab Konfigurasi elektron untuk 10 unsur periode 4. Catat unsur yang menjadi pengecualian dan jelaskan alasannya.', 'Use the Electron configuration lab for 10 period-4 elements. Note the exceptions and explain them.'],
     kuliah: ['Hitung Z_eff elektron 2p pada C, N, O, F dengan aturan Slater, lalu hubungkan dengan tren energi ionisasi pertama dari data PubChem.', 'Compute Z_eff for 2p electrons in C, N, O, F with Slater’s rules and relate it to first ionisation energies from PubChem.'],
   },
@@ -128,14 +128,14 @@ The quantum foundations are developed in {{learn:kuantum|Quantum & physical chem
     steps: [
       ['Pemantik: "Seberapa kecil sesuatu dapat dibagi?" Diskusi dengan sebutir garam.', 'Hook: "How small can you divide something?" Discuss with a grain of salt.'],
       ['Garis waktu model atom (kerja kelompok, tiap kelompok satu ilmuwan).', 'Atomic-model timeline (groups each present one scientist).'],
-      ['Latihan terbimbing di lab Konfigurasi elektron Alchemist.', 'Guided practice in the Alchemist Electron configuration lab.'],
+      ['Latihan terbimbing di lab Konfigurasi elektron Kimialoka.', 'Guided practice in the Kimialoka Electron configuration lab.'],
       ['Uji nyala virtual: hubungkan warna nyala dengan loncatan elektron.', 'Virtual flame test: link flame colours to electron jumps.'],
     ],
     misconceptions: [
       ['"Elektron beredar seperti planet di orbit tetap." Model kuantum menggambarkan orbital sebagai peluang.', '"Electrons orbit like planets." The quantum model describes orbitals as probabilities.'],
       ['"Atom bisa dilihat dengan mikroskop biasa." Atom terlalu kecil; hanya mikroskop khusus (STM) yang dapat "memetakannya".', '"Atoms are visible under an ordinary microscope." Only special instruments (STM) can map them.'],
     ],
-    assessment: ['Kuis Alchemist dan poster garis waktu model atom.', 'Alchemist quiz and an atomic-model timeline poster.'],
+    assessment: ['Kuis Kimialoka dan poster garis waktu model atom.', 'Kimialoka quiz and an atomic-model timeline poster.'],
   },
   refs: ["2-2-evolution-of-atomic-theory", "2-3-atomic-structure-and-symbolism", "6-2-the-bohr-model", "6-3-development-of-quantum-theory", "6-4-electronic-structure-of-atoms-electron-configurations"],
 };

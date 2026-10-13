@@ -47,7 +47,7 @@ test('every main page renders a heading without script errors', async ({ page })
   const errors = watchErrors(page);
   for (const hash of PAGES) {
     await open(page, hash);
-    await expect(page).toHaveTitle(/Alchemist/);
+    await expect(page).toHaveTitle(/Kimialoka/);
   }
   expect(errors).toEqual([]);
 });

@@ -1,5 +1,5 @@
 {
- "note": "Section slugs and titles read from each book's own table of contents on openstax.org (slugs 2026-09-28, titles 2026-09-29). data:check accepts only references to these sections; scripts/build-refs.mjs copies the titles of the sections Alchemist cites into js/data/sectionTitles.js.",
+ "note": "Section slugs and titles read from each book's own table of contents on openstax.org (slugs 2026-09-28, titles 2026-09-29). data:check accepts only references to these sections; scripts/build-refs.mjs copies the titles of the sections Kimialoka cites into js/data/sectionTitles.js.",
  "books": {
   "chemistry-2e": {
    "1-1-chemistry-in-context": "1.1 Chemistry in Context",

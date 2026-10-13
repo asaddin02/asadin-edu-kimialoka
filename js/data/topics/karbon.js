@@ -95,7 +95,7 @@ Structures are identified by spectroscopy: IR (functional groups, C=O ≈ 1700 c
   labs: ['rakit', 'vsepr'],
   activity: {
     sd: ["Rangkai manik-manik atau klip kertas menjadi rantai lurus, bercabang, dan cincin. Setiap manik adalah atom karbon; berapa banyak bentuk yang bisa kamu buat?", "Link beads or paper clips into straight chains, branches and rings. Each bead is a carbon atom: how many shapes can you make?"],
-    smp: ['Kunjungi halaman LPG, bensin (isooktana), dan solar (heksadekana) di Alchemist, bandingkan titik didih dari data PubChem, lalu kaitkan dengan panjang rantai.', 'Visit the LPG, petrol (isooctane) and diesel (hexadecane) pages, compare PubChem boiling points and relate them to chain length.'],
+    smp: ['Kunjungi halaman LPG, bensin (isooktana), dan solar (heksadekana) di Kimialoka, bandingkan titik didih dari data PubChem, lalu kaitkan dengan panjang rantai.', 'Visit the LPG, petrol (isooctane) and diesel (hexadecane) pages, compare PubChem boiling points and relate them to chain length.'],
     sma: ['Gunakan lab Perakit molekul untuk C₄H₁₀, C₅H₁₂, dan C₂H₆O. Gambar semua isomer yang ditemukan dan beri nama IUPAC.', 'Use the Molecule builder for C₄H₁₀, C₅H₁₂ and C₂H₆O. Draw every isomer found and give IUPAC names.'],
     kuliah: ['Buat ester aroma buah (etil asetat, isoamil asetat) di laboratorium dengan katalis asam; bahas mekanisme esterifikasi Fischer.', 'Make fruity esters (ethyl acetate, isoamyl acetate) with acid catalysis and discuss the Fischer esterification mechanism.'],
   },
@@ -122,11 +122,11 @@ Structures are identified by spectroscopy: IR (functional groups, C=O ≈ 1700 c
     duration: ['6 × 45 menit', '6 × 45 min'],
     steps: [
       ['Model molimod atau plastisin untuk alkana C₁–C₅.', 'Model kits or play dough for C₁–C₅ alkanes.'],
-      ['Tur gugus fungsi di halaman Golongan Alchemist.', 'Functional-group tour in Alchemist’s Classes pages.'],
+      ['Tur gugus fungsi di halaman Golongan Kimialoka.', 'Functional-group tour in Kimialoka’s Classes pages.'],
       ['Tantangan isomer dengan lab Perakit molekul (data live PubChem).', 'Isomer challenge with the Molecule builder (live PubChem data).'],
     ],
     misconceptions: [['"Organik berarti alami atau sehat." Dalam kimia, organik berarti senyawa karbon, termasuk plastik dan racun.', '"Organic means natural or healthy." In chemistry it means carbon compounds, including plastics and poisons.']],
-    assessment: ['Kuis Alchemist dan poster keluarga gugus fungsi dengan contoh sehari-hari.', 'Alchemist quiz and a functional-group family poster with everyday examples.'],
+    assessment: ['Kuis Kimialoka dan poster keluarga gugus fungsi dengan contoh sehari-hari.', 'Kimialoka quiz and a functional-group family poster with everyday examples.'],
   },
   refs: ["20-1-hydrocarbons", "oc:3-1-functional-groups", "oc:3-4-naming-alkanes", "oc:5-2-the-reason-for-handedness-in-molecules-chirality"],
 };

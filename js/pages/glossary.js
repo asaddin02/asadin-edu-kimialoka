@@ -53,7 +53,7 @@ const termHTML = (g, open = false) => {
   </article>`;
 };
 
-/** Where a term lives in Alchemist: knowledge-map domains, lessons and terms that point to it. */
+/** Where a term lives in Kimialoka: knowledge-map domains, lessons and terms that point to it. */
 function usesHTML(g) {
   const domains = domainsOfConcept(g.key);
   const lessons = topicsLinking('g', g.key);

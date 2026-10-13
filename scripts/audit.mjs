@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Coverage audit of Alchemist against the chemistry scope (docs/AUDIT-CHEMISTRY.md, part B). Recomputed from the
+// Coverage audit of Kimialoka against the chemistry scope (docs/AUDIT-CHEMISTRY.md, part B). Recomputed from the
 // data every time, so the numbers in the audit can be reproduced. It measures concept coverage per domain (the same
 // 194 concepts and Indonesian/English keyword patterns as the initial audit in part A), entities, metadata,
 // sources, relations and education. Keyword presence is an upper bound: a word that appears is not necessarily

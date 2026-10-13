@@ -53,10 +53,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
-      - run: docker build -t alchemist .
+      - run: docker build -t kimialoka .
       - name: Container serves the app, blocks private files and survives bad URLs
         run: |
-          docker run -d --name alchemist -p 8080:8080 alchemist
+          docker run -d --name kimialoka -p 8080:8080 kimialoka
           for _ in $(seq 1 30); do curl -sf http://127.0.0.1:8080/api/health && break; sleep 1; done
           curl -sf http://127.0.0.1:8080/ | grep -q '<title>'
           curl -sf http://127.0.0.1:8080/data/molecules/water.json | grep -q '"cid":962'
@@ -64,4 +64,4 @@ jobs:
           test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/server/server.mjs)" = 404
           test "$(curl -s -o /dev/null -w '%{http_code}' 'http://127.0.0.1:8080/%E0%A4%A')" = 400
           curl -sf http://127.0.0.1:8080/api/health
-          docker stop alchemist
+          docker stop kimialoka

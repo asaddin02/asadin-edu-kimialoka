@@ -54,7 +54,7 @@ await shot(
   1200,
   630,
   `<div style="width:1200px;height:630px;box-sizing:border-box;padding:80px;background:#245fdb;color:#fff;font-family:system-ui,sans-serif;display:flex;flex-direction:column;justify-content:center;gap:28px">
-    <div style="display:flex;align-items:center;gap:28px"><div style="padding:16px;background:#fff;border-radius:32px">${icon(130)}</div><div><div style="font-size:84px;font-weight:800;letter-spacing:-2px">Alchemist</div><div style="font-size:30px;opacity:.85">Asadin Edu</div></div></div>
+    <div style="display:flex;align-items:center;gap:28px"><div style="padding:16px;background:#fff;border-radius:32px">${icon(130)}</div><div><div style="font-size:84px;font-weight:800;letter-spacing:-2px">Kimialoka</div><div style="font-size:30px;opacity:.85">Asadin Edu</div></div></div>
     <div style="font-size:40px;font-weight:700;max-width:1000px;line-height:1.25">Ensiklopedia kimia interaktif: dari materi dan atom sampai reaksi.</div>
     <div style="font-size:26px;opacity:.8">Unsur · Isotop · Ion · Molekul · Material · Reaksi<br>Materi berjenjang SD–kuliah · Laboratorium virtual</div>
   </div>`

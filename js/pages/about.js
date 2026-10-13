@@ -15,10 +15,10 @@ import { MATERIALS } from '../data/materials.js';
 import { allDataFiles } from '../services/data.js';
 
 const s = S({
-  title: ['Tentang Alchemist', 'About Alchemist'],
+  title: ['Tentang Kimialoka', 'About Kimialoka'],
   lead: [
-    'Alchemist adalah ensiklopedia kimia interaktif dan platform belajar yang terbuka untuk pelajar SD sampai mahasiswa serta guru: dari materi, partikel, atom, dan unsur sampai molekul, material, reaksi, dan cabang-cabang ilmu kimia. Bagian dari ekosistem Asadin Edu bersama BioTaxa.',
-    'Alchemist is an open interactive chemistry encyclopedia and learning platform for learners from primary school to university and their teachers: from matter, particles, atoms and elements to molecules, materials, reactions and the branches of chemistry. Part of the Asadin Edu family alongside BioTaxa.',
+    'Kimialoka adalah ensiklopedia kimia interaktif dan platform belajar yang terbuka untuk pelajar SD sampai mahasiswa serta guru: dari materi, partikel, atom, dan unsur sampai molekul, material, reaksi, dan cabang-cabang ilmu kimia. Bagian dari ekosistem Asadin Edu bersama Biotaloka.',
+    'Kimialoka is an open interactive chemistry encyclopedia and learning platform for learners from primary school to university and their teachers: from matter, particles, atoms and elements to molecules, materials, reactions and the branches of chemistry. Part of the Asadin Edu family alongside Biotaloka.',
   ],
   what: ['Apa isinya?', 'What is inside?'],
   whatList: [
@@ -72,13 +72,13 @@ const s = S({
   ],
   privacy: ['Privasi', 'Privacy'],
   privacyText: [
-    'Tanpa akun, iklan, cookie pelacak, atau analitik. Simpanan, catatan, dan kemajuan hanya ada di perangkatmu. Saat mencari atau membuka senyawa baru, browser menghubungi PubChem dan Wikimedia secara langsung atau melalui server Alchemist.',
-    'No accounts, ads, tracking cookies or analytics. Bookmarks, notes and progress live only on your device. When you search or open new compounds, your browser contacts PubChem and Wikimedia directly or through the Alchemist server.',
+    'Tanpa akun, iklan, cookie pelacak, atau analitik. Simpanan, catatan, dan kemajuan hanya ada di perangkatmu. Saat mencari atau membuka senyawa baru, browser menghubungi PubChem dan Wikimedia secara langsung atau melalui server Kimialoka.',
+    'No accounts, ads, tracking cookies or analytics. Bookmarks, notes and progress live only on your device. When you search or open new compounds, your browser contacts PubChem and Wikimedia directly or through the Kimialoka server.',
   ],
   offline: ['Pakai tanpa internet', 'Use offline'],
   offlineText: [
-    'Alchemist adalah aplikasi web progresif (PWA): bisa dipasang di layar utama dan tetap berjalan tanpa internet. Tekan tombol di bawah saat ada Wi-Fi untuk menyimpan seluruh data katalog dan 118 unsur ({n} berkas).',
-    'Alchemist is a progressive web app (PWA): install it on your home screen and it works without internet. Press the button below on Wi-Fi to store all catalogue and element data ({n} files).',
+    'Kimialoka adalah aplikasi web progresif (PWA): bisa dipasang di layar utama dan tetap berjalan tanpa internet. Tekan tombol di bawah saat ada Wi-Fi untuk menyimpan seluruh data katalog dan 118 unsur ({n} berkas).',
+    'Kimialoka is a progressive web app (PWA): install it on your home screen and it works without internet. Press the button below on Wi-Fi to store all catalogue and element data ({n} files).',
   ],
   offlineBtn: ['Simpan semua untuk offline', 'Save everything for offline'],
   offlineWorking: ['Menyimpan… {done}/{total}', 'Saving… {done}/{total}'],
@@ -89,8 +89,8 @@ const s = S({
   ],
   limits: ['Batasan', 'Limitations'],
   limitsText: [
-    'Alchemist adalah alat belajar, bukan petunjuk medis, farmasi, atau keselamatan kerja. Data eksperimen dan klasifikasi bahaya berasal dari sumber PubChem apa adanya dan dapat berbeda antarsumber. Selalu ikuti lembar data keselamatan (SDS) dan pengawasan guru di laboratorium.',
-    'Alchemist is a learning tool, not medical, pharmaceutical or workplace-safety advice. Experimental data and hazard classifications come from PubChem sources as published and may differ between sources. Always follow safety data sheets (SDS) and a teacher’s supervision in the lab.',
+    'Kimialoka adalah alat belajar, bukan petunjuk medis, farmasi, atau keselamatan kerja. Data eksperimen dan klasifikasi bahaya berasal dari sumber PubChem apa adanya dan dapat berbeda antarsumber. Selalu ikuti lembar data keselamatan (SDS) dan pengawasan guru di laboratorium.',
+    'Kimialoka is a learning tool, not medical, pharmaceutical or workplace-safety advice. Experimental data and hazard classifications come from PubChem sources as published and may differ between sources. Always follow safety data sheets (SDS) and a teacher’s supervision in the lab.',
   ],
   license: ['Lisensi & kode', 'Licence & code'],
   licenseText: [
@@ -100,8 +100,8 @@ const s = S({
   cite: ['Cara mengutip', 'How to cite'],
   family: ['Keluarga Asadin Edu', 'The Asadin Edu family'],
   familyText: [
-    'BioTaxa adalah atlas makhluk hidup; Alchemist adalah ensiklopedia kimia dan dunia materi. Keduanya terbuka, dwibahasa, dan bebas dipakai sekolah.',
-    'BioTaxa is the atlas of living things; Alchemist is the encyclopedia of chemistry and the world of matter. Both are open, bilingual and free for schools.',
+    'Biotaloka adalah atlas makhluk hidup; Kimialoka adalah ensiklopedia kimia dan dunia materi. Keduanya terbuka, dwibahasa, dan bebas dipakai sekolah.',
+    'Biotaloka is the atlas of living things; Kimialoka is the encyclopedia of chemistry and the world of matter. Both are open, bilingual and free for schools.',
   ],
   repo: ['Kode sumber & laporan masalah', 'Source code & issue reports'],
 });
@@ -141,7 +141,7 @@ export function render({ main }) {
     <h2>${esc(s.privacy)}</h2><p>${esc(s.privacyText)}</p>
     <h2>${esc(s.limits)}</h2><p>${esc(s.limitsText)}</p>
     <h2>${esc(s.license)}</h2><p>${esc(s.licenseText)}</p>
-    <h2>${esc(s.cite)}</h2><p class="mono">Alchemist · Asadin Edu (${new Date().getFullYear()}). ${esc(pick(['Ensiklopedia kimia interaktif.', 'Interactive chemistry encyclopedia.']))} ${esc(location.origin)}</p>
+    <h2>${esc(s.cite)}</h2><p class="mono">Kimialoka · Asadin Edu (${new Date().getFullYear()}). ${esc(pick(['Ensiklopedia kimia interaktif.', 'Interactive chemistry encyclopedia.']))} ${esc(location.origin)}</p>
     <h2>${esc(s.family)}</h2><p>${esc(s.familyText)}</p>
     <p>${extLink(CONFIG.repository, s.repo)}</p>
   </div>`;
@@ -157,7 +157,7 @@ export function render({ main }) {
     }
     e.currentTarget.disabled = true;
     const files = await allDataFiles();
-    const cache = await caches.open('alchemist-data-v1');
+    const cache = await caches.open('kimialoka-data-v1');
     let done = 0;
     const queue = [...files];
     await Promise.all(

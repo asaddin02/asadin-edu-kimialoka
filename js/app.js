@@ -1,4 +1,4 @@
-// Alchemist entry point: shell, routing, global event delegation and the service worker.
+// Kimialoka entry point: shell, routing, global event delegation and the service worker.
 import { $, $$, esc, toast } from './core/dom.js';
 import { applyPrefs, pick } from './core/prefs.js';
 import { configureRouter, render, go, routeURL, upgradeLegacyHash } from './core/router.js';
@@ -16,7 +16,7 @@ renderFooter();
 bindShell(q => go(routeURL('search', null, { q })));
 configureRouter({ before: route => markActive(route.page) });
 
-window.addEventListener('alchemist:prefs', () => {
+window.addEventListener('kimialoka:prefs', () => {
   renderHeader();
   renderFooter();
   // The skip link moves focus without touching the route.
@@ -116,7 +116,7 @@ if (
 
 function showUpdate(worker) {
   const box = $('#toast');
-  box.innerHTML = `<div class="toast toast-info">${esc(pick(['Versi baru Alchemist tersedia.', 'A new version of Alchemist is available.']))}
+  box.innerHTML = `<div class="toast toast-info">${esc(pick(['Versi baru Kimialoka tersedia.', 'A new version of Kimialoka is available.']))}
     <button class="btn btn-small" type="button" data-update>${esc(pick(['Perbarui', 'Update']))}</button></div>`;
   box
     .querySelector('[data-update]')

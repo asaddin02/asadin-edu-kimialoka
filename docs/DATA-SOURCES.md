@@ -15,7 +15,7 @@ Semua sumber resmi, gratis, dan tanpa kunci API. Data katalog disinkronkan oleh 
 ### Data unsur, isotop, dan ion (versi 3.0)
 
 Rekaman unsur PubChem ([PUG View element](https://pubchem.ncbi.nlm.nih.gov/docs/pug-view), `rest/pug_view/data/element/<Z>/JSON`)
-menghimpun data dari lembaga rujukan. Alchemist menyimpan setiap nilai bersama kunci sumbernya dan menampilkan nama
+menghimpun data dari lembaga rujukan. Kimialoka menyimpan setiap nilai bersama kunci sumbernya dan menampilkan nama
 serta tautan sumber di halaman unsur dan isotop. Nilai ditulis apa adanya; tidak ada yang diperkirakan sendiri.
 
 | Sumber (lewat PubChem)                                                                                                     | Yang diambil                                                                                                                                                                                          | Lisensi / ketentuan                                                                                                                                                          | Berkas                                         |
@@ -24,7 +24,7 @@ serta tautan sumber di halaman unsur dan isotop. Nilai ditulis apa adanya; tidak
 | [IAEA Atomic Mass Data Center](https://www-nds.iaea.org/amdc/) (NUBASE/AME)                                                | Semua nuklida yang dikenal: massa, waktu paruh, cara meluruh dan persentasenya, tahun ditemukan (3.557 keadaan dasar)                                                                                 | [Disclaimer IAEA NDS](https://www-nds.iaea.org/disclaimer.html)                                                                                                              | `data/elements/<Z>.json`, `data/isotopes.json` |
 | [NIST PML](https://physics.nist.gov/)                                                                                      | Untuk 34 unsur tanpa berat atom standar: nomor massa acuan (`[98]`) atau massa atom relatif satu isotop (`241.0568293(19)`)                                                                           | Karya pemerintah AS; [disclaimer NIST](https://www.nist.gov/pml/database-disclaimer)                                                                                         | `data/elements/<Z>.json`                       |
 | [Los Alamos National Laboratory](https://periodic.lanl.gov/) dan [Jefferson Lab](https://education.jlab.org/itselemental/) | Teks sejarah, kegunaan, sumber di alam, deskripsi, penanganan (bahasa Inggris); perkiraan kelimpahan di kerak bumi dan air laut (Jefferson Lab)                                                       | Ditampilkan utuh dengan nama lembaga dan tautan ke halaman aslinya, sesuai permintaan sitasi dan tautan Jefferson Lab                                                        | `data/elements/<Z>.json`                       |
-| [IUPAC Periodic Table of the Elements and Isotopes](https://doi.org/10.1515/pac-2015-0703) (IPTEI)                         | Pemakaian isotop (kedokteran, industri, penanggalan, dll.)                                                                                                                                            | **CC BY-NC-ND 4.0**: ditampilkan tanpa diubah, dengan atribusi, untuk pendidikan nonkomersial. Pihak yang memakai ulang Alchemist secara komersial harus menghapus teks ini. | `data/elements/<Z>.json` (`isotopeUses`)       |
+| [IUPAC Periodic Table of the Elements and Isotopes](https://doi.org/10.1515/pac-2015-0703) (IPTEI)                         | Pemakaian isotop (kedokteran, industri, penanggalan, dll.)                                                                                                                                            | **CC BY-NC-ND 4.0**: ditampilkan tanpa diubah, dengan atribusi, untuk pendidikan nonkomersial. Pihak yang memakai ulang Kimialoka secara komersial harus menghapus teks ini. | `data/elements/<Z>.json` (`isotopeUses`)       |
 | ECHA C&L Inventory (via PubChem)                                                                                           | Klasifikasi GHS zat unsur (84 unsur), memakai kartu katalog zatnya bila ada                                                                                                                           | Idem data GHS molekul                                                                                                                                                        | `data/elements/<Z>.json`                       |
 | PubChem compound (ion)                                                                                                     | CID, rumus, muatan, massa, nama IUPAC, SMILES, InChIKey, CAS, sinonim, deskripsi, struktur untuk 58 dari 60 ion; rekaman diterima hanya bila rumus dan muatannya persis sama dengan `js/data/ions.js` | Idem PubChem                                                                                                                                                                 | `sync-ions.mjs` → `data/ions/`                 |
 
@@ -41,7 +41,7 @@ menyatakan "data belum tersedia" dan tidak memakai CID yang salah.
 
 ## Kebijakan pemakaian yang dipatuhi
 
-- PubChem: maksimal 5 permintaan per detik. Skrip sinkronisasi memakai jeda 260 ms; server/Function Alchemist
+- PubChem: maksimal 5 permintaan per detik. Skrip sinkronisasi memakai jeda 260 ms; server/Function Kimialoka
   menjeda dan meng-cache permintaan untuk seluruh kelas; browser tanpa server membatasi diri ~4/detik.
 - Wikimedia: User-Agent deskriptif pada skrip sinkronisasi; permintaan browser memakai `origin=*`.
 - Pencarian identitas di browser (CAS, SMILES, InChI, InChIKey) memakai endpoint PubChem baca-saja yang diizinkan
@@ -50,7 +50,7 @@ menyatakan "data belum tersedia" dan tidak memakai CID yang salah.
 ## Nilai yang perlu dipahami
 
 - **Data eksperimen** ditampilkan apa adanya dari sumber (bahasa Inggris, satuan asli). Nilai dapat berbeda antarsumber.
-- **GHS**: bila sebagian besar laporan ke ECHA menyatakan zat tidak memenuhi kriteria bahaya, Alchemist menampilkan
+- **GHS**: bila sebagian besar laporan ke ECHA menyatakan zat tidak memenuhi kriteria bahaya, Kimialoka menampilkan
   persentasenya (misalnya air 99,5%) agar pelajar tidak salah paham. Terjemahan pernyataan bahaya ke Bahasa Indonesia
   mengikuti kode H internasional.
 - **Polimer dan alotrop** memakai CID monomer atau unsur sebagai model; halaman molekul menampilkan catatannya.

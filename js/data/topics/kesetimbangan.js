@@ -127,7 +127,7 @@ In biology, O₂ binding by haemoglobin is cooperative (a sigmoid curve, the Hil
       ['"Pada kesetimbangan konsentrasi pereaksi = produk." Yang sama adalah lajunya, bukan konsentrasinya.', '"At equilibrium reactant and product concentrations are equal." The rates are equal, not the concentrations.'],
       ['"Katalis menambah hasil pada kesetimbangan." Katalis hanya mempercepat tercapainya kesetimbangan.', '"A catalyst increases the equilibrium yield." It only reaches equilibrium faster.'],
     ],
-    assessment: ['Kuis Alchemist, laporan praktikum Le Chatelier, dan soal hitungan Kc.', 'The Alchemist quiz, a Le Chatelier practical report and Kc problems.'],
+    assessment: ['Kuis Kimialoka, laporan praktikum Le Chatelier, dan soal hitungan Kc.', 'The Kimialoka quiz, a Le Chatelier practical report and Kc problems.'],
   },
   refs: ['13-1-chemical-equilibria', '13-2-equilibrium-constants', '13-3-shifting-equilibria-le-chateliers-principle', '13-4-equilibrium-calculations', '15-1-precipitation-and-dissolution', '15-3-coupled-equilibria'],
 };

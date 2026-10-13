@@ -69,14 +69,14 @@ Enzim mempercepat reaksi umumnya jutaan kali atau lebih (pada kasus ekstrem lebi
 
 Dogma sentral (DNA → RNA → protein) diwujudkan oleh replikasi semikonservatif, transkripsi, dan translasi dengan kode genetik triplet. Teknik modern seperti PCR, sekuensing, CRISPR, dan kristalografi atau krio-EM protein berakar pada kimia molekul-molekul ini.
 
-Struktur 3D biomolekul kecil di Alchemist berasal dari PubChem; untuk protein utuh gunakan Protein Data Bank (PDB).`,
+Struktur 3D biomolekul kecil di Kimialoka berasal dari PubChem; untuk protein utuh gunakan Protein Data Bank (PDB).`,
       `Biochemistry links molecular structure to metabolism. The intermediates and products of metabolism are [[metabolit|metabolites]], such as pyruvate, lactate and acetyl-CoA. Glycolysis turns glucose into 2 pyruvate (+2 ATP, +2 NADH); the citric acid cycle and oxidative phosphorylation give about 30–32 ATP per glucose in total. Coenzymes such as {{m:nad|NAD⁺}} (from vitamin B3) and FAD (from {{m:riboflavin|riboflavin}}) carry electrons.
 
 Enzymes speed reactions up typically a million-fold or more (in extreme cases more than 10¹⁷-fold) by stabilising transition states, regulated by inhibition, allostery and covalent modification. Lipid hormones ({{m:cortisol|cortisol}}) act on nuclear receptors, while peptide and amine hormones ({{m:adrenaline|adrenaline}}) use membrane receptors and second messengers.
 
 The central dogma (DNA → RNA → protein) runs through semi-conservative replication, transcription and translation with a triplet code. PCR, sequencing, CRISPR and protein crystallography or cryo-EM all rest on the chemistry of these molecules.
 
-Small-biomolecule 3D structures in Alchemist come from PubChem; for whole proteins use the Protein Data Bank (PDB).`,
+Small-biomolecule 3D structures in Kimialoka come from PubChem; for whole proteins use the Protein Data Bank (PDB).`,
     ],
   },
   points: [
@@ -113,11 +113,11 @@ Small-biomolecule 3D structures in Alchemist come from PubChem; for whole protei
     duration: ['4 × 45 menit', '4 × 45 min'],
     steps: [
       ['Uji makanan dari bekal siswa.', 'Food tests on learners’ packed lunches.'],
-      ['Tur model 3D glukosa, glisina, dan adenina di Alchemist.', 'Tour 3D models of glucose, glycine and adenine in Alchemist.'],
+      ['Tur model 3D glukosa, glisina, dan adenina di Kimialoka.', 'Tour 3D models of glucose, glycine and adenine in Kimialoka.'],
       ['Ekstraksi DNA buah.', 'Fruit DNA extraction.'],
     ],
     misconceptions: [['"Lemak selalu buruk." Lemak diperlukan untuk membran sel, hormon, dan penyerapan vitamin A, D, E, K.', '"Fat is always bad." Fats are needed for membranes, hormones and absorbing vitamins A, D, E, K.']],
-    assessment: ['Kuis Alchemist dan laporan uji makanan.', 'Alchemist quiz and a food-test report.'],
+    assessment: ['Kuis Kimialoka dan laporan uji makanan.', 'Kimialoka quiz and a food-test report.'],
   },
   refs: ["bio:3-1-synthesis-of-biological-macromolecules", "bio:3-2-carbohydrates", "bio:3-3-lipids", "bio:3-4-proteins", "bio:3-5-nucleic-acids", "oc:26-10-enzymes-and-coenzymes"],
 };

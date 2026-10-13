@@ -1,7 +1,7 @@
 // Parsers for PubChem PUG REST / PUG View responses. Pure functions with no browser or Node APIs, shared by
 // scripts/sync-molecules.mjs (build time) and services/pubchem.js (live lookups), so both give the same shape.
 
-/** Experimental property headings Alchemist shows, in display order. */
+/** Experimental property headings Kimialoka shows, in display order. */
 export const EXPERIMENTAL_HEADINGS = [
   'Physical Description',
   'Color/Form',

@@ -1,9 +1,9 @@
 {
-  "name": "asadin-edu-alchemist",
+  "name": "asadin-edu-kimialoka",
   "version": "3.0.0",
   "private": true,
   "type": "module",
-  "description": "Alchemist · Asadin Edu — open, bilingual interactive chemistry encyclopedia and learning platform: matter, particles, atoms, elements, isotopes, ions, molecules, materials, reactions and every branch of chemistry, from primary school to university.",
+  "description": "Kimialoka · Asadin Edu — open, bilingual interactive chemistry encyclopedia and learning platform: matter, particles, atoms, elements, isotopes, ions, molecules, materials, reactions and every branch of chemistry, from primary school to university.",
   "scripts": {
     "start": "node server/server.mjs",
     "dev": "PORT=8086 HOST=127.0.0.1 LOG=1 node server/server.mjs",
@@ -40,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asaddin02/asadin-edu-alchemist.git"
+    "url": "git+https://github.com/asaddin02/asadin-edu-kimialoka.git"
   },
   "bugs": {
-    "url": "https://github.com/asaddin02/asadin-edu-alchemist/issues"
+    "url": "https://github.com/asaddin02/asadin-edu-kimialoka/issues"
   },
-  "homepage": "https://github.com/asaddin02/asadin-edu-alchemist#readme"
+  "homepage": "https://github.com/asaddin02/asadin-edu-kimialoka#readme"
 }

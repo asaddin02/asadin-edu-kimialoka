@@ -147,7 +147,7 @@ Links to electrochemistry: ΔG° = −nFE°, so a standard cell potential conver
       ['"Reaksi endoterm tidak mungkin spontan." Bisa, bila kenaikan entropinya cukup besar.', '"Endothermic reactions cannot be spontaneous." They can, if the entropy gain is large enough.'],
       ['"Entropi hanya berarti ketidakteraturan." Lebih tepat: ukuran penyebaran energi di antara keadaan mikro.', '"Entropy just means disorder." More precisely: how energy is spread among microstates.'],
     ],
-    assessment: ['Kuis Alchemist dan tugas analisis ΔG untuk tiga reaksi industri.', 'The Alchemist quiz and a ΔG analysis of three industrial reactions.'],
+    assessment: ['Kuis Kimialoka dan tugas analisis ΔG untuk tiga reaksi industri.', 'The Kimialoka quiz and a ΔG analysis of three industrial reactions.'],
   },
   refs: ['16-1-spontaneity', '16-2-entropy', '16-3-the-second-and-third-laws-of-thermodynamics', '16-4-free-energy', '17-4-potential-free-energy-and-equilibrium'],
 };

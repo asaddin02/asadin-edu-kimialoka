@@ -19,7 +19,7 @@ Unsur yang berada dalam satu kolom sifatnya mirip, seperti saudara:
 - Di kanan atas ada nonlogam, seperti oksigen dan belerang.
 - Di kolom paling kanan ada [[gas-mulia|gas mulia]], seperti helium dan neon, yang hampir tidak pernah bereaksi. Helium dipakai mengisi balon, neon untuk lampu reklame.
 
-Buka {{page:table|tabel periodik Alchemist}} dan ketuk unsur mana pun untuk melihat fotonya.`,
+Buka {{page:table|tabel periodik Kimialoka}} dan ketuk unsur mana pun untuk melihat fotonya.`,
       `Everything in nature is made of 118 kinds of atom called [[unsur|elements]]. Scientists arrange them all in one big chart, a bit like a calendar, called the [[tabel-periodik|periodic table]].
 
 Each box holds one element and its symbol: O for {{e:O|oxygen}}, C for {{e:C|carbon}}, Fe for {{e:Fe|iron}} (from the Latin *ferrum*) and Au for {{e:Au|gold}} (from *aurum*).
@@ -30,7 +30,7 @@ Elements in the same column behave alike, like siblings:
 - At the top right are nonmetals, such as oxygen and sulfur.
 - In the far-right column are the [[gas-mulia|noble gases]], such as helium and neon, which hardly ever react. Helium fills balloons; neon lights up signs.
 
-Open the {{page:table|Alchemist periodic table}} and tap any element to see its photo.`,
+Open the {{page:table|Kimialoka periodic table}} and tap any element to see its photo.`,
     ],
     smp: [
       `[[tabel-periodik|Tabel periodik]] menyusun unsur menurut kenaikan [[nomor-atom]]. Baris mendatar disebut [[periode]] (7 periode) dan kolom tegak disebut [[golongan]] (18 golongan).
@@ -42,7 +42,7 @@ Unsur dalam satu golongan memiliki jumlah [[elektron-valensi]] yang sama sehingg
 - Golongan 17, halogen ({{e:F}}, {{e:Cl}}, Br, I): nonlogam reaktif pembentuk garam.
 - Golongan 18, [[gas-mulia]] ({{e:He}}, {{e:Ne}}, {{e:Ar}}): hampir tidak bereaksi.
 
-Sebagian besar unsur adalah logam (kiri dan tengah), nonlogam di kanan atas, dan [[metaloid]] seperti {{e:Si}} di perbatasan keduanya. Buka {{page:table|tabel periodik Alchemist}} untuk melihat foto dan data tiap unsur.`,
+Sebagian besar unsur adalah logam (kiri dan tengah), nonlogam di kanan atas, dan [[metaloid]] seperti {{e:Si}} di perbatasan keduanya. Buka {{page:table|tabel periodik Kimialoka}} untuk melihat foto dan data tiap unsur.`,
       `The [[tabel-periodik|periodic table]] orders elements by increasing [[nomor-atom|atomic number]]. Rows are [[periode|periods]] (7) and columns are [[golongan|groups]] (18).
 
 Elements in a group share the same number of [[elektron-valensi|valence electrons]], so they behave alike:
@@ -52,7 +52,7 @@ Elements in a group share the same number of [[elektron-valensi|valence electron
 - Group 17, halogens ({{e:F}}, {{e:Cl}}, Br, I): reactive nonmetals that form salts.
 - Group 18, [[gas-mulia|noble gases]] ({{e:He}}, {{e:Ne}}, {{e:Ar}}): barely react.
 
-Most elements are metals (left and middle), nonmetals are at the top right, and [[metaloid|metalloids]] such as {{e:Si}} sit on the border. Open the {{page:table|Alchemist periodic table}} to see photos and data for every element.`,
+Most elements are metals (left and middle), nonmetals are at the top right, and [[metaloid|metalloids]] such as {{e:Si}} sit on the border. Open the {{page:table|Kimialoka periodic table}} to see photos and data for every element.`,
     ],
     sma: [
       `Dmitri Mendeleev (1869) menyusun unsur berdasarkan massa atom dan sifatnya, bahkan menyisakan tempat kosong untuk unsur yang belum ditemukan (galium, germanium) lengkap dengan ramalan sifatnya. Henry Moseley (1913) menunjukkan bahwa dasar yang benar adalah nomor atom.
@@ -85,14 +85,14 @@ Kontraksi lantanida (pengisian 4f yang perisainya buruk) membuat unsur periode 6
 
 Hubungan diagonal (Li–Mg, Be–Al, B–Si) muncul karena kepadatan muatan yang mirip. Unsur superberat (Z > 103) dibuat di akselerator; sebagian besar isotopnya hanya bertahan beberapa detik atau kurang, sehingga sifat kimianya diteliti atom demi atom dan dipengaruhi efek relativistik yang kuat.
 
-Data periodik di Alchemist diambil langsung dari tabel periodik PubChem (NIH); gunakan halaman unsur untuk membandingkan tren secara kuantitatif.`,
+Data periodik di Kimialoka diambil langsung dari tabel periodik PubChem (NIH); gunakan halaman unsur untuk membandingkan tren secara kuantitatif.`,
       `First-ionisation anomalies confirm subshell structure: B < Be (a 2p electron leaves more easily than 2s) and O < N (pairing repulsion in a doubly occupied 2p orbital). F has a smaller electron affinity than Cl because the compact n = 2 shell is crowded.
 
 The lanthanide contraction (poorly shielding 4f electrons) makes period-6 d-block elements nearly as small as period 5: Hf and Zr are so alike they are hard to separate. The inert-pair effect makes heavy group 13–15 elements (Tl, Pb, Bi) prefer lower oxidation states (+1, +2, +3).
 
 Diagonal relationships (Li–Mg, Be–Al, B–Si) arise from similar charge densities. Superheavy elements (Z > 103) are made in accelerators; most of their isotopes last seconds or less, so their chemistry is studied atom by atom and shaped by strong relativistic effects.
 
-Alchemist’s periodic data come straight from the PubChem (NIH) periodic table; use the element pages to compare trends quantitatively.`,
+Kimialoka’s periodic data come straight from the PubChem (NIH) periodic table; use the element pages to compare trends quantitatively.`,
     ],
   },
   points: [
@@ -103,9 +103,9 @@ Alchemist’s periodic data come straight from the PubChem (NIH) periodic table;
   molecules: ['sodium', 'chlorine', 'helium', 'silicon', 'gold'],
   labs: ['orbital', 'nyala'],
   activity: {
-    sd: ["Buat kartu 20 unsur pertama berisi lambang dan namanya, lalu kelompokkan menjadi logam, nonlogam, dan gas mulia dengan bantuan tabel periodik Alchemist.", "Make cards for the first 20 elements with symbol and name, then sort them into metals, nonmetals and noble gases using the Alchemist periodic table."],
-    smp: ['Mainkan "tebak unsur": satu siswa menyebut petunjuk (golongan, wujud, kegunaan), siswa lain mencarinya di tabel periodik Alchemist.', 'Play "guess the element": one learner gives clues (group, state, use), others find it in the Alchemist periodic table.'],
-    sma: ['Buat grafik energi ionisasi pertama unsur Z = 1–36 dari data tabel periodik Alchemist dan jelaskan puncak serta lembahnya.', 'Plot first ionisation energies for Z = 1–36 from the Alchemist table and explain the peaks and dips.'],
+    sd: ["Buat kartu 20 unsur pertama berisi lambang dan namanya, lalu kelompokkan menjadi logam, nonlogam, dan gas mulia dengan bantuan tabel periodik Kimialoka.", "Make cards for the first 20 elements with symbol and name, then sort them into metals, nonmetals and noble gases using the Kimialoka periodic table."],
+    smp: ['Mainkan "tebak unsur": satu siswa menyebut petunjuk (golongan, wujud, kegunaan), siswa lain mencarinya di tabel periodik Kimialoka.', 'Play "guess the element": one learner gives clues (group, state, use), others find it in the Kimialoka periodic table.'],
+    sma: ['Buat grafik energi ionisasi pertama unsur Z = 1–36 dari data tabel periodik Kimialoka dan jelaskan puncak serta lembahnya.', 'Plot first ionisation energies for Z = 1–36 from the Kimialoka table and explain the peaks and dips.'],
     kuliah: ['Bandingkan jari-jari atom Zr–Hf dan Nb–Ta; jelaskan dengan kontraksi lantanida.', 'Compare atomic radii of Zr–Hf and Nb–Ta and explain with the lanthanide contraction.'],
   },
   quiz: [
@@ -130,11 +130,11 @@ Alchemist’s periodic data come straight from the PubChem (NIH) periodic table;
     duration: ['3 × 45 menit', '3 × 45 min'],
     steps: [
       ['Kisah Mendeleev dan kartu unsur: siswa menyusun kartu berdasarkan sifat.', 'Mendeleev’s story and element cards: learners sort cards by properties.'],
-      ['Eksplorasi tabel periodik Alchemist (warna kategori, foto unsur).', 'Explore the Alchemist periodic table (category colours, photos).'],
+      ['Eksplorasi tabel periodik Kimialoka (warna kategori, foto unsur).', 'Explore the Kimialoka periodic table (category colours, photos).'],
       ['Analisis data tren dan presentasi kelompok.', 'Trend data analysis and group presentations.'],
     ],
     misconceptions: [['"Unsur disusun menurut massa atom." Dasar modern adalah nomor atom.', '"Elements are ordered by mass." The modern basis is atomic number.']],
-    assessment: ['Kuis Alchemist dan grafik tren sifat periodik.', 'Alchemist quiz and a periodic-trend graph.'],
+    assessment: ['Kuis Kimialoka dan grafik tren sifat periodik.', 'Kimialoka quiz and a periodic-trend graph.'],
   },
   refs: ["2-5-the-periodic-table", "6-5-periodic-variations-in-element-properties", "18-1-periodicity"],
 };

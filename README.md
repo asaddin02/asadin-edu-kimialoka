@@ -55,7 +55,7 @@ Pilih salah satu:
 1. **Cloudflare Pages (disarankan).** Isi variable `CLOUDFLARE_PAGES_PROJECT` serta secret `CLOUDFLARE_API_TOKEN`
    dan `CLOUDFLARE_ACCOUNT_ID` di GitHub (opsional: variable `SITE_URL`). Workflow **Deploy** berjalan setiap CI di
    `main` lulus, atau jalankan manual. Proxy PubChem berjalan sebagai Pages Function dengan cache di edge. Proyek ini
-   memakai nama `kimialoka`, sehingga alamatnya https://kimialoka.pages.dev.
+   memakai nama `kimialoka` dan terbit di https://kimialoka.asadinedu.com (custom domain; `kimialoka.pages.dev` dialihkan ke sana).
 2. **Docker / server sekolah.**
    ```bash
    docker build -t kimialoka .

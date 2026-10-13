@@ -2,7 +2,7 @@
 
 ## Belum dirilis
 
-- Berganti nama menjadi **Kimialoka** dan pindah ke https://kimialoka.pages.dev. Data yang tersimpan di browser
+- Berganti nama menjadi **Kimialoka** dan pindah ke https://kimialoka.asadinedu.com. Data yang tersimpan di browser
   pada alamat lama tidak ikut pindah: ekspor cadangan di situs lama, lalu impor di alamat baru.
 - Alamat halaman kini berupa path (`/atom/Fe`, `/molecule/water`, `/learn/zat`, `/search?q=…`), bukan `#/…`;
   tautan lama `#/…` tetap bekerja dan diarahkan otomatis.

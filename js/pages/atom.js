@@ -207,7 +207,10 @@ function weightHTML(e, w) {
 export const title = route => {
   if (!route.id) return pick(['Atom', 'Atoms']);
   const e = getElement(route.id);
-  return e ? pick([e.id, e.en]) : pick(['Unsur', 'Element']);
+  // Name, symbol and atomic number: what people type when they search for an element.
+  return e
+    ? pick([`${e.id} (${e.s}): unsur nomor atom ${e.z}`, `${e.en} (${e.s}): element ${e.z}`])
+    : pick(['Unsur', 'Element']);
 };
 
 export async function render({ id, main, isCurrent }) {

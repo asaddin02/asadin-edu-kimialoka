@@ -327,6 +327,12 @@ function homePage(data) {
         name: SITE_NAME,
         inLanguage: 'id',
         description: lead,
+        publisher: {
+          '@type': 'Organization',
+          '@id': 'https://asadinedu.com/#organization',
+          name: 'Asadin Edu',
+          url: 'https://asadinedu.com/',
+        },
       },
     ],
   };
@@ -467,7 +473,7 @@ function elementPage(e, data) {
   </article>`;
   return {
     path: `/atom/${e.s}`,
-    title: e.id,
+    title: `${e.id} (${e.s}): unsur nomor atom ${e.z}`,
     description: summary(extract) || lead,
     main,
     crumbs: [
@@ -761,15 +767,28 @@ const HALF = {
   Zy: 'sekstiliun tahun',
   Yy: 'septiliun tahun',
 };
-/** "12.32 y ± 0.02" → "12,32 tahun (± 0,02)"; "Stable" → "Stabil". */
+/**
+ * NUBASE half-life text in Indonesian: "12.32 y ± 0.02" → "12,32 tahun (± 0,02 tahun)", "Stable" → "Stabil",
+ * "Stable >1.3Ey" → "Stabil (waktu paruh lebih dari 1,3 kuintiliun tahun)", "~10 s" → "sekitar 10 detik",
+ * "Not-specified <30ns" → "belum terukur pasti (kurang dari 30 nanodetik)", "p-Unstable" → unbound to proton emission.
+ */
 function halfLifeText(raw) {
-  if (!raw) return 'Belum diketahui';
-  if (/^stable$/i.test(raw)) return 'Stabil';
-  const m = String(raw).match(/^([\d.eE+-]+)\s*([a-zA-Zµ]+)(?:\s*±\s*([\d.eE+-]+))?/);
-  if (!m) return raw;
-  const value = Number(m[1]).toLocaleString('id-ID', { maximumSignificantDigits: 6 });
-  const unit = HALF[m[2]] || m[2];
-  return `${value} ${unit}${m[3] ? ` (± ${Number(m[3]).toLocaleString('id-ID', { maximumSignificantDigits: 4 })} ${unit})` : ''}`;
+  const t = String(raw || '').trim();
+  if (!t || /^not-specified$/i.test(t)) return 'Belum diketahui';
+  if (/^p-unstable$/i.test(t)) return 'Tidak terikat (langsung memancarkan proton)';
+  const stable = /^stable\b/i.test(t);
+  const unknown = /^not-specified\b/i.test(t);
+  const rest = t.replace(/^(stable|not-specified)\s*/i, '');
+  if (stable && !rest) return 'Stabil';
+  const m = rest.match(/^([<>~]?)\s*(\d[\d.]*(?:[eE][-+]?\d+)?)\s*([a-zA-Zµμ]+)(?:\s*±\s*([\d.eE+-]+))?/);
+  if (!m) return stable ? 'Stabil' : unknown ? 'Belum diketahui' : t;
+  const op = { '<': 'kurang dari ', '>': 'lebih dari ', '~': 'sekitar ' }[m[1]] || '';
+  const value = Number(m[2]).toLocaleString('id-ID', { maximumSignificantDigits: 6 });
+  const unit = HALF[m[3] === 'μs' || m[3] === 'µs' ? 'us' : m[3]] || HALF[m[3] + 's'] || m[3];
+  const text = `${op}${value} ${unit}${m[4] && !op ? ` (± ${Number(m[4]).toLocaleString('id-ID', { maximumSignificantDigits: 4 })} ${unit})` : ''}`;
+  if (stable) return `Stabil (waktu paruh ${text})`;
+  if (unknown) return `belum terukur pasti (${text})`;
+  return text;
 }
 
 function isotopePage(row, data, siblings) {
@@ -788,7 +807,7 @@ function isotopePage(row, data, siblings) {
   const uses = (rec?.isotopeUses || []).filter(u =>
     new RegExp(`\\b${A}${e.s}\\b|${e.s}-${A}\\b`).test(u.text)
   );
-  const lead = `${name} (${label}) adalah ${stable ? 'isotop stabil' : 'isotop radioaktif'} ${e.id.toLowerCase()} dengan ${z} proton dan ${A - z} neutron (nomor massa ${A}).${stable ? '' : ` Waktu paruhnya ${halfLifeText(half)}${mainDecay ? `, meluruh terutama lewat ${id(DECAY[mainDecay]?.name || [mainDecay]).toLowerCase()}` : ''}.`}${natural ? ` Kelimpahan alaminya ${natural.abundance}.` : ''}`;
+  const lead = `${name} (${label}) adalah ${stable ? 'isotop stabil' : 'isotop radioaktif'} ${e.id.toLowerCase()} dengan ${z} proton dan ${A - z} neutron (nomor massa ${A}).${stable ? '' : ` Waktu paruhnya ${halfLifeText(half).replace(/^(Belum|Tidak)/, w => w.toLowerCase())}${mainDecay ? `, meluruh terutama lewat ${id(DECAY[mainDecay]?.name || [mainDecay]).toLowerCase()}` : ''}.`}${natural ? ` Kelimpahan alaminya ${natural.abundance}.` : ''}`;
   const main = `<article class="container isotope">
     ${pageHead({
       title: `${name} (${label})`,
@@ -854,7 +873,7 @@ function isotopePage(row, data, siblings) {
   </article>`;
   return {
     path: `/isotope/${routeId}`,
-    title: routeId,
+    title: `${name} (${routeId}), isotop ${e.id.toLowerCase()}`,
     description: summary(lead),
     main,
     crumbs: [

@@ -79,7 +79,12 @@ const s = S({
 export const title = route => {
   if (!route.id) return s.title;
   const p = parseNuclide(route.id);
-  return p ? `${p.element.s}-${p.A}` : s.title;
+  if (!p) return s.title;
+  const { id, en, s: symbol } = p.element;
+  return pick([
+    `${id}-${p.A} (${symbol}-${p.A}), isotop ${id.toLowerCase()}`,
+    `${en}-${p.A} (${symbol}-${p.A}), an isotope of ${en.toLowerCase()}`,
+  ]);
 };
 
 /** Ordinal ramp for half-life bands (one hue, light → dark; validated with the dataviz palette checker). */

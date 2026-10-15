@@ -93,9 +93,9 @@ test('pages set a descriptive document title and a single h1', async ({ page }) 
   await prefs(page);
   for (const [hash, title] of [
     ['molecule/water', 'Air · Kimialoka'],
-    ['atom/Au', 'Emas · Kimialoka'],
+    ['atom/Au', 'Emas (Au): unsur nomor atom 79 · Kimialoka'],
     ['learn/zat', 'Zat dan wujudnya · Kimialoka'],
-    ['isotope/C-14', 'C-14 · Kimialoka'],
+    ['isotope/C-14', 'Karbon-14 (C-14), isotop karbon · Kimialoka'],
     ['reaction/haber-bosch', 'Proses Haber–Bosch (amonia) · Kimialoka'],
     ['peta/inti', 'Isotop & kimia inti · Kimialoka'],
   ]) {

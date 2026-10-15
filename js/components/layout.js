@@ -170,11 +170,12 @@ export function renderFooter() {
         <p class="footer-brand"><img src="/assets/brand/logo.png" alt="" width="28" height="28" /> <strong>Kimialoka</strong></p>
         <p>${esc(
           pick([
-            'Ensiklopedia kimia interaktif yang terbuka untuk pelajar SD sampai mahasiswa, serta guru. Bagian dari Asadin Edu, bersama Biotaloka.',
-            'An open interactive chemistry encyclopedia for primary pupils to university students, and teachers. Part of Asadin Edu, alongside Biotaloka.',
+            'Ensiklopedia kimia interaktif yang terbuka untuk pelajar SD sampai mahasiswa, serta guru.',
+            'An open interactive chemistry encyclopedia for primary pupils to university students, and teachers.',
           ])
         )}</p>
         <p class="muted">${esc(ui.eduNote)}</p>
+        <p class="footer-family">${esc(pick(['Bagian dari', 'Part of']))} <a href="https://asadinedu.com/">Asadin Edu</a> · <a href="https://biotaloka.asadinedu.com/">Biotaloka</a> · <a href="https://fisikaloka.asadinedu.com/">Fisikaloka</a> · <a href="https://mitoloka.asadinedu.com/">Mitoloka</a> · <a href="https://kodeloka.asadinedu.com/">Kodeloka</a></p>
       </div>
       <div>
         <h2 class="footer-title">${esc(pick(['Sumber data resmi', 'Official data sources']))}</h2>

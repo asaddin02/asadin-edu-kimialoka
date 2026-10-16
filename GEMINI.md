@@ -62,7 +62,7 @@ Untuk materi, tulis per jenjang (SD, SMP, SMA, kuliah). Sertakan soal pilihan ga
 7. Kimialoka adalah alat belajar, bukan nasihat medis atau keselamatan. Percobaan yang kamu sarankan harus aman untuk jenjangnya.
 8. Kalau ragu akan suatu fakta, tandai dengan `> Perlu dicek:` daripada menebak.
 9. **Hanya tulis di dalam `materi-gemini/`.** Jangan mengubah berkas atau folder lain di repo.
-10. Commit ke cabang **`gemini/materi`**, bukan `main`. Folder ini tidak ikut ter-deploy ke situs.
+10. **Kamu tidak bisa push ke repo.** Di akhir setiap sesi, sediakan **seluruh folder `materi-gemini/`** sebagai satu berkas zip untuk diunduh pemilik (nama yang disarankan: `materi-gemini-<repo>.zip`). Isinya: semua berkas yang sudah ada di repo, ditambah berkas baru dan berkas yang kamu ubah. Jangan hanya berkas baru. Claude memasukkan isi zip ke repo; folder ini tidak ikut ter-deploy ke situs.
 
 ## Status dan tanda selesai
 

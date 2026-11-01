@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Cadmium",
-   "extract": "Cadmium is a chemical element; it has symbol Cd and atomic number 48. This soft, silvery-white metal is chemically similar to the two other stable metals in group 12, zinc and mercury. Like zinc, it demonstrates oxidation state +2 in most of its compounds, and like mercury, it has a lower melting point than the transition metals in groups 3 through 11. Cadmium and its congeners in group 12 are often not considered transition metals, in that they do not have partly filled d or f electron shells in the elemental or common oxidation states. The average concentration of cadmium in Earth's crust is between 0.1 and 0.5 parts per million (ppm). It was discovered in 1817 simultaneously by Stromeyer and Hermann, both in Germany, as an impurity in zinc carbonate.\nCadmium occurs as a minor component in most zinc ores and is a byproduct of zinc production. It was used for a long time in the 1900s as a corrosion-resistant plating on steel, and cadmium compounds are used as red, orange, and yellow pigments, to color glass, and to stabilize plastic. Cadmium's use is generally decreasing because it is toxic, and nickel–cadmium batteries have been replaced with nickel–metal hydride and lithium-ion batteries. Because it is a neutron poison, cadmium is also used as a component of control rods in nuclear fission reactors. One of its few new uses is in cadmium telluride solar panels.\nAlthough cadmium has no known biological function in higher organisms, a cadmium-dependent carbonic anhydrase has been found in marine diatoms.",
+   "extract": "Cadmium is a chemical element; it has symbol Cd and atomic number 48. This soft, silvery-white metal is chemically similar to the two other stable metals in group 12, zinc and mercury. Like zinc, it demonstrates oxidation state +2 in most of its compounds, and like mercury, it has a lower melting point than the transition metals in groups 3 through 11. Cadmium and its congeners in group 12 are often not considered transition metals, in that they do not have partly filled d or f electron shells in the elemental or common oxidation states. The average concentration of cadmium in Earth's crust is between 0.1 and 0.5 parts per million (ppm). It was discovered in 1817 simultaneously by Stromeyer and Hermann, both in Germany, as an impurity in zinc carbonate.\nCadmium occurs as a minor component in most zinc ores and is a byproduct of zinc production. It was used for a long time in the 1900s as a corrosion-resistant plating on steel, and cadmium compounds are used as red, orange, and yellow pigments, to color glass, and to stabilize plastic. Cadmium's use is generally decreasing because it is toxic, and nickel–cadmium batteries have been replaced with nickel–metal hydride and lithium-ion batteries. Because it is a neutron poison, cadmium is also used as a component of control rods in nuclear fission reactors. One of its few new uses is in cadmium telluride solar panels.\nAlthough cadmium has no known biological function in most organisms, a cadmium-dependent carbonic anhydrase has been found in certain diatoms.",
    "url": "https://en.wikipedia.org/wiki/Cadmium"
   }
  },
@@ -111,7 +111,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -133,7 +133,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -155,7 +155,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -194,7 +194,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -233,7 +233,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -255,7 +255,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -311,7 +311,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -333,7 +333,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -350,7 +350,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -367,7 +367,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -384,7 +384,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -401,7 +401,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -418,7 +418,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -469,7 +469,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -503,7 +503,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -1423,7 +1423,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

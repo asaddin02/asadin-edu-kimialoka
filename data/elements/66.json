@@ -105,7 +105,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -166,7 +166,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -188,7 +188,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -198,7 +198,7 @@
      "pct": 90
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 10
     },
@@ -220,7 +220,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -242,7 +242,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -281,7 +281,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -303,7 +303,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -325,7 +325,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -347,7 +347,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -381,7 +381,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -403,7 +403,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 68.9
     },
@@ -442,7 +442,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -476,7 +476,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -498,7 +498,7 @@
      "pct": 99.3
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 0.7
     }
@@ -515,7 +515,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 66.4
     },
@@ -537,7 +537,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 94.4
     },
@@ -559,7 +559,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 99.9
     },
@@ -581,7 +581,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.9906
     },
@@ -625,7 +625,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -681,7 +681,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -754,7 +754,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -1267,7 +1267,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

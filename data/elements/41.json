@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Niobium",
-   "extract": "Niobium is a chemical element; it has symbol Nb (formerly columbium, Cb) and atomic number 41. It is a light grey, crystalline transition metal. Pure niobium has a Mohs hardness rating similar to pure titanium, and it has similar ductility to iron. Niobium oxidizes in Earth's atmosphere very slowly, hence its application in jewelry as a hypoallergenic alternative to nickel. Niobium is found in the minerals pyrochlore and columbite, as well as other minerals. Its name comes from Greek mythology: Niobe, daughter of Tantalus, the namesake of tantalum. The name reflects the great similarity between the two elements in their physical and chemical properties, which makes them difficult to distinguish.\nEnglish chemist Charles Hatchett reported a new element similar to tantalum in 1801 and named it columbium. In 1809, English chemist William Hyde Wollaston wrongly concluded that tantalum and columbium were identical. German chemist Heinrich Rose determined in 1846 that tantalum ores contain a second element, which he named niobium. In 1864 and 1865, a series of scientific findings clarified that niobium and columbium were the same element (as distinguished from tantalum), and for a century both names were used interchangeably. Niobium was officially adopted as the name of the element in 1949, but the name columbium remains in current use in metallurgy in the United States.\nIt was not until the early 20th century that niobium was first used commercially. Niobium is an important addition to high-strength low-alloy steels. Brazil is the leading producer of niobium and ferroniobium, an alloy of 60–70% niobium with iron. Niobium is used mostly in alloys, the largest part in special steel such as that used in gas pipelines. Although these alloys contain a maximum of 0.1%, the small percentage of niobium enhances the strength of the steel by scavenging carbide and nitride. The temperature stability of niobium-containing superalloys is important for its use in jet and rocket engines.\nNiobium is used in various superconducting materials. These alloys, also containing titanium and tin, are widely used in the superconducting magnets of MRI scanners.",
+   "extract": "Niobium is a chemical element; it has symbol Nb (formerly columbium, Cb) and atomic number 41. It is a light grey, crystalline transition metal. Pure niobium has a Mohs hardness rating similar to pure titanium, and it has similar ductility to iron. Niobium oxidizes in Earth's atmosphere very slowly, hence its application in jewelry as a hypoallergenic alternative to nickel. Niobium is found in the minerals pyrochlore and columbite, as well as other minerals. Its name comes from Greek mythology: Niobe, daughter of Tantalus, the namesake of tantalum. The name reflects the great similarity between the two elements in their physical and chemical properties, which makes them difficult to distinguish.\nEnglish chemist Charles Hatchett reported a new element similar to tantalum in 1801 and named it columbium. In 1809, English chemist William Hyde Wollaston wrongly concluded that tantalum and columbium were identical. German chemist Heinrich Rose determined in 1846 that tantalum ores contain a second element, which he named niobium. In 1864 and 1865, a series of scientific findings clarified that niobium and columbium were the same element (as distinguished from tantalum), and for a century both names were used interchangeably. Niobium was officially adopted as the name of the element in 1949, but the name columbium remains in use in metallurgy in the United States.\nIt was not until the early 20th century that niobium was first used commercially. Niobium is an important addition to high-strength low-alloy steels. Brazil is the leading producer of niobium and ferroniobium, an alloy of 60–70% niobium with iron. Niobium is used mostly in alloys, the largest part in special steel such as that used in gas pipelines. Although these alloys contain a maximum of 0.1%, the small percentage of niobium enhances the strength of the steel by scavenging carbide and nitride. The temperature stability of niobium-containing superalloys is important for its use in jet and rocket engines.\nNiobium is used in various superconducting materials. These alloys, also containing titanium and tin, are widely used in the superconducting magnets of MRI scanners.",
    "url": "https://en.wikipedia.org/wiki/Niobium"
   }
  },
@@ -128,7 +128,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -167,7 +167,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -184,7 +184,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -235,7 +235,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -257,7 +257,7 @@
      "pct": null
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": null
     }
@@ -296,7 +296,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -313,7 +313,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -335,7 +335,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": null
     },
@@ -357,7 +357,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -374,7 +374,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -391,7 +391,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -408,7 +408,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -425,7 +425,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -442,7 +442,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -459,7 +459,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -555,7 +555,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "≈",
      "pct": 100
     },
@@ -582,7 +582,7 @@
      "pct": 96.6
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 3.4
     },
@@ -621,7 +621,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -638,7 +638,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -1637,7 +1637,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

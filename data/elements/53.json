@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Iodine",
-   "extract": "Iodine is a chemical element; it has symbol I and atomic number 53. The heaviest of the stable halogens, it exists at standard conditions as a semi-lustrous, non-metallic solid that melts to form a deep violet liquid at 114 °C (237 °F), and boils to a violet gas at 184 °C (363 °F). The element was discovered by the French chemist Bernard Courtois in 1811 and was named two years later by Joseph Louis Gay-Lussac, after the Ancient Greek Ιώδης, meaning 'violet'.\nIodine occurs in many oxidation states, including iodide (I−), iodate (IO−3), and the various periodate anions. As the heaviest essential mineral nutrient, iodine is required for the synthesis of thyroid hormones. Iodine deficiency affects about two billion people and is the leading preventable cause of intellectual disabilities.\nThe dominant producers of iodine today are Chile and Japan. Due to its high atomic number and ease of attachment to organic compounds, it has also found favour as a non-toxic radiocontrast material. Because of the organ specificity of its uptake by the human body, radioactive isotopes of iodine can also be used to treat thyroid cancer. Iodine is also used as a catalyst in the industrial production of acetic acid and some polymers.\nIt is on the World Health Organization's List of Essential Medicines.",
+   "extract": "Iodine is a chemical element; it has symbol I and atomic number 53. The heaviest of the stable halogens, it exists at standard conditions as a semi-lustrous, non-metallic solid that melts to form a deep violet liquid at 114 °C (237 °F), and boils to a violet gas at 184 °C (363 °F). The element was discovered by the French chemist Bernard Courtois in 1811 and was named two years later by Joseph Louis Gay-Lussac, after the Ancient Greek Ιώδης, meaning 'violet'.\nIodine occurs in many oxidation states, including iodide (I−), iodate (IO3−), and the various periodate anions. As the heaviest essential mineral nutrient, iodine is required for the synthesis of thyroid hormones. Iodine deficiency affects about two billion people and is the leading preventable cause of intellectual disabilities.\nThe dominant producers of iodine today are Chile and Japan. Due to its high atomic number and ease of attachment to organic compounds, it has also found favour as a non-toxic radiocontrast material. Because of the organ specificity of its uptake by the human body, radioactive isotopes of iodine can also be used to treat thyroid cancer. Iodine is also used as a catalyst in the industrial production of acetic acid and some polymers.\nIt is on the World Health Organization's List of Essential Medicines.",
    "url": "https://en.wikipedia.org/wiki/Iodine"
   }
  },
@@ -135,7 +135,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 83
     },
@@ -226,7 +226,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -248,7 +248,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -270,7 +270,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -287,7 +287,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -304,7 +304,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -326,7 +326,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -343,7 +343,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -353,7 +353,7 @@
      "pct": 51
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 49
     }
@@ -370,7 +370,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -387,7 +387,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -404,7 +404,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -414,7 +414,7 @@
      "pct": 78
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 22
     }
@@ -431,7 +431,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -448,7 +448,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -465,7 +465,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -482,7 +482,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 52.7
     },
@@ -520,7 +520,7 @@
      "pct": 93.1
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 6.9
     }
@@ -1046,7 +1046,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

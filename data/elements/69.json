@@ -167,7 +167,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 85
     },
@@ -206,7 +206,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -228,7 +228,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -272,7 +272,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -289,7 +289,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -322,7 +322,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -339,7 +339,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -373,7 +373,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -390,7 +390,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -429,7 +429,7 @@
      "pct": 91
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 9
     }
@@ -451,7 +451,7 @@
      "pct": 92
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 8
     }
@@ -473,7 +473,7 @@
      "pct": 54
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 46
     }
@@ -495,7 +495,7 @@
      "pct": 58
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 42
     },
@@ -517,7 +517,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.17
     },
@@ -600,7 +600,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -639,7 +639,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -661,7 +661,7 @@
      "pct": null
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "?",
      "pct": null
     }
@@ -678,7 +678,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -695,7 +695,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -717,7 +717,7 @@
      "pct": 85
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 15
     }
@@ -751,7 +751,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -807,7 +807,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -829,7 +829,7 @@
      "pct": 81
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 19
     }
@@ -846,7 +846,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -880,12 +880,12 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 61
     },
@@ -929,7 +929,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -980,7 +980,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -1031,7 +1031,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -1137,7 +1137,7 @@
      "pct": 99.869
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 0.131
     }
@@ -1658,7 +1658,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

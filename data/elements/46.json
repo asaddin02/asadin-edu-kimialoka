@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Palladium",
-   "extract": "Palladium is a chemical element; it has the symbol Pd and atomic number 46. It is a rare and lustrous silvery-white metal discovered in 1802 by the English chemist William Hyde Wollaston. He named it after the asteroid Pallas (formally 2 Pallas), which was itself named after the epithet of the Greek goddess Athena, acquired by her when she slew Pallas. Palladium, platinum, rhodium, ruthenium, iridium and osmium form together a group of elements referred to as the platinum group metals. They have similar chemical properties, but palladium has the lowest melting point and is the least dense of them.\nMore than half the supply of palladium and its congener platinum is used in catalytic converters, which convert as much as 90% of the harmful gases in automobile exhaust (hydrocarbons, carbon monoxide, and nitrogen dioxide) into nontoxic substances (nitrogen, carbon dioxide and water vapor). Palladium is also used in electronics, dentistry, medicine, hydrogen purification, chemical applications, electrochemical sensors, electrosynthesis, groundwater treatment, and jewelry. \nOre deposits of palladium and other platinum group metals are rare. The most extensive deposits have been found in the norite belt of the Bushveld Igneous Complex covering the Transvaal Basin in South Africa; the Stillwater Complex in Montana, United States; the Sudbury Basin and Thunder Bay District of Ontario, Canada; and the Norilsk Complex in Russia. Recycling is also a source, mostly from scrapped catalytic converters. The numerous applications and limited supply sources result in considerable investment interest, and palladium is frequently sold as a precious metal in the form of palladium coins and bars.",
+   "extract": "Palladium is a chemical element; it has the symbol Pd and atomic number 46. It is a rare and lustrous silvery-white metal discovered in 1802 by the English chemist William Hyde Wollaston. He named it after the asteroid 2 Pallas, which was itself named after the epithet of the Greek goddess Athena, acquired by her when she slew Pallas. Palladium, platinum, rhodium, ruthenium, iridium and osmium form together a group of elements referred to as the platinum group metals. They have similar chemical properties, but palladium has the lowest melting point and is the least dense of them.\nMore than half the supply of palladium and its congener platinum is used in catalytic converters, which convert as much as 90% of the harmful gases in automobile exhaust (hydrocarbons, carbon monoxide, and nitrogen dioxide) into nontoxic substances (nitrogen, carbon dioxide and water vapor). Palladium is also used in electronics, dentistry, medicine, hydrogen purification, chemical applications, electrochemical sensors, electrosynthesis, groundwater treatment, and jewelry. \nOre deposits of palladium and other platinum group metals are rare. The most extensive deposits have been found in the norite belt of the Bushveld Igneous Complex covering the Transvaal Basin in South Africa; the Stillwater Complex in Montana, United States; the Sudbury Basin and Thunder Bay District of Ontario, Canada; and the Norilsk Complex in Russia. Recycling is also a source, mostly from scrapped catalytic converters. The numerous applications and limited supply sources result in considerable investment interest, and palladium is frequently sold as a precious metal in the form of palladium coins and bars.",
    "url": "https://en.wikipedia.org/wiki/Palladium"
   }
  },
@@ -94,7 +94,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -116,7 +116,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -138,7 +138,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -160,7 +160,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -216,7 +216,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -238,7 +238,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 89
     },
@@ -265,7 +265,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -299,7 +299,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -316,7 +316,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -333,7 +333,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -350,7 +350,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -367,7 +367,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -401,7 +401,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -1424,7 +1424,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

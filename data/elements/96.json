@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Curium",
-   "extract": "Curium is a synthetic chemical element; it has symbol Cm and atomic number 96. This transuranic actinide element was named after eminent scientists Marie and Pierre Curie, both known for their research on radioactivity. Curium was first intentionally made by the team of Glenn T. Seaborg, Ralph A. James, and Albert Ghiorso in 1944, using the cyclotron at Berkeley. They bombarded the newly discovered element plutonium (the isotope 239Pu) with alpha particles. This was then sent to the Metallurgical Laboratory at the University of Chicago where a tiny sample of curium was eventually separated and identified. The discovery was kept secret until after the end of World War II. The news was released to the public in November 1947. Most curium is produced by bombarding uranium or plutonium with neutrons in nuclear reactors – one tonne of spent nuclear fuel contains ~20 grams of curium.\nCurium is a hard, dense, silvery metal with a high melting and boiling point for an actinide. It is paramagnetic at ambient conditions, but becomes antiferromagnetic upon cooling, and other magnetic transitions are also seen in many curium compounds. In compounds, curium usually has valence +3 and sometimes +4; the +3 valence is predominant in solutions. Curium readily oxidizes, and its oxides are a dominant form of this element. It forms strongly fluorescent complexes with various organic compounds. If it gets into the human body, curium accumulates in bones, lungs, and liver, where it promotes cancer.\nAll known isotopes of curium are radioactive and have small critical mass for a nuclear chain reaction. The most stable isotope, 247Cm, has a half-life of 15.6 million years; the longest-lived curium isotopes predominantly emit alpha particles. Radioisotope thermoelectric generators can use the heat from this process, but this is hindered by the rarity and high cost of curium. Curium is used in making heavier actinides and the 238Pu radionuclide for power sources in artificial cardiac pacemakers and RTGs for spacecraft.",
+   "extract": "Curium is a synthetic chemical element; it has symbol Cm and atomic number 96. This transuranic actinide element was named after eminent scientists Marie and Pierre Curie, both known for their research on radioactivity. Curium was first intentionally made by the team of Glenn T. Seaborg, Ralph A. James, and Albert Ghiorso in 1944, using the cyclotron at Berkeley. They bombarded the newly discovered element plutonium (the isotope 239Pu) with alpha particles. This was then sent to the Metallurgical Laboratory at the University of Chicago where a tiny sample of curium was eventually separated and identified. The discovery was kept secret until after the end of World War II. The news was released to the public in November 1947. Most curium is produced by bombarding uranium or plutonium with neutrons in nuclear reactors – one tonne of spent nuclear fuel contains ~20 grams of curium.\nCurium is a hard, dense, silvery metal with a relatively high melting point and boiling point among the actinides. It is paramagnetic at ambient conditions, but becomes antiferromagnetic upon cooling, and other magnetic transitions are also seen in many curium compounds. In compounds, curium usually has valence +3 and sometimes +4; the +3 valence is predominant in solutions. Curium readily oxidizes, and its oxides are a dominant form of this element. It forms strongly fluorescent complexes with various organic compounds. If it gets into the human body, curium accumulates in bones, lungs, and liver, where it promotes cancer.\nAll known isotopes of curium are radioactive and have small critical mass for a nuclear chain reaction. The most stable isotope, 247Cm, has a half-life of 15.6 million years; the longest-lived curium isotopes predominantly emit alpha particles. Radioisotope thermoelectric generators can use the heat from this process, but this is hindered by the rarity and high cost of curium. Curium is used in making heavier actinides and the 238Pu radionuclide for power sources in artificial cardiac pacemakers and RTGs for spacecraft.",
    "url": "https://en.wikipedia.org/wiki/Curium"
   }
  },
@@ -91,7 +91,7 @@
      "pct": 20
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 80
     }
@@ -157,7 +157,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 82
     },
@@ -217,7 +217,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "?",
      "pct": null
     },
@@ -288,7 +288,7 @@
      "pct": 100
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "?",
      "pct": null
     }
@@ -305,7 +305,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 99
     },
@@ -376,7 +376,7 @@
      "pct": 100
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 0.29
     }
@@ -801,7 +801,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

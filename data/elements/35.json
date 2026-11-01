@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Bromine",
-   "extract": "Bromine is a chemical element; its symbol is Br and its atomic number is 35. It is a volatile red-brown liquid at room temperature that evaporates readily to form a similarly coloured vapour. Its properties are intermediate between those of chlorine and iodine. Isolated independently by two chemists, Carl Jacob Löwig (in 1825) and Antoine Jérôme Balard (in 1826), its name was derived from Ancient Greek βρῶμος (bromos) 'stench', referring to its sharp and pungent smell.\nElemental bromine is very reactive and thus does not occur as a free element in nature. Instead, it can be isolated from colourless soluble crystalline mineral halide salts analogous to table salt, a property it shares with the other halogens. While it is rather rare in the Earth's crust, the high solubility of the bromide ion (Br−) has caused its accumulation in the oceans. Commercially the element is easily extracted from brine evaporation ponds, mostly in the United States and Israel. The mass of bromine in the oceans is about one three-hundredth that of chlorine.\nAt standard conditions for temperature and pressure it is a liquid; the only other element that is liquid under these conditions is mercury. At high temperatures, organobromine compounds readily dissociate to yield free bromine atoms, a process that stops free radical chemical chain reactions. This effect makes organobromine compounds useful as fire retardants, with more than half the bromine produced worldwide each year put to this purpose. The same property causes ultraviolet sunlight to dissociate volatile organobromine compounds in the atmosphere to yield free bromine atoms, causing ozone depletion. As a result, some organobromine compounds—such as the pesticide methyl bromide—are no longer used. Bromine compounds are still used in well drilling fluids, in photographic film, and as an intermediate in the manufacture of organic chemicals.\nLarge amounts of bromide salts are toxic from the action of soluble bromide ions, causing bromism. However, bromine is beneficial for human eosinophils, and is an essential trace element for collagen development in all animals.",
+   "extract": "Bromine is a chemical element; its symbol is Br and its atomic number is 35. It is a volatile red-brown liquid at room temperature that evaporates readily to form a similarly coloured vapour. Its properties are intermediate between those of chlorine and iodine. Isolated independently by two chemists, Carl Jacob Löwig (in 1825) and Antoine Jérôme Balard (in 1826), its name was derived from Ancient Greek βρῶμος (bromos) 'stench', referring to its sharp and pungent smell.\nElemental bromine is very reactive and thus does not occur as a free element in nature. Instead, it can be isolated from colourless soluble crystalline mineral halide salts analogous to table salt, a property it shares with the other halogens. While it is rather rare in the Earth's crust, the high solubility of the bromide ion (Br−) has caused its accumulation in the oceans. Commercially the element is easily extracted from brine evaporation ponds, mostly in the United States and Israel. The mass of bromine in the oceans is about one three-hundredth that of chlorine.\nAt standard conditions for temperature and pressure it is a liquid; the only other element that is liquid is mercury. At high temperatures, organobromine compounds readily dissociate to yield free bromine atoms, a process that stops free radical chemical chain reactions. This effect makes organobromine compounds useful as fire retardants, with more than half the bromine produced worldwide each year put to this purpose. The same property causes ultraviolet sunlight to dissociate volatile organobromine compounds in the atmosphere to yield free bromine atoms, causing ozone depletion. As a result, some organobromine compounds—such as the pesticide methyl bromide—are no longer used. Bromine compounds are still used in well drilling fluids, in photographic film, and as an intermediate in the manufacture of organic chemicals.\nLarge amounts of bromide salts are toxic from the action of soluble bromide ions, causing bromism. However, bromine is beneficial for human eosinophils, and is an essential trace element for collagen development in all animals.",
    "url": "https://en.wikipedia.org/wiki/Bromine"
   }
  },
@@ -160,7 +160,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -182,7 +182,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -204,7 +204,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -221,7 +221,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -260,7 +260,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -277,7 +277,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -294,7 +294,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -311,7 +311,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -328,7 +328,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -367,7 +367,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -473,7 +473,7 @@
      "pct": 91.7
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 8.3
     }
@@ -1171,7 +1171,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

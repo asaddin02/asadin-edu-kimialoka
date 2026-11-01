@@ -206,7 +206,7 @@
      "pct": 31.3
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 1.1
     }
@@ -323,7 +323,7 @@
      "pct": 90
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 10
     },
@@ -394,7 +394,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 70
     },
@@ -465,7 +465,7 @@
      "pct": 0.55
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "?",
      "pct": null
     }
@@ -487,7 +487,7 @@
      "pct": 85
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 15
     },
@@ -547,7 +547,7 @@
      "pct": 75
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 25
     },
@@ -719,7 +719,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

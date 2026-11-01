@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Mercury (element)",
-   "extract": "Mercury is a chemical element; it has symbol Hg (from Latin hydrargyrum) and atomic number 80. It is commonly known as quicksilver. A heavy, silvery d-block element, mercury is the only metallic element that is known to be liquid at standard temperature and pressure. As well as having the lowest freezing point, mercury has the lowest boiling point and subsequently the narrowest liquid state range of any metal at standard conditions.\nMercury occurs in deposits throughout the world mostly as cinnabar (mercuric sulfide). The red pigment vermilion is obtained by grinding natural cinnabar or synthetic mercuric sulfide. Exposure to mercury and mercury-containing organic compounds is toxic to the nervous system, immune system and kidneys of humans and other animals; mercury poisoning can result from exposure to water-soluble forms of mercury (such as mercuric chloride or methylmercury) either directly or through mechanisms of biomagnification.\nMercury is used in thermometers, barometers, manometers, sphygmomanometers, float valves, mercury switches, mercury relays, fluorescent lamps and other devices, but concerns about the element's toxicity have led to a reduction in the amount of mercury used in these instruments, or manufacturers not using it altogether. It remains in use in scientific research applications and in amalgam for dental restoration in some locales. It is also still used in fluorescent lighting, although the quantity of mercury used is now smaller. Electricity passed through mercury vapor in a fluorescent lamp produces short-wave ultraviolet light, which then causes the phosphor in the tube to fluoresce, making visible light.",
+   "extract": "Mercury is a chemical element; it has symbol Hg (from Latin hydrargyrum) and atomic number 80. It is commonly known as quicksilver. A heavy, silvery d-block element, mercury is the only metallic element that is known to be liquid at standard temperature and pressure. As well as having the lowest freezing point, mercury has the lowest boiling point and the narrowest liquid state range of any metal at standard conditions.\nMercury occurs in deposits throughout the world mostly as cinnabar (mercuric sulfide). The red pigment vermilion is obtained by grinding natural cinnabar or synthetic mercuric sulfide. Exposure to mercury and mercury-containing organic compounds is toxic to the nervous system, immune system and kidneys of humans and other animals; mercury poisoning can result from exposure to water-soluble forms of mercury (such as mercuric chloride or methylmercury) either directly or through mechanisms of biomagnification.\nMercury is used in thermometers, barometers, manometers, sphygmomanometers, float valves, mercury switches, mercury relays, fluorescent lamps and other devices, but concerns about the element's toxicity have led to a reduction in the amount of mercury used in these instruments, or manufacturers not using it altogether. It remains in use in scientific research applications and in amalgam for dental restoration in some locales. It is also still used in fluorescent lighting, although the quantity of mercury used is now smaller. Electricity passed through mercury vapor in a fluorescent lamp produces short-wave ultraviolet light, which then causes the phosphor in the tube to fluoresce, making visible light.",
    "url": "https://en.wikipedia.org/wiki/Mercury_(element)"
   }
  },
@@ -310,7 +310,7 @@
      "pct": 75
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 25
     },
@@ -349,7 +349,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 52
     },
@@ -371,7 +371,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 73
     },
@@ -415,7 +415,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 86.2
     },
@@ -437,7 +437,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 88.3
     },
@@ -481,7 +481,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 98.89
     },
@@ -503,7 +503,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 94
     },
@@ -530,7 +530,7 @@
      "pct": 54
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 46
     },
@@ -591,7 +591,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -613,7 +613,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -635,7 +635,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -669,7 +669,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -691,7 +691,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -713,7 +713,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -735,7 +735,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -757,7 +757,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -784,7 +784,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     },
@@ -806,7 +806,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -823,7 +823,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 92.8
     },
@@ -845,7 +845,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -862,7 +862,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -884,7 +884,7 @@
      "pct": 54.2
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 45.8
     }
@@ -918,7 +918,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -940,7 +940,7 @@
      "pct": 94.68
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 5.32
     }
@@ -1567,7 +1567,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

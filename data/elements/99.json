@@ -74,7 +74,7 @@
      "pct": 70
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 30
     },
@@ -134,7 +134,7 @@
      "pct": 57
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 43
     },
@@ -210,7 +210,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 95
     },
@@ -237,7 +237,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 51
     },
@@ -314,7 +314,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 90.1
     },
@@ -505,7 +505,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 99.5
     },
@@ -532,7 +532,7 @@
      "pct": null
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "?",
      "pct": null
     }
@@ -554,7 +554,7 @@
      "pct": 78
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 22
     }
@@ -610,7 +610,7 @@
      "pct": 100
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "?",
      "pct": null
     }
@@ -642,7 +642,7 @@
      "pct": 0.32
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 0.076
     },
@@ -824,7 +824,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

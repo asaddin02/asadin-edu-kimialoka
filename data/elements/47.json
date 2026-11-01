@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Silver",
-   "extract": "Silver is a chemical element; it has symbol Ag (from Latin argentum) and atomic number 47. A soft, white, lustrous transition metal, it exhibits the highest electrical conductivity, thermal conductivity and reflectivity of any metal. Silver is found in the Earth's crust in the pure, free elemental form (\"native silver\"), as an alloy with gold and other metals, and in minerals such as acanthite, argentite and chlorargyrite. Most silver is recovered as a byproduct of lead–zinc, copper and gold mining and refining.\nSilver has long been valued as a precious metal and coinage metal. It is one of the seven metals of antiquity, and has had an enduring role in monetary systems, jewellery, tableware and decorative arts. Its purity is commonly measured on a per-mille basis; a 94%-pure alloy is described as \"0.940 fine\". Because pure silver is relatively soft, silver used in jewellery, coinage and household objects is often alloyed with copper or other metals.\nBeyond currency and investment uses such as coins and bullion, silver is an important industrial material. It is used in photovoltaics, electrical contacts and conductors, printed electronics, brazing alloys, catalysis, specialised mirrors and window coatings, and antimicrobial materials. Silver halides are important in photographic film, photographic paper and photochromic glass, although demand for photographic silver has declined with the spread of digital imaging.",
+   "extract": "Silver is a chemical element; it has symbol Ag (from Latin argentum) and atomic number 47. A soft, white, lustrous transition metal, it exhibits the highest electrical conductivity, thermal conductivity and reflectivity of any metal. Silver is found in the Earth's crust in the pure, free elemental form (\"native silver\"), as an alloy with gold (electrum) and other metals, and in minerals such as acanthite, argentite and chlorargyrite. Most silver is recovered as a byproduct of lead–zinc, copper and gold mining and refining.\nSilver has long been valued as a precious metal and coinage metal. It is one of the seven metals of antiquity, and has had an enduring role in monetary systems, jewellery, tableware and decorative arts. Its purity is commonly measured on a per-mille basis; a 94%-pure alloy is described as \"0.940 fine\". Because pure silver is relatively soft, silver used in jewellery, coinage and household objects is often alloyed with copper or other metals.\nBeyond currency and investment uses such as coins and bullion, silver is an important industrial material. It is used in photovoltaics, electrical contacts and conductors, printed electronics, brazing alloys, catalysis, specialised mirrors and window coatings, and antimicrobial materials. Silver halides are important in photographic film, photographic paper and photochromic glass, although demand for photographic silver has declined with the spread of digital imaging.",
    "url": "https://en.wikipedia.org/wiki/Silver"
   }
  },
@@ -102,7 +102,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -124,7 +124,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -146,7 +146,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 95.4
     },
@@ -178,7 +178,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -251,7 +251,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -273,7 +273,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -346,7 +346,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -380,7 +380,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -419,7 +419,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -453,7 +453,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -470,7 +470,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": null
     },
@@ -492,7 +492,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -526,7 +526,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -543,7 +543,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 51
     },
@@ -565,7 +565,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -599,7 +599,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -638,7 +638,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -660,7 +660,7 @@
      "pct": 99.66
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 0.34
     }
@@ -699,7 +699,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -754,7 +754,7 @@
      "pct": 97.15
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 2.85
     }
@@ -771,7 +771,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 91.3
     },
@@ -826,7 +826,7 @@
      "pct": 100
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 0.3
     }
@@ -2091,7 +2091,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

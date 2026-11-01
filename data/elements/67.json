@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Holmium",
-   "extract": "Holmium is a chemical element; it has symbol Ho and atomic number 67. It is a rare-earth element and the eleventh member of the lanthanide series of elements. It is a relatively soft, silvery, fairly corrosion-resistant and malleable metal. Like many other lanthanides, holmium is too reactive to be found in native form, as pure holmium slowly forms a yellowish oxide coating when exposed to air. When isolated, holmium is relatively stable in dry air at room temperature. However, it reacts with water and corrodes readily, and also burns in air when heated.\nIn nature, holmium occurs together with the other rare-earth metals (like thulium). It is a relatively rare lanthanide, making up 1.4 parts per million of the Earth's crust, an abundance similar to tungsten. Holmium was discovered through isolation by Swedish chemist Per Theodor Cleve. It was also independently discovered by Jacques-Louis Soret and Marc Delafontaine, who together observed it spectroscopically in 1878. Its oxide was first isolated from rare-earth ores by Cleve in 1878. The element's name comes from Holmia, the Latin name for the city of Stockholm.\nLike many other lanthanides, holmium is found in the minerals monazite and gadolinite and is usually commercially extracted from monazite using ion-exchange techniques. Its compounds in nature and in nearly all of its laboratory chemistry are trivalently oxidized, containing Ho(III) ions. Trivalent holmium ions have fluorescent properties similar to many other rare-earth ions (while yielding their own set of unique emission light lines), and thus are used in the same way as some other rare earths in certain laser and glass-colorant applications.\nHolmium has the highest magnetic permeability and magnetic saturation of any element and is thus used for the pole pieces of the strongest static magnets. Because holmium strongly absorbs neutrons, it is also used as a burnable poison in nuclear reactors.",
+   "extract": "Holmium is a chemical element; it has symbol Ho and atomic number 67. It is a rare-earth element and the eleventh member of the lanthanide series of elements. It is a relatively soft, silvery, fairly corrosion-resistant and malleable metal. Like many other lanthanides, holmium is too reactive to be found in native form, as pure holmium slowly forms a yellowish oxide coating when exposed to air. When isolated, holmium is relatively stable in dry air at room temperature. However, it reacts with water and corrodes readily, and also burns in air when heated.\nIn nature, no free holmium or even an ore with significant amounts of holmium has been found. Holmium occurs together with the other rare-earth metals and it is difficult to separate. Holmium was discovered through isolation by Swedish chemist Per Theodor Cleve. It was also independently discovered by Jacques-Louis Soret and Marc Delafontaine, who together observed it spectroscopically in 1878. Its oxide was first isolated from rare-earth ores by Cleve in 1878. The element's name comes from Holmia, the Latin name for the city of Stockholm.\nLike many other lanthanides, holmium is found in the minerals monazite and gadolinite and is usually commercially extracted from monazite using ion-exchange techniques. Its compounds in nature and in nearly all of its laboratory chemistry are trivalently oxidized, containing Ho(III) ions. Trivalent holmium ions have fluorescent properties similar to many other rare-earth ions (while yielding their own set of unique emission light lines), and thus are used in the same way as some other rare earths in certain laser and glass-colorant applications.\nHolmium has the highest magnetic permeability and magnetic saturation of any element and is thus used for the pole pieces of the strongest static magnets. Because holmium strongly absorbs neutrons, it is also used as a burnable poison in nuclear reactors.",
    "url": "https://en.wikipedia.org/wiki/Holmium"
   }
  },
@@ -167,7 +167,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -206,7 +206,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -245,7 +245,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -267,7 +267,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -301,7 +301,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -318,7 +318,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -351,7 +351,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -368,7 +368,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -385,7 +385,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -402,7 +402,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -436,7 +436,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 88
     },
@@ -463,7 +463,7 @@
      "pct": 77
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 23
     }
@@ -480,7 +480,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 88
     },
@@ -502,7 +502,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 89.2
     },
@@ -541,7 +541,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.949
     },
@@ -563,7 +563,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.82
     },
@@ -602,7 +602,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.981
     },
@@ -624,7 +624,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -651,7 +651,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -685,7 +685,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -746,7 +746,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -846,7 +846,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -880,7 +880,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -902,7 +902,7 @@
      "pct": 73
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 27
     }
@@ -936,7 +936,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -970,7 +970,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -992,7 +992,7 @@
      "pct": 62
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 38
     }
@@ -1009,7 +1009,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -1060,12 +1060,12 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 61
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 39
     }
@@ -1594,7 +1594,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

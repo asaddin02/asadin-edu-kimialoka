@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Magnesium",
-   "extract": "Magnesium is a chemical element; it has symbol Mg and atomic number 12. It is a shiny gray metal having a low density, low melting point, and high chemical reactivity. Like the other alkaline earth metals (group 2 of the periodic table), it occurs naturally only in combination with other elements and almost always has an oxidation state of +2. It reacts readily with air to form a thin passivation coating of magnesium oxide that inhibits further corrosion of the metal. The free metal burns with a brilliant-white light. The metal is obtained mainly by electrolysis of magnesium salts obtained from brine. It is less dense than aluminium and is used primarily as a component in strong and lightweight alloys that contain aluminium.\nIn the cosmos, magnesium is produced in large, aging stars by the sequential addition of three helium nuclei to a carbon nucleus. When such stars explode as supernovas, much of the magnesium is expelled into the interstellar medium, where it may recycle into new star systems. Magnesium is the eighth most abundant element in Earth's crust and the fourth most common element in the Earth (after iron, oxygen and silicon), making up 13% of the planet's mass and a large fraction of the planet's mantle. It is the third most abundant element dissolved in seawater, after sodium and chlorine.\nThis element is the eleventh most abundant element by mass in the human body and is essential to all cells and some 300 enzymes. Magnesium ions interact with polyphosphate compounds such as ATP, DNA, and RNA. Hundreds of enzymes require magnesium ions to function. Magnesium compounds are used medicinally as common laxatives and antacids (such as milk of magnesia), and to stabilize abnormal nerve excitation or blood vessel spasm in such conditions as eclampsia.",
+   "extract": "Magnesium is a chemical element; it has symbol Mg and atomic number 12. It is a shiny gray metal having a low density, low melting point, and high chemical reactivity. Like the other alkaline earth metals (group 2 of the periodic table), it occurs naturally only in combination with other elements and almost always has an oxidation state of +2. It reacts readily with air to form a thin passivation coating of magnesium oxide that inhibits further corrosion of the metal. The free metal burns with a brilliant-white light. The metal is obtained mainly by electrolysis of magnesium salts obtained from brine. It is less dense than aluminium and is used primarily as a component in strong and lightweight alloys that contain aluminium.\nIn the cosmos, magnesium is produced in large, aging stars by the sequential addition of three helium nuclei to a carbon nucleus. When such stars explode as supernovas, much of the magnesium is expelled into the interstellar medium, where it may recycle into new star systems. Magnesium ranks eighth in the abundance of elements in Earth's crust. It is the third-most-abundant element dissolved in seawater, after sodium and chlorine.\nThis element is required for many core functions of cells in the human body and to some 300 enzymes. Magnesium ions interact with polyphosphate compounds such as ATP, DNA and RNA. Magnesium compounds are used medicinally as common laxatives and antacids (such as milk of magnesia), and to stabilize abnormal nerve excitation or blood vessel spasm in such conditions as eclampsia.",
    "url": "https://en.wikipedia.org/wiki/Magnesium"
   }
  },
@@ -76,7 +76,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -98,7 +98,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -130,7 +130,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -147,7 +147,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -625,7 +625,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

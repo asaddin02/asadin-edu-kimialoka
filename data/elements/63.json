@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Europium",
-   "extract": "Europium is a chemical element; it has symbol Eu and atomic number 63. It is a silvery-white metal of the lanthanide series that reacts readily with air to form a dark oxide coating. Europium is the most chemically reactive, least dense, and softest of the lanthanides. It is soft enough to be cut with a knife. Europium was discovered in 1896, provisionally designated as Σ; in 1901, it was named after the continent of Europe. Europium usually assumes the oxidation state +3, like other members of the lanthanide series, but compounds having oxidation state +2 are also common. All europium compounds with oxidation state +2 are slightly reducing due to their tendency to get oxidised into the more stable +3 state. It has no significant biological role but is relatively non-toxic compared to other heavy metals. Most applications of europium exploit the phosphorescence of europium compounds. Europium is one of the rarest of the rare-earth elements on Earth.",
+   "extract": "Europium is a chemical element; it has symbol Eu and atomic number 63. It is a soft, silvery-white lanthanide metal that tarnishes rapidly in air and is the most chemically reactive of the lanthanides. Europium has an unusually low density and large atomic volume for a lanthanide because the metal is effectively divalent, unlike the predominantly trivalent neighbouring elements. Its half-filled 4f7 electron configuration also gives elemental europium distinctive magnetic properties; it is paramagnetic at room temperature and becomes antiferromagnetic below about 91 K. In compounds, the +3 oxidation state is generally the most stable, but europium has the most readily accessible +2 state of any lanthanide.\nEuropium does not occur naturally as the free metal and is found only as a minor component of rare-earth minerals such as bastnäsite, monazite and xenotime. Its ability to form Eu(II) gives it unusual geochemical behaviour: europium can be preferentially incorporated into feldspar, producing positive or negative europium anomalies that are widely used in petrology and geochemistry. Naturally occurring europium consists of two isotopes in nearly equal proportions, 151Eu and 153Eu. 153Eu is observationally stable, while 151Eu is a very long-lived alpha emitter with a half-life of about 4.6×1018 years.\nThe identification of europium formed part of the long 19th-century process of separating the rare-earth elements. William Crookes observed an unexplained spectral feature in rare-earth material in 1885, and Paul Émile Lecoq de Boisbaudran reported a further unidentified line in samarium in 1892. In 1896, the French chemist Eugène-Anatole Demarçay reported evidence for a new element associated with samarium; after repeated fractional crystallisation, he obtained it in sufficiently pure form in 1901 and named it europium after Europe. Elemental europium metal was prepared several decades later.\nThe major applications of europium exploit its luminescence. Eu(III) produces narrow orange-red emission lines, whereas Eu(II) gives broad, host-dependent emission that can span much of the visible spectrum.",
    "url": "https://en.wikipedia.org/wiki/Europium"
   }
  },
@@ -156,7 +156,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -178,7 +178,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -200,7 +200,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -222,7 +222,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -244,7 +244,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -278,7 +278,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -295,7 +295,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -329,7 +329,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -339,7 +339,7 @@
      "pct": 95.1
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 4.9
     }
@@ -395,7 +395,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -417,7 +417,7 @@
      "pct": 86
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 14
     }
@@ -434,7 +434,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -444,7 +444,7 @@
      "pct": 89.9
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 10.1
     }
@@ -461,7 +461,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -478,7 +478,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -512,7 +512,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -546,7 +546,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -580,7 +580,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -653,7 +653,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -687,7 +687,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -721,7 +721,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -743,7 +743,7 @@
      "pct": 89
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 11
     },
@@ -799,7 +799,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 72.08
     },
@@ -826,7 +826,7 @@
      "pct": 73
     },
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 27
     }
@@ -944,7 +944,7 @@
      "pct": 99.982
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 0.018
     }
@@ -1427,7 +1427,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",

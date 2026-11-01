@@ -9,7 +9,7 @@
   },
   "en": {
    "title": "Iridium",
-   "extract": "Iridium is a chemical element; it has the symbol Ir and atomic number 77. This very hard, brittle, silvery-white transition metal of the platinum group is considered the second-densest naturally occurring metal (after osmium), with a density of 22.56 g/cm3 (0.815 lb/cu in) as defined by experimental X-ray crystallography. 191Ir and 193Ir are the only two naturally occurring isotopes of iridium, as well as the only stable isotopes; the latter is the more abundant. It is one of the most corrosion-resistant metals, even at temperatures as high as 2,000 °C (3,630 °F).\nIridium was discovered in 1803 in the acid-insoluble residues of platinum ores by the British chemist Smithson Tennant. The name iridium, derived from the Greek word iris (rainbow), refers to the various colors of its compounds. Iridium is one of the rarest elements in Earth's crust, with an estimated annual production of only 6,800 kilograms (15,000 lb) in 2023.\nThe dominant uses of iridium and its alloys are in high-performance spark plugs, crucibles for recrystallization of semiconductors at high temperatures, and electrodes for the production of chlorine in the chloralkali process. Important compounds of iridium are chlorides and iodides in industrial catalysis. Iridium is a component of some OLEDs.\nIridium is found in meteorites in much higher abundance than in the Earth's crust. For this reason, the unusually high abundance of iridium in the clay layer at the Cretaceous–Paleogene boundary gave rise to the Alvarez hypothesis that the impact of a massive extraterrestrial object caused the extinction of non-avian dinosaurs and many other species 66 million years ago, now known to be produced by the impact that formed the Chicxulub crater. Similarly, an iridium anomaly in core samples from the Pacific Ocean suggested the Eltanin impact of about 2.5 million years ago.",
+   "extract": "Iridium is a chemical element; it has the symbol Ir and atomic number 77. This very hard, brittle, silvery-white transition metal of the platinum group is considered the second-densest naturally occurring metal (after osmium), with a density of 22.56 g/cm3 (0.815 lb/cu in) as defined by experimental X-ray crystallography. 191Ir and 193Ir are the only two naturally occurring isotopes of iridium, as well as the only stable isotopes; the latter is the more abundant. It is one of the most corrosion-resistant metals, even at temperatures as high as 2,000 °C (3,600 °F).\nIridium was discovered in 1803 in the acid-insoluble residues of platinum ores by the British chemist Smithson Tennant. The name iridium, derived from the Greek word iris (rainbow), refers to the various colors of its compounds. Iridium is one of the rarest elements in Earth's crust, with an estimated annual production of only 6,800 kilograms (15,000 lb) in 2023.\nThe dominant uses of iridium and its alloys are in high-performance spark plugs, crucibles for recrystallization of semiconductors at high temperatures, and electrodes for the production of chlorine in the chloralkali process. Important compounds of iridium are chlorides and iodides in industrial catalysis. Iridium is a component of some OLEDs.\nIridium is found in meteorites in much higher abundance than in the Earth's crust. For this reason, the unusually high abundance of iridium in the clay layer at the Cretaceous–Paleogene boundary gave rise to the Alvarez hypothesis that the impact of a massive extraterrestrial object caused the extinction of non-avian dinosaurs and many other species 66 million years ago, now known to be produced by the impact that formed the Chicxulub crater. Similarly, an iridium anomaly in core samples from the Pacific Ocean suggested the Eltanin impact of about 2.5 million years ago.",
    "url": "https://en.wikipedia.org/wiki/Iridium"
   }
  },
@@ -489,7 +489,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 90.5
     },
@@ -511,7 +511,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 96.5
     },
@@ -533,7 +533,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 88
     },
@@ -555,7 +555,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.5
     },
@@ -577,7 +577,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 97.5
     },
@@ -599,7 +599,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 99.15
     },
@@ -621,7 +621,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": null
     },
@@ -660,7 +660,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 96.9
     },
@@ -682,7 +682,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": null
     },
@@ -760,7 +760,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -777,7 +777,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -794,7 +794,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -811,7 +811,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -862,7 +862,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -935,7 +935,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -986,7 +986,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -1020,7 +1020,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -1059,7 +1059,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -1127,7 +1127,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     }
@@ -1166,7 +1166,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 100
     }
@@ -1217,7 +1217,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 100
     },
@@ -1273,7 +1273,7 @@
    "stable": false,
    "decay": [
     {
-     "mode": "β+",
+     "mode": "ec β+",
      "op": "=",
      "pct": 91.4
     },
@@ -1345,7 +1345,7 @@
      "pct": 95.24
     },
     {
-     "mode": "ε",
+     "mode": "ec",
      "op": "=",
      "pct": 4.76
     }
@@ -1949,7 +1949,7 @@
   },
   "amdc": {
    "name": "Atomic Mass Data Center (AMDC), International Atomic Energy Agency (IAEA)",
-   "url": "https://www-nds.iaea.org/amdc/"
+   "url": "https://www-nds.iaea.org/relnsd/nubase/nubase_min.html"
   },
   "jlab": {
    "name": "Jefferson Lab, U.S. Department of Energy",
